@@ -12,6 +12,9 @@ import { MdEmail, MdLocationCity } from "react-icons/md";
 import { useSelector } from "react-redux";
 import Link from "next/link";
 import ShareButtons from "../ShareButtons";
+import raview from '../../assests/Review1.png'
+import Image from "next/image";
+
 
 const Footer = () => {
   const { token } = useSelector((state) => state.auth);
@@ -40,8 +43,10 @@ const Footer = () => {
               substantial contributions to these industries.
             </p>
             <div className="mt-4">
-              <img
-                src="https://jharkhanditservices.com/images/icons/Review1.png"
+              <Image
+              width={300}
+              height={300}
+                src={raview}
                 alt="Ratings"
                 className="h-16"
               />
