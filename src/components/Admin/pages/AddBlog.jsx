@@ -1,10 +1,12 @@
 "use client";
 import axios from "axios";
 import React, { useState } from "react";
-import ReactQuill from "react-quill";
+
 import "react-quill/dist/quill.snow.css";
 import Swal from "sweetalert2";
 import { toast } from "react-toastify";
+import dynamic from "next/dynamic"; // Import dynamic for ReactQuill
+const ReactQuill = dynamic(() => import("react-quill"), { ssr: false });
 
 const AddBlog = () => {
   const BASE_URL = process.env.NEXT_PUBLIC_BASE_URL;

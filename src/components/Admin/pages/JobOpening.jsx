@@ -4,8 +4,11 @@ import axios from "axios";
 import Swal from "sweetalert2";
 import { FaPlus, FaTimes, FaEdit, FaTrash } from "react-icons/fa";
 import { MdAdd } from "react-icons/md";
-import ReactQuill from "react-quill";
+
 import "react-quill/dist/quill.snow.css";
+
+import dynamic from "next/dynamic"; // Import dynamic for ReactQuill
+const ReactQuill = dynamic(() => import("react-quill"), { ssr: false });
 
 function JobOpening() {
   const BASE_URL = process.env.NEXT_PUBLIC_BASE_URL;

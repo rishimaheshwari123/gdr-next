@@ -43,19 +43,23 @@ const Sidebar = () => {
 
   // Effect to close sidebar when clicking outside
   useEffect(() => {
-    const handleClickOutside = (event) => {
-      if (sidebarRef.current && !sidebarRef.current.contains(event.target)) {
-        setIsCollapsed(true);
-        localStorage.setItem("sidebarCollapsed", "true");
-      }
-    };
+    // Ensure that this code only runs in the browser (client-side)
+    if (typeof window !== "undefined" && typeof document !== "undefined") {
+      const handleClickOutside = (event) => {
+        if (sidebarRef.current && !sidebarRef.current.contains(event.target)) {
+          setIsCollapsed(true);
+          localStorage.setItem("sidebarCollapsed", "true");
+        }
+      };
 
-    document.addEventListener("mousedown", handleClickOutside);
+      document.addEventListener("mousedown", handleClickOutside);
 
-    return () => {
-      document.removeEventListener("mousedown", handleClickOutside);
-    };
+      return () => {
+        document.removeEventListener("mousedown", handleClickOutside);
+      };
+    }
   }, []);
+
 
   const menuItems = [
     { href: "/", icon: <FaHome />, label: "Back To Home" },
