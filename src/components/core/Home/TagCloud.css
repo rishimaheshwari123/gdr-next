@@ -1,0 +1,174 @@
+.containercanvas {
+  background: url("https://as1.ftcdn.net/v2/jpg/04/76/35/16/1000_F_476351699_PioCA914rBzWWwJjuS8S29L3SJwnJmEB.jpg")
+    no-repeat center center;
+  background-size: cover;
+  position: relative;
+  padding: 0;
+}
+
+.containercanvas::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+ /* Adjust the opacity to make it darker or lighter */
+  z-index: 1;
+}
+
+.containercanvas > * {
+  position: relative;
+  z-index: 2;
+}
+
+.tags ul {
+  padding: 0;
+  margin: 0;
+  position: relative;
+}
+
+.tags li {
+  padding: 10px;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  position: relative;
+  animation-play-state: running; /* Ensure the animation is running by default */
+}
+
+.tags li:hover {
+  color: #008cba;
+  animation-play-state: paused; /* Pause the animation on hover */
+}
+
+/* Different floating effects for each tag */
+
+/* Keyframes for different floating animations with more vertical movement */
+@keyframes float1 {
+  0% {
+    transform: translateY(0) translateX(0);
+  }
+  25% {
+    transform: translateY(-30px) translateX(20px);
+  }
+  50% {
+    transform: translateY(0) translateX(40px);
+  }
+  75% {
+    transform: translateY(30px) translateX(-20px);
+  }
+  100% {
+    transform: translateY(0) translateX(0);
+  }
+}
+
+@keyframes float2 {
+  0% {
+    transform: translateY(0) translateX(0);
+  }
+  25% {
+    transform: translateY(40px) translateX(-20px);
+  }
+  50% {
+    transform: translateY(-20px) translateX(-10px);
+  }
+  75% {
+    transform: translateY(-40px) translateX(30px);
+  }
+  100% {
+    transform: translateY(0) translateX(0);
+  }
+}
+
+@keyframes float3 {
+  0% {
+    transform: translateY(0) translateX(0);
+  }
+  25% {
+    transform: translateY(-30px) translateX(-40px);
+  }
+  50% {
+    transform: translateY(40px) translateX(30px);
+  }
+  75% {
+    transform: translateY(-40px) translateX(-30px);
+  }
+  100% {
+    transform: translateY(0) translateX(0);
+  }
+}
+
+@keyframes float4 {
+  0% {
+    transform: translateY(0) translateX(0);
+  }
+  25% {
+    transform: translateY(30px) translateX(-20px);
+  }
+  50% {
+    transform: translateY(-40px) translateX(40px);
+  }
+  75% {
+    transform: translateY(40px) translateX(-30px);
+  }
+  100% {
+    transform: translateY(0) translateX(0);
+  }
+}
+
+@keyframes float5 {
+  0% {
+    transform: translateY(0) translateX(0);
+  }
+  25% {
+    transform: translateY(-40px) translateX(20px);
+  }
+  50% {
+    transform: translateY(30px) translateX(-30px);
+  }
+  75% {
+    transform: translateY(-30px) translateX(20px);
+  }
+  100% {
+    transform: translateY(0) translateX(0);
+  }
+}
+
+@keyframes float6 {
+  0% {
+    transform: translateY(0) translateX(0);
+  }
+  25% {
+    transform: translateY(-40px) translateX(20px);
+  }
+  50% {
+    transform: translateY(30px) translateX(-30px);
+  }
+  75% {
+    transform: translateY(-30px) translateX(20px);
+  }
+  100% {
+    transform: translateY(0) translateX(0);
+  }
+}
+
+.details-box {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  background: url(https://www.awzpact.com//images/vector.png) no-repeat bottom
+    #0b1e2c;
+  background-size: 100% 400px;
+  opacity: 0.8;
+}
+
+.details-content {
+  font-size: 1.2em;
+  line-height: 50px;
+  transition: opacity 0.3s ease-in-out;
+}
+
+.details-placeholder {
+  color: #aaa;
+}

@@ -1,0 +1,315 @@
+@import url("https://fonts.googleapis.com/css2?family=Bungee+Tint&display=swap");
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html,
+body {
+  overflow-x: hidden;
+  color: gray;
+}
+
+.sub-navbar-container {
+  background-color: #f0f0f0;
+}
+
+.icon-container {
+  transition: transform 0.3s ease-in-out;
+  cursor: pointer;
+}
+
+.icon-container:hover {
+  transform: rotate(360deg);
+}
+
+.hide-scrollbar {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+.hide-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+@keyframes rotate-container {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(-360deg);
+  }
+}
+
+.animate-rotate {
+  animation: rotate-container 10s linear infinite;
+}
+@keyframes rotate-container {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(-360deg);
+  }
+}
+
+.animate-rotate {
+  animation: rotate-container 10s linear infinite;
+}
+
+/* Define the keyframes for vertical bouncing */
+@keyframes bounce-vertical {
+  0% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(
+      -20px
+    ); /* Adjust this value to control the bounce height */
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
+
+/* Apply the vertical bounce animation to the contact card */
+.animate-bounce-vertical {
+  animation: bounce-vertical 2s ease-in-out infinite;
+}
+.bg-get {
+  position: relative;
+  min-height: 300px;
+  min-width: 100vw;
+  /* background-color: #f7f7f7; Light background for better contrast */
+  overflow: hidden;
+}
+
+.bg-get::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: url("https://wallpapercave.com/wp/wp2757877.gif");
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  opacity: 0.3; /* Reduced opacity */
+  z-index: -1;
+}
+
+/* Welcome */
+@keyframes scroll-left {
+  0% {
+    transform: translateX(100%);
+  }
+  100% {
+    transform: translateX(-100%);
+  }
+}
+
+@keyframes scroll-right {
+  0% {
+    transform: translateX(-100%);
+  }
+  100% {
+    transform: translateX(100%);
+  }
+}
+
+.welcomeanimate-scroll-left {
+  animation: scroll-left 15s linear infinite;
+  white-space: nowrap;
+}
+
+.welcomeanimate-scroll-right {
+  animation: scroll-right 15s linear infinite;
+  white-space: nowrap;
+}
+
+.gradient-text {
+  background-image: linear-gradient(to right, #b3e11d, #e83598);
+  background-clip: text;
+  color: transparent;
+}
+
+@keyframes scroll-left {
+  0% {
+    transform: translateX(100%);
+  }
+  100% {
+    transform: translateX(-100%);
+  }
+}
+
+@keyframes scroll-right {
+  0% {
+    transform: translateX(-100%);
+  }
+  100% {
+    transform: translateX(100%);
+  }
+}
+
+.animate-scroll-left {
+  animation: scroll-left 10s linear infinite;
+}
+
+.animate-scroll-right {
+  animation: scroll-right 10s linear infinite;
+}
+
+.hover\:pause-scroll:hover {
+  animation-play-state: paused;
+}
+
+/* // moving*/
+
+@keyframes scroll-left {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
+@keyframes scroll-right {
+  0% {
+    transform: translateX(-50%);
+  }
+  100% {
+    transform: translateX(0);
+  }
+}
+
+.animate-scroll-left {
+  animation: scroll-left var(--animation-duration) linear infinite;
+}
+
+.animate-scroll-right {
+  animation: scroll-right var(--animation-duration) linear infinite;
+}
+
+.testimonial-section {
+  text-align: center;
+  padding: 50px;
+  background-color: #f9f9f9;
+}
+
+.testimonials {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+.testimonial {
+  background: white;
+  border-radius: 10px;
+  padding: 20px;
+  max-width: 300px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.testimonial img {
+  border-radius: 50%;
+  width: 80px;
+  height: 80px;
+  object-fit: cover;
+  margin-bottom: 15px;
+}
+
+.testimonial h3 {
+  margin-top: 10px;
+  font-size: 1.2em;
+  color: #333;
+}
+
+.testimonial p {
+  font-size: 1em;
+  color: #666;
+}
+
+.animate-scroll {
+  animation: var(--animation-direction) var(--animation-duration) linear
+    infinite;
+}
+
+.scroller {
+  --animation-direction: scroll-left;
+  --animation-duration: 20s;
+  overflow: hidden;
+  position: relative;
+}
+
+.scroll-to-top-button {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  background-color: black;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  padding: 15px 20px;
+  cursor: pointer;
+  z-index: 1000;
+}
+
+.scroll-to-top-button:hover {
+  background-color: #0056b3;
+}
+
+/* globals.css or Tailwind CSS file */
+/* ScrollingText.css */
+
+.scrolling-text-right {
+  display: inline-block;
+  white-space: nowrap;
+  color: white;
+  font-weight: bold;
+  text-transform: uppercase;
+  animation: scroll-right 20s linear infinite;
+}
+
+.scrolling-text-left {
+  display: inline-block;
+  white-space: nowrap;
+  color: white;
+  font-weight: bold;
+  text-transform: uppercase;
+  animation: scroll-left 20s linear infinite;
+}
+
+@keyframes scroll-right {
+  0% {
+    transform: translateX(100%);
+  }
+  100% {
+    transform: translateX(-100%);
+  }
+}
+
+@keyframes scroll-left {
+  0% {
+    transform: translateX(-100%);
+  }
+  100% {
+    transform: translateX(100%);
+  }
+}
+
+.scroll-right:hover,
+.scroll-left:hover {
+  animation-play-state: paused;
+}
+
+/* //ANimation */
+
+/* styles.css */
