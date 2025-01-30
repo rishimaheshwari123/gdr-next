@@ -17,6 +17,8 @@ const Partners = () => {
         <h3 className="text-3xl font-bold mb-8">
           Partners Who Trust Industrie
         </h3>
+        <h2 className="">Farmhouse near Bhopal</h2>
+
         <div className="flex flex-wrap justify-center space-x-4">
           {partners.map((partner, index) => (
             <div

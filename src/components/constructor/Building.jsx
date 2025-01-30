@@ -26,9 +26,11 @@ const Building = () => {
   return (
     <div className="bg-gray-900 py-12">
       <div className=" flex flex-col  w-full items-center">
-        <h3 className="  text-4xl font-fjalla text-[#33536B]">
+        <h6 className="  text-4xl font-fjalla text-[#33536B]">
           Goverment Contract
-        </h3>
+        </h6>
+        <h2 className="">Best Farmhouse in Bhopal  Agriculture land for sale in bhopal</h2>
+
         <div className="flex items-center w-[75px]">
           <div className="h-0.5 bg-[#e2571a]"></div>
           <div className="h-1 w-1 bg-[#e2571a] rounded-full mx-1"></div>
