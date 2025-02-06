@@ -2,46 +2,48 @@ import React from "react";
 
 const FarmhouseListing = () => {
   return (
-    <div className="bg-gray-100 text-gray-800 py-10 px-5">
-      <div className="max-w-7xl mx-auto">
-        <h5 className="text-4xl font-bold text-yellow-500 text-center mb-6">
-          Find great opportunities with GDR Group 72
+    <div className="bg-gray-100 text-gray-800 py-8 px-4">
+      <div className="max-w-5xl mx-auto">
+        <h5 className="text-3xl font-bold text-yellow-500 text-center mb-4">
+          Find Great Opportunities with GDR Group 72
         </h5>
-        <p className="text-center text-lg mb-8">
-          Your farmhouse for sale in Bhopal and farmland for sale in Bhopal. The prime locations in Kolar Road, Hoshangabad Road, and Sehore Bypass Road have been covered to list out the most suitable and available properties that ensure a serene ambiance along with all urban comfort strategically located as property.
+        <p className="text-center text-base mb-6 max-w-2xl mx-auto">
+          Your farmhouse and farmland for sale in Bhopal. Prime locations like Kolar Road, Hoshangabad Road, and Sehore Bypass Road offer serene ambiance along with urban comfort.
         </p>
 
-        <div className="bg-white p-6 rounded-lg shadow-md mb-8">
-          <h6 className="text-2xl font-semibold text-yellow-500 mb-4">
-            Why Buy a Farmhouse in Bhopal the central Farmland part of Bhopal?
+        <div className="bg-white p-4 rounded-lg shadow-md mb-6">
+          <h6 className="text-xl font-semibold text-yellow-500 mb-3">
+            Why Buy a Farmhouse in Bhopal?
           </h6>
-          <ul className="list-disc list-inside space-y-2">
-            <li><strong>Strategically Located:</strong> Bhopal is at the center. It is quite easy to reach other major cities easily. So, it is one of the excellent options for investment in real estate.</li>
-            <li><strong>Scenic Beauty:</strong> It is known as the "City of Lakes." The scenic landscapes of Bhopal provide a peaceful atmosphere for your farmhouse getaway.</li>
-            <li><strong>Affordable Investment:</strong> Bhopal offers relatively cheaper options compared to the metropolitan cities and has promising appreciation potential.</li>
+          <ul className="list-disc list-inside space-y-1 text-gray-700">
+            <li><strong>Strategic Location:</strong> Centrally located, making travel to major cities easy.</li>
+            <li><strong>Scenic Beauty:</strong> Known as the "City of Lakes," Bhopal offers a peaceful retreat.</li>
+            <li><strong>Affordable Investment:</strong> Lower costs compared to metropolitan cities with good appreciation potential.</li>
           </ul>
         </div>
 
-        <div className="grid md:grid-cols-2 gap-6">
-          <div className="bg-white p-6 rounded-lg shadow-md">
-            <h6 className="text-2xl font-semibold text-yellow-500 mb-4">Our Offerings</h6>
-            <p><strong>Farmhouses:</strong> Compared to a variety metropolitan of areas, farmhouses in Bhopal provide modern cost facilities, effective beautiful options gardens, and promise sufficient appreciation potential.</p>
-            <p><strong>Farmland:</strong> Our farmland offers fertile soil and necessary resources for farming professionals' activities that will help your future development.</p>
+        <div className="grid md:grid-cols-2 gap-4">
+          <div className="bg-white p-4 rounded-lg shadow-md">
+            <h6 className="text-xl font-semibold text-yellow-500 mb-3">Our Offerings</h6>
+            <p className="text-gray-700 mb-2"><strong>Farmhouses:</strong> Modern amenities, lush gardens, and strong investment potential.</p>
+            <p className="text-gray-700"><strong>Farmland:</strong> Fertile soil and essential resources for agricultural activities.</p>
           </div>
 
-          <div className="bg-white p-6 rounded-lg shadow-md">
-            <h6 className="text-2xl font-semibold text-yellow-500 mb-4">Why select GDR Group 72?</h6>
-            <ul className="list-disc list-inside space-y-2">
-              <li><strong>Professional Property Advice:</strong> Our advice meets your requirements as well as your investment goals and objectives.</li>
-              <li><strong>Transparent Transactions:</strong> We ensure to provide a hassle-free buying experience with integrity and clear communication at every step of the process.</li>
-              <li><strong>Diverse Listings:</strong> Whether it is luxurious farmhouses or expansive farmlands our portfolio is designed to meet the needs and budget of a variety of clients.</li>
+          <div className="bg-white p-4 rounded-lg shadow-md">
+            <h6 className="text-xl font-semibold text-yellow-500 mb-3">Why Choose GDR Group 72?</h6>
+            <ul className="list-disc list-inside space-y-1 text-gray-700">
+              <li><strong>Expert Advice:</strong> Tailored property solutions aligned with investment goals.</li>
+              <li><strong>Transparent Transactions:</strong> Clear communication and hassle-free buying process.</li>
+              <li><strong>Extensive Listings:</strong> Options for both luxurious farmhouses and expansive farmland.</li>
             </ul>
           </div>
         </div>
 
-        <div className="text-center mt-10">
-          <p className="text-lg">Take the first step to owning a part of Bhopal’s peaceful countryside with GDR Group 72. Explore our current listings now and let us help you turn your real estate dreams into a reality.</p>
-          <a href="https://gdrgroup72.com/" className="mt-4 bg-yellow-500 text-white px-6 py-3 rounded-lg text-lg font-semibold hover:bg-yellow-600 transition">
+        <div className="text-center mt-6">
+          <p className="text-base text-gray-700 max-w-xl mx-auto">
+            Own a piece of Bhopal tranquil countryside with GDR Group 72. Browse our listings today!
+          </p>
+          <a href="https://gdrgroup72.com/" className="mt-3 inline-block bg-yellow-500 text-white px-5 py-2 rounded-lg text-base font-semibold hover:bg-yellow-600 transition">
             Explore Listings
           </a>
         </div>

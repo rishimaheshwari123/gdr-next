@@ -30,14 +30,14 @@ const AboutHome = () => {
             empower the future through our strategic initiatives and dedicated
             efforts.
           </p>
-          <motion.button
+          {/* <motion.button
             className="mt-6 px-8 py-3 bg-yellow-500 text-white text-lg font-semibold rounded-md shadow-lg hover:bg-yellow-600 flex items-center transition duration-300"
             whileHover={{ scale: 1.05 }}
             whileTap={{ scale: 0.95 }}
           >
             Learn More
             <BsArrowRight className="ml-2" />
-          </motion.button>
+          </motion.button> */}
         </motion.div>
 
         {/* Image and Video Section */}
