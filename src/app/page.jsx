@@ -13,6 +13,7 @@ import Process from "@/components/core/Home/Process";
 import WhyUs from "@/components/core/Home/WhyUs";
 import Blog from "@/components/core/Home/Blog";
 import HomeQuote from "@/components/core/Home/HomeQuote";
+import FarmhouseListing from "@/components/FormListing";
 
 function Home() {
   const [isClient, setIsClient] = useState(false);
@@ -39,6 +40,7 @@ function Home() {
       </Fade>
       <Services />
       <Company />
+      <FarmhouseListing />
       <ContactBanner />
       <Project />
       <Process />
