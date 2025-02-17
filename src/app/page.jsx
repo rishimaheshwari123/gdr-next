@@ -38,9 +38,9 @@ function Home() {
       <Fade>
         <AboutHome />
       </Fade>
+      <FarmhouseListing />
       <Services />
       <Company />
-      <FarmhouseListing />
       <ContactBanner />
       <Project />
       <Process />
