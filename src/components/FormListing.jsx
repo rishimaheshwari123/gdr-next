@@ -8,7 +8,7 @@ const FarmhouseListing = () => {
           Find Great Opportunities with GDR Group 72
         </h5>
         <p className="text-center text-base mb-6 max-w-2xl mx-auto">
-          Your farmhouse and farmland for sale in Bhopal. Prime locations like Kolar Road, Hoshangabad Road, and Sehore Bypass Road offer serene ambiance along with urban comfort.
+          Your farmhouse and farm land for sale in Bhopal. Prime locations like Kolar Road, Hoshangabad Road, and Sehore Bypass Road offer serene ambiance along with urban comfort.
         </p>
 
         <div className="bg-white p-4 rounded-lg shadow-md mb-6">
