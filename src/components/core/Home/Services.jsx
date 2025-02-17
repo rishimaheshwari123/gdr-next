@@ -47,8 +47,8 @@ const Services = () => {
     <div className="my-16">
       <div className="flex flex-col w-full items-center">
         <h3 className="text-4xl font-fjalla text-[#33536B]">Our Services</h3>
-        <h2 className="">Bhopal Farmhouse</h2>
-        <h2 className="">Buy commercial property in bhopal</h2>
+        <h2 className="hidden">Bhopal Farmhouse</h2>
+        <h2 className="hidden">Buy commercial property in bhopal</h2>
 
         <div className="flex items-center w-[75px]">
           <div className="h-0.5 bg-yellow-400"></div>
