@@ -35,9 +35,9 @@ function Home() {
         }
       />
       <TagCloudWithDetails />
-      <Fade>
+      {/* <Fade>
         <AboutHome />
-      </Fade>
+      </Fade> */}
       <FarmhouseListing />
       <Services />
       <Company />

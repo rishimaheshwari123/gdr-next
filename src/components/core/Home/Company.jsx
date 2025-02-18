@@ -33,7 +33,7 @@ const Company = () => {
     <div className="my-20 overflow-hidden">
       <div className="flex flex-col w-full items-center">
         <h6 className="text-4xl font-fjalla text-[#33536B]">Our Companies</h6>
-       <h1 className="my-2 hidden">Commercial Property for Sale in Bhopal </h1>
+       {/* <h1 className="my-2 hidden">Commercial Property for Sale in Bhopal </h1> */}
        <h2 className="hidden">Farmhouse in Bhopal</h2>
 
         <div className="flex items-center w-[75px]">
