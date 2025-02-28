@@ -1,70 +1,129 @@
-import Link from "next/link";
-import { FaHome, FaTractor, FaBuilding } from "react-icons/fa";
+import { FaHome, FaTree, FaBuilding, FaPhone } from "react-icons/fa";
 
 const RealEstateListing = () => {
   return (
-    <div className="container mx-auto p-6 space-y-8">
-      {/* Farmhouse Section */}
-      <div className="bg-gray-100 p-6 rounded-lg shadow-md">
-        <h1 className="text-3xl font-bold mb-4 flex items-center">
-          <FaHome className="mr-2 text-green-600" /> Farmhouse for Sale in Bhopal – A Nature Retreat
-        </h1>
-        <p className="text-gray-700 mb-2">
-          Get away from the city bustle and embrace nature with a luxurious farmhouse for sale in Bhopal. Whether you are looking for a weekend retreat or a permanent abode surrounded by greenery, our farmhouses have to offer:
-        </p>
-        <ul className="list-disc list-inside text-gray-700">
-          <li>Scenic locales with state-of-the-art amenities</li>
-          <li>Large areas with green landscapes</li>
-          <li>Good connectivity to key city hubs</li>
-        </ul>
-      </div>
-      
-      {/* Farm Land Section */}
-      <div className="bg-gray-100 p-6 rounded-lg shadow-md">
-        <h2 className="text-2xl font-bold mb-4 flex items-center">
-          <FaTractor className="mr-2 text-green-600" /> Farm Land for Sale in Bhopal – A Lucrative Investment
-        </h2>
-        <p className="text-gray-700 mb-2">
-          Investing in land for the farm on sale in Bhopal is an ideal option to build your future. Our farmland for sale options offer:
-        </p>
-        <ul className="list-disc list-inside text-gray-700">
-          <li>Pleasing soil conditions suitable for agricultural purposes or organic farming</li>
-          <li>Proximity to abundant water supplies and road connection</li>
-          <li>Long-term appreciation and future resale value opportunities</li>
-        </ul>
-      </div>
-      
-      {/* Commercial Property Section */}
-      <div className="bg-gray-100 p-6 rounded-lg shadow-md">
-        <h3 className="text-xl font-bold mb-4 flex items-center">
-          <FaBuilding className="mr-2 text-green-600" /> Commercial Property for Sale in Bhopal – Prime Business Areas
-        </h3>
-        <p className="text-gray-700 mb-2">
-          For investors and entrepreneurs, the key is to find the ideal commercial property available in Bhopal. GDR Group 72 provides commercial properties in prime areas, with high footfall and profit generation. Our properties are:
-        </p>
-        <ul className="list-disc list-inside text-gray-700">
-          <li>Office spaces, retail shops, and showroom spaces</li>
-          <li>Properties in highly sought-after commercial areas</li>
-          <li>Competitive rates with high return on investment</li>
-        </ul>
-      </div>
-      
-      {/* Why Choose Us Section */}
-      <div className="bg-gray-100 p-6 rounded-lg shadow-md text-center">
-        <h2 className="text-2xl font-bold mb-4">Why Choose GDR Group 72?</h2>
-        <ul className="list-disc list-inside text-gray-700">
-          <li>Substantial experience in Bhopal's real estate market</li>
-          <li>Verified properties with a legal guarantee</li>
-          <li>Customer-oriented process for a hassle-free buying experience</li>
-        </ul>
-      </div>
-      
-      {/* Contact Section */}
-      <div className="bg-green-600 text-white p-6 rounded-lg shadow-md text-center">
-        <h2 className="text-2xl font-bold mb-4">Contact Us Now and Invest Wisely!</h2>
-        <p className="mb-4">If you are looking for a farmhouse, agricultural land, or commercial property in Bhopal, GDR Group 72 is your reliable partner.</p>
-        <Link href="/contact" className="bg-white text-green-600 font-bold py-2 px-6 rounded-lg hover:bg-gray-200 transition">Get in Touch</Link>
-      </div>
+    <div className="text-gray-700 p-6 space-y-6 w-11/12 mx-auto">
+      <p>
+        Searching for an ideal Farmhouse for sale in Bhopal? Maybe you're in
+        search of farmland for sale in Bhopal? Are you an investor,
+        entrepreneur, or nature enthusiast with a specific taste? GDR Group 72
+        has got your back with the best selection of real estate possibilities
+        that suit your needs. We deal in the best possible placement of buyers
+        for top-notch commercial property for sale in Bhopal, farmhouses, and
+        massive agricultural land for sale at budget-friendly prices.
+      </p>
+
+      <h1 className="text-2xl font-bold flex items-center gap-2">
+        <FaHome /> Farmhouse for Sale in Bhopal – Your Dream Getaway Awaits
+      </h1>
+      <p>
+        Wish to dream of owning a peaceful farmhouse with green landscapes away
+        from the urban commotion? Our farmhouse for sale in Bhopal is a perfect
+        haven for families and individuals seeking a peaceful life.
+      </p>
+
+      <h2 className="text-xl font-semibold flex items-center gap-2">
+        <FaTree /> Why Choose Our Farmhouse for sale in Bhopal?
+      </h2>
+      <ul className="list-disc pl-6">
+        <li>
+          Scenic Locations: The farmhouse is placed in serene surroundings with
+          picturesque views.
+        </li>
+        <li>
+          Modern Amenities: Our farmhouse has swimming pools, gardens, and
+          luxury interiors.
+        </li>
+        <li>
+          Spacious & Affordable: The farmhouse has huge lands with simple
+          accessibility and great road connectivity.
+        </li>
+      </ul>
+      <p>
+        Explore the Farm House for sale in Bhopal today and make weekend trips
+        or use it as a rental property for additional income.
+      </p>
+
+      <h2 className="text-xl font-semibold flex items-center gap-2">
+        <FaTree /> Farmland for Sale in Bhopal – Invest in Nature & Growth
+      </h2>
+      <p>
+        If you are searching for farmland for sale in Bhopal, GDR Group 72
+        offers you several options that meet your agricultural and investment
+        requirements. Our farmland for sale in Bhopal is perfect for farming,
+        organic farming, and long-term investment.
+      </p>
+      <ul className="list-disc pl-6">
+        <li>
+          Fertile Land & Water Supply: Suitable for multiple crops and
+          horticulture.
+        </li>
+        <li>Strategic Locations: Near highways and basic facilities.</li>
+        <li>
+          Legal Clarity: Authenticated documents guaranteeing smooth
+          transactions.
+        </li>
+      </ul>
+      <p>
+        Investing in farmland in Bhopal is a viable investment choice for those
+        who wish to invest their capital in land buying to settle down in their
+        life.
+      </p>
+
+      <h3 className="text-lg font-semibold flex items-center gap-2">
+        <FaBuilding /> Commercial Property for Sale in Bhopal – An Intelligent
+        Investment Opportunity
+      </h3>
+      <p>
+        Bhopal is urbanizing fast and is a good location for commercial
+        investment. If you wish to find commercial property for sale in Bhopal,
+        we offer best-in-class retail, office, and industrial space at prime
+        locations.
+      </p>
+
+      <h3 className="text-lg font-semibold flex items-center gap-2">
+        <FaBuilding /> Why buy commercial property for sale in Bhopal?
+      </h3>
+      <ul className="list-disc pl-6">
+        <li>
+          High Return on Investment: Commercial properties in prime business
+          locations.
+        </li>
+        <li>Flexible Property Sizes: Small shops to big office complexes.</li>
+        <li>
+          Ready-to-Move & Customizable Options: Designed according to your
+          business requirements so that you use it for business meetings.
+        </li>
+      </ul>
+      <p>
+        Bhopal's developing infrastructure and widening market make it a great
+        location for commercial activities.
+      </p>
+
+      <h3 className="text-lg font-semibold">Why Choose GDR Group 72?</h3>
+      <ul className="list-disc pl-6">
+        <li>
+          Reliable Property Experts: Well-established property professionals
+          with years of experience in the Bhopal real estate market.
+        </li>
+        <li>
+          Comprehensive Range of Properties: From posh farmhouses to high
+          return-generating commercial properties.
+        </li>
+        <li>
+          Customer-Centric Policy: We guarantee transparency, trust, and
+          hassle-free transactions.
+        </li>
+      </ul>
+
+      <h3 className="text-lg font-semibold flex items-center gap-2">
+        <FaPhone /> Contact Us Today!
+      </h3>
+      <p>
+        If you are searching for farmhouse farmland in Bhopal or commercial
+        property in Bhopal, GDR Group 72 is your best bet. You can contact us
+        today to find the best offers and book your dream property.
+      </p>
     </div>
   );
 };
