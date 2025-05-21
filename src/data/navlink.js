@@ -22,7 +22,7 @@ export const navlinks = [
         sublink: [
             { name: "RKS Infrabuild & Homes Pvt. LTD.", path: "/rks-homes/home" },
             { name: "New RK Construction", path: "/construction/home" },
-            { name: " SRS Home Food", path: "/ri-si-food/home" },
+            { name: " Aamras", path: "/ri-si-food/home" },
             { name: "Nirvdit All Making Products Private Limited", path: "/srs-foods/home" },
             // { name: "72 GDR Steel", path: "/72-gdr-steel/home" },
             // { name: "R.R.S. Liquid Products", path: "/liquid/home" },
@@ -85,7 +85,7 @@ export const constructionNavbar = [
         sublink: [
             { name: "RKS Infrabuild & Homes Pvt. LTD.", path: "/rks-homes/home" },
             { name: "New RK Construction", path: "/construction/home" },
-            { name: " SRS Home Food", path: "/ri-si-food/home" },
+            { name: " Aamras", path: "/ri-si-food/home" },
             { name: "Nirvdit All Making Products Private Limited", path: "/srs-foods/home" },
         ]
     },
@@ -123,7 +123,7 @@ export const milkNavbar = [
         sublink: [
             { name: "RKS Infrabuild & Homes Pvt. LTD.", path: "/rks-homes/home" },
             { name: "New RK Construction", path: "/construction/home" },
-            { name: "SRS Home Food", path: "/ri-si-food/home" },
+            { name: "Aamras", path: "/ri-si-food/home" },
             { name: "Nirvdit All Making Products Private Limited", path: "/srs-foods/home" },
         ]
     },
@@ -162,7 +162,7 @@ export const risiFoodNavbar = [
         sublink: [
             { name: "RKS Infrabuild & Homes Pvt. LTD.", path: "/rks-homes/home" },
             { name: "New RK Construction", path: "/construction/home" },
-            { name: "SRS Home Food", path: "/ri-si-food/home" },
+            { name: "Aamras", path: "/ri-si-food/home" },
             { name: "Nirvdit All Making Products Private Limited", path: "/srs-foods/home" },
 
         ]
@@ -201,7 +201,7 @@ export const homeReatNavbar = [
         sublink: [
             { name: "RKS Infrabuild & Homes Pvt. LTD.", path: "/rks-homes/home" },
             { name: "New RK Construction", path: "/construction/home" },
-            { name: "SRS Home Food", path: "/ri-si-food/home" },
+            { name: "Aamras", path: "/ri-si-food/home" },
             { name: "Nirvdit All Making Products Private Limited", path: "/srs-foods/home" },
         ]
     },
@@ -240,7 +240,7 @@ export const gridSteel72 = [
         sublink: [
             { name: "RKS Infrabuild & Homes Pvt. LTD.", path: "/rks-homes/home" },
             { name: "New RK Construction", path: "/construction/home" },
-            { name: "SRS Home Food", path: "/ri-si-food/home" },
+            { name: "Aamras", path: "/ri-si-food/home" },
             { name: "Nirvdit All Making Products Private Limited", path: "/srs-foods/home" },
 
         ]
@@ -278,7 +278,7 @@ export const lequied = [
         sublink: [
             { name: "RKS Infrabuild & Homes Pvt. LTD.", path: "/rks-homes/home" },
             { name: "New RK Construction", path: "/construction/home" },
-            { name: "SRS Home Food", path: "/ri-si-food/home" },
+            { name: "Aamras", path: "/ri-si-food/home" },
             { name: "Nirvdit All Making Products Private Limited", path: "/srs-foods/home" },
         ]
     },

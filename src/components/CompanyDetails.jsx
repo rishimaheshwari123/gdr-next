@@ -46,10 +46,9 @@ const CompanyDetails = () => {
       <div className="mb-6 p-6 bg-red-50 hover:bg-yellow-400 rounded-lg shadow-sm">
         <h6 className="text-2xl font-extrabold text-red-800 mb-4">Home Food</h6>
         <p className="text-lg text-gray-600 leading-relaxed">
-          <span className="font-semibold text-red-600">SRS Home Food</span>{" "}
-          offers a wide range of home food products, including groceries,
-          grains, and dried fruits, delivering the freshness and quality you
-          deserve.
+          <span className="font-semibold text-red-600">Aamras</span> offers a
+          wide range of home food products, including groceries, grains, and
+          dried fruits, delivering the freshness and quality you deserve.
         </p>
         <div className="ml-6 mt-4">
           <h3 className="text-xl font-semibold text-red-700 mb-2">

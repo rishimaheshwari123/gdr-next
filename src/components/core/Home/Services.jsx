@@ -26,7 +26,7 @@ const services = [
   {
     image:
       "https://c4.wallpaperflare.com/wallpaper/441/38/477/pepper-carnation-spices-diversity-wallpaper-preview.jpg",
-    title: "SRS Home Food",
+    title: "Aamras",
     subtitle: "Best Quality Assurance",
     description:
       "Specializes in selling high-quality spices and dry food items for home cooking.",

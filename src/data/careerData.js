@@ -8,8 +8,8 @@ export const jobPostings = [
     details: "New RK Construction. is committed to delivering excellence in construction, focusing on innovative designs and sustainable building practices."
   },
   {
-    title: "SRS Home Food",
-    details: "SRS Home Food offers a wide range of home food products, including groceries, grains, and dried fruits, delivering the freshness and quality you deserve."
+    title: "Aamras",
+    details: "Aamras offers a wide range of home food products, including groceries, grains, and dried fruits, delivering the freshness and quality you deserve."
   },
   {
     title: "Nirvdit All Making Products Private Limited",

@@ -51,6 +51,7 @@ const nextConfig = {
             'nonprod-media.webdunia.com',
             'www.prakashdairymorbi.com',
             'www.indianhealthyrecipes.com',
+
         ],
     },
 };

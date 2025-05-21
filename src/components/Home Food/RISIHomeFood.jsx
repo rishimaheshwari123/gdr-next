@@ -17,7 +17,7 @@ function RISIHomeFood() {
   return (
     <div>
       <Helmet>
-        <title>Home - SRS Home Food </title>
+        <title>Home - Aamras </title>
         <meta
           name="description"
           content="GDR Group 72: A dynamic conglomerate specializing in Agriculture, Dairy, Farm Land, and Commercial Property with a mission to drive growth in rural communities through innovation and sustainability"

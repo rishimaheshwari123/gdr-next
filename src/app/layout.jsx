@@ -36,9 +36,8 @@ export default function RootLayout({ children }) {
   return (
     <html lang="en">
       <link rel="canonical" href="https://gdrgroup72.com/" />
-    
 
-      <script type="application/ld+json">
+      {/* <script type="application/ld+json">
         {JSON.stringify({
           "@context": "https://schema.org",
           "@type": "Organization",
@@ -46,7 +45,7 @@ export default function RootLayout({ children }) {
           url: "https://gdrgroup72.com/",
           logo: "https://gdrgroup72.com/_next/image?url=%2F_next%2Fstatic%2Fmedia%2Fgdrgruop.95865275.jpg&w=1920&q=75",
         })}
-      </script>
+      </script> */}
       <body>
         <Wrapper>{children}</Wrapper>
       </body>

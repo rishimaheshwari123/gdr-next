@@ -25,7 +25,7 @@ const AboutUsPage = () => {
   return (
     <>
       <Helmet>
-        <title>About - SRS Home Food </title>
+        <title>About - Aamras </title>
         <meta
           name="description"
           content="GDR Group 72: A dynamic conglomerate specializing in Agriculture, Dairy, Farm Land, and Commercial Property with a mission to drive growth in rural communities through innovation and sustainability"
@@ -48,10 +48,10 @@ const AboutUsPage = () => {
             </h6>
             <p>
               Both the employees and business partners have made a major
-              contribution to SRS Home Food strong foundation. We are proud to
-              have such team players incorporating years of expertise in
-              providing customers with a range of import and export solutions.
-              Our leaders' approach is always intended to provide visibility,
+              contribution to Aamras strong foundation. We are proud to have
+              such team players incorporating years of expertise in providing
+              customers with a range of import and export solutions. Our
+              leaders' approach is always intended to provide visibility,
               reliability, and consistency of product and unwavering commitment
               towards customer satisfaction. Advent our customers with
               distinguished qualities and fulfill their product-related
@@ -117,12 +117,11 @@ const AboutUsPage = () => {
               <FaGavel className="text-red-500 mr-2" /> BUSINESS ETHICS
             </h6>
             <p>
-              SRS Home Food' business ethics completely incorporate
-              import-export laws & guidelines and operate in a fair, legal, and
-              quality-assured manner. At SRS Home Food, the groundwork of
-              integrity is based on the standards of business conduct which are
-              envisioned to meet commitment, principles, and endeavor to trade
-              fairly and honestly.
+              Aamras' business ethics completely incorporate import-export laws
+              & guidelines and operate in a fair, legal, and quality-assured
+              manner. At Aamras, the groundwork of integrity is based on the
+              standards of business conduct which are envisioned to meet
+              commitment, principles, and endeavor to trade fairly and honestly.
             </p>
             <p>
               Our commitment to business reliability doesn’t compete with these

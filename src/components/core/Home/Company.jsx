@@ -18,8 +18,8 @@ const company = [
   },
   {
     photo: food,
-    title: "SRS Home Food",
-    desc: "SRS Home Food is a company that specializes in selling a wide range of spices and dry food items for home cooking. Our aim is to provide our customers with high-quality products.",
+    title: "Aamras",
+    desc: "Aamras is a company that specializes in selling a wide range of spices and dry food items for home cooking. Our aim is to provide our customers with high-quality products.",
   },
   {
     photo: n,
@@ -33,8 +33,8 @@ const Company = () => {
     <div className="my-20 overflow-hidden">
       <div className="flex flex-col w-full items-center">
         <h6 className="text-4xl font-fjalla text-[#33536B]">Our Companies</h6>
-       {/* <h1 className="my-2 hidden">Commercial Property for Sale in Bhopal </h1> */}
-       <h2 className="hidden">Farmhouse in Bhopal</h2>
+        {/* <h1 className="my-2 hidden">Commercial Property for Sale in Bhopal </h1> */}
+        <h2 className="hidden">Farmhouse in Bhopal</h2>
 
         <div className="flex items-center w-[75px]">
           <div className="h-0.5 bg-[#e2571a]"></div>

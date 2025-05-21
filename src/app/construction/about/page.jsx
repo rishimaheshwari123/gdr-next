@@ -89,7 +89,7 @@ const ConstructorAbout = () => {
             <ul className="list-none space-y-2">
               <li className="flex items-center text-gray-600">
                 <FaCheckCircle className="text-green-600 mr-2" />
-                SRS Home Food
+                Aamras
               </li>
               <li className="flex items-center text-gray-600">
                 <FaCheckCircle className="text-green-600 mr-2" />

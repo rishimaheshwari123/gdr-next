@@ -25,7 +25,7 @@ const TopHeader = () => {
               </div>
             </div>
           </div>
-          <div className="flex space-x-4">
+          <div className="flex mr-5 space-x-4">
             <Link
               href="https://www.facebook.com/RKSHOME.CO.IN"
               target="_blank"

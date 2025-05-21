@@ -21,17 +21,18 @@ const TagCloudWithDetails = () => {
         "Offering comprehensive home building and renovation services with a focus on quality and customer satisfaction.",
       image: image3,
     },
+
+    {
+      name: "Aamras",
+      details:
+        "Supplying a variety of liquid products, including industrial chemicals and personal care items.",
+      image: image1,
+    },
     {
       name: "Nirvdit All Making Products Private Limited",
       details:
         "Providing a range of high-quality food products, including spices, grains, and ready-to-eat meals.",
       image: image4,
-    },
-    {
-      name: "SRS Home Food",
-      details:
-        "Supplying a variety of liquid products, including industrial chemicals and personal care items.",
-      image: image1,
     },
   ];
 

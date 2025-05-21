@@ -16,8 +16,8 @@ import ghee from "@/assests/ghee.jpg";
 const tabs = [
   { id: 2, name: "RKS Homes" },
   { id: 1, name: "New RK Construction" },
+  { id: 4, name: "Aamras" },
   { id: 3, name: "Nirvdit All Making Products Private Limited" },
-  { id: 4, name: "SRS Home Food" },
 ];
 
 const projects = {
@@ -169,12 +169,12 @@ const projects = {
     {
       id: 10,
       name: "Sugar Cane Vinegar",
-      src: "https://encrypted-tbn2.gstatic.com/shopping?q=tbn:ANd9GcQpKpWcpxp5eJBNISi6Y0QsIYVBVo874ikrDfSg3Xh6qTdnG6MDmtUSicPh9gLI84ZgQYG5UN9NrkP_nH-IU1wiaa0jSvYzAsDpue_5GfU&usqp=CAE",
+      src: "/1.jpeg",
     },
     {
       id: 11,
       name: "Minralas Water",
-      src: "https://www.netsolwater.com/netsol-water/assets/img/product-images/Is-mineral-water-different-from-packaged-drinking-water.jpg",
+      src: "/2.jpg",
     },
   ],
   5: [
