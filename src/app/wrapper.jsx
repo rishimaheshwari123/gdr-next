@@ -29,13 +29,15 @@ const Wrapper = ({ children }) => {
     pathname.includes("ri-si-food") ||
     pathname.includes("srs-foods");
   const isAdminRoute = pathname.startsWith("/admin");
-
+  const handleCloseModal = () => {
+    setShowModal(false);
+  };
   return (
     <Provider store={store}>
       {removeNavbar || isAdminRoute ? null : <TopHeader />}
       {removeNavbar || isAdminRoute ? null : <Navbar />}
 
-      {showModal && <Modal />}
+      {showModal && <Modal onClose={handleCloseModal}  />}
       {children}
       <ToastContainer />
       <SocialMediaBar />
