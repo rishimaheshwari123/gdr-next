@@ -13,7 +13,7 @@ const ConstructorHome = () => {
       <Building />
       <Company />
       <ContactBanner />
-      <Partners />
+      {/* <Partners /> */}
 
       <TalkToUs />
     </div>
