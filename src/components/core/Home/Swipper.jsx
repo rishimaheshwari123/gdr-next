@@ -47,7 +47,7 @@ const Slider = () => {
     {
       id: 3,
       image:
-        "https://c4.wallpaperflare.com/wallpaper/441/38/477/pepper-carnation-spices-diversity-wallpaper-preview.jpg",
+        "/aamrasImage.jpeg",
       text: "Aamras",
       description: "Wide range of spices and dry foods for home cooking.",
       path: "/ri-si-food/home",
