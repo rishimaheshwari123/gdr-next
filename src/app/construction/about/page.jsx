@@ -60,7 +60,7 @@ const ConstructorAbout = () => {
           </p>
           <p className="text-lg text-gray-600 leading-relaxed mb-6">
             In the present, GDR Group 72 comprises diverse companies, such as
-            RKS Homes, SRS Cattle and Milk Food, NEW RK Construction, Ri Si Home
+            RKS Infrabuild & Homes Pvt. LTD, SRS Cattle and Milk Food, NEW RK Construction, Ri Si Home
             Food, RS 1 Liquid Products as well as 72 GD Steel. Every one of them
             has contributed greatly to the growth of the group and its growth,
             demonstrating GDR Group 72's values and dedication to excellence.

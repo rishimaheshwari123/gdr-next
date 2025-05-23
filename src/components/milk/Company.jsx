@@ -5,7 +5,7 @@ import { Slide } from "react-awesome-reveal";
 const company = [
   {
     img: "https://5.imimg.com/data5/JP/JU/QJ/SELLER-86216945/dairy-cattle-feed.jpg",
-    title: "RKS Homes",
+    title: "RKS Infrabuild & Homes Pvt. LTD",
     desc1:
       "Shree Ji 72 Cattle food is made of high quality protein, energy and essential minerals. It provides your cattle with essential nutrients that help to build strong bones and muscles.",
     desc2:

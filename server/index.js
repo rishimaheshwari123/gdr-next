@@ -40,6 +40,7 @@ app.use("/api/v1/blog", require("./routes/blogRoute"))
 app.use("/api/v1/image", require("./routes/imageRoute"))
 app.use("/api/v1/gallery", require("./routes/galleryRoute"))
 app.use("/api/v1/product", require("./routes/productROute"))
+app.use("/api/v1/formhouse", require("./routes/formHouseRoute"))
 
 app.use("/", (req, res) => {
     res.send("Ha bhai chal rha hu. Uski tarha tere ko chod kar thodi jaunga 😀")

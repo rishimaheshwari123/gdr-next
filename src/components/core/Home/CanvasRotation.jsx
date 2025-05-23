@@ -16,7 +16,7 @@ const TagCloudWithDetails = () => {
       image: image2,
     },
     {
-      name: "RKS Homes",
+      name: "RKS Infrabuild & Homes Pvt. LTD",
       details:
         "Offering comprehensive home building and renovation services with a focus on quality and customer satisfaction.",
       image: image3,

@@ -147,7 +147,7 @@ const Sidebar = () => {
               <AiOutlineUser size={20} />
             ) : (
               <span className="text-xl">
-                {user?.name.charAt(0).toUpperCase() + user?.name.slice(1)}
+                {user?.name?.charAt(0).toUpperCase() + user?.name.slice(1)}
               </span>
             )}
           </div>

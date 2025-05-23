@@ -9,7 +9,7 @@ const Dashboard = () => {
   return (
     <>
       <p className="mt-5 mb-10 text-xl">
-        Welcome {user?.name.charAt(0).toUpperCase() + user?.name.slice(1)} 👋 to
+        Welcome {user?.name?.charAt(0).toUpperCase() + user?.name?.slice(1)} 👋 to
         our admin dashboard
       </p>
 

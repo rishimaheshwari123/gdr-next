@@ -9,7 +9,7 @@ const company = [
   {
     photo: home,
     title: "RKS Infrabuild & Homes Pvt LTD",
-    desc: "RKS Homes is a real estate company specializing in the sale of agricultural lands. We are committed to helping our clients find the perfect piece of land for their farming or ranching needs. Our team of real estate professionals has extensive knowledge.",
+    desc: "RKS Infrabuild & Homes Pvt. LTD is a real estate company specializing in the sale of agricultural lands. We are committed to helping our clients find the perfect piece of land for their farming or ranching needs. Our team of real estate professionals has extensive knowledge.",
   },
   {
     photo: prabhash,

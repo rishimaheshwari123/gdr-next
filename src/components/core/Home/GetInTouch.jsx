@@ -8,7 +8,7 @@ import {
 
 const companies = [
   { name: "New RK Construction", path: "/construction-home" },
-  { name: "RKS Homes", path: "/rks-homes" },
+  { name: "RKS Infrabuild & Homes Pvt. LTD", path: "/rks-homes" },
   { name: "SRS Foods", path: "/srs-foods" },
   { name: "Ri Si Home Food", path: "/ri-si-home-food" },
   { name: "72 GDR Steel", path: "/72-gdr-steel" },

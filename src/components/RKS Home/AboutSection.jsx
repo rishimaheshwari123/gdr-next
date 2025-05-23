@@ -23,7 +23,7 @@ const offerings = [
   },
   // {
   //   title: "Financing",
-  //   description: "We offer financing options to make the process of purchasing land easier. With RKS Homes, you can trust that you are in good hands.",
+  //   description: "We offer financing options to make the process of purchasing land easier. With RKS Infrabuild & Homes Pvt. LTD, you can trust that you are in good hands.",
   //   icon: <FaMoneyBill className="h-8 w-8 text-yellow-500" />,
   // },
   {
@@ -41,7 +41,7 @@ const offerings = [
   {
     title: "Investment Opportunity",
     description:
-      "RKS Homes offers you a trustworthy investment opportunity in agriculture and commercial farmland with a 100% guaranteed return.",
+      "RKS Infrabuild & Homes Pvt. LTD offers you a trustworthy investment opportunity in agriculture and commercial farmland with a 100% guaranteed return.",
     icon: <FaBullhorn className="h-8 w-8 text-teal-500" />,
   },
 ];
@@ -55,7 +55,7 @@ const AboutSection = () => {
             About RKS Infrabuild & Homes Pvt. Ltd.
           </h6>
           <p className="mt-4 text-lg text-gray-600">
-            RKS Homes is a real estate company specializing in the sale of
+            RKS Infrabuild & Homes Pvt. LTD is a real estate company specializing in the sale of
             agricultural lands. We are committed to helping our clients find the
             perfect piece of land for their farming or ranching needs. Our team
             of real estate professionals has extensive knowledge of the local

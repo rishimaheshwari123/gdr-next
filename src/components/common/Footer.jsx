@@ -63,7 +63,7 @@ const Footer = () => {
                 </Link>
 
                 <Link href="/rks-homes/home">
-                  <p>RKS Homes</p>
+                  <p>RKS Infrabuild & Homes Pvt. LTD</p>
                 </Link>
                 <Link href="/srs-foods/home">
                   <p>Nirvdit All Making Products Private Limited</p>

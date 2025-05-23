@@ -15,7 +15,7 @@ const FeaturesSection = () => {
   return (
     <section className="container mx-auto px-6 py-8">
       <h6 className="text-3xl mx-auto w-full text-center font-bold text-gray-600 mb-8">
-        Why sell and purchase your house with RKS Home?
+        Why sell and purchase your house with RKS Infrabuild & Homes Pvt. LTD.?
       </h6>
       <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-7xl mx-auto p-5">
         <AnimatedCard index={1} imageSrc={h1} heading="Agriculture Farm Land" />

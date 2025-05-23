@@ -6,3 +6,10 @@ export const admin = {
     GET_ALL_PRODUCT: BASE_URL + "/product/getAll",
     DELETE_PRODUCT: BASE_URL + "/product/delete",
 }
+export const paymentEndpoints ={
+    PRODUCT_PAYMENT_API: BASE_URL + "/formhouse/capturePayment",
+    PRODUCT_VERIFY_API: BASE_URL + "/formhouse/verifyPayment",
+
+
+    
+  }

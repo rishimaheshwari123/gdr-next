@@ -50,7 +50,7 @@ export default function MainSection() {
         >
           <motion.div className="lg:w-1/2 lg:mr-4" variants={leftItemVariants}>
             <h6 className="text-3xl md:text-5xl font-bold text-gray-600 mb-6 text-center lg:text-left">
-              Explore Some RKS Homes for The Best Properties In Your Bhopal
+              Explore Some RKS Infrabuild & Homes Pvt. LTD for The Best Properties In Your Bhopal
             </h6>
             <p className="text-gray-600 mb-6 text-center lg:text-left">
               Discover premium residences that best suit your needs and

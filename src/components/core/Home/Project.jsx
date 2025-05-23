@@ -14,7 +14,7 @@ import dudh from "@/assests/dudh.jpg"; // import missing home3 image
 import ghee from "@/assests/ghee.jpg";
 
 const tabs = [
-  { id: 2, name: "RKS Homes" },
+  { id: 2, name: "RKS Infrabuild & Homes Pvt. LTD" },
   { id: 1, name: "New RK Construction" },
   { id: 4, name: "Aamras" },
   { id: 3, name: "Nirvdit All Making Products Private Limited" },
