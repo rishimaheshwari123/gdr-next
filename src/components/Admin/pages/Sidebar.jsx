@@ -72,11 +72,11 @@ const Sidebar = () => {
       label: "Add Gallery",
     },
     { href: "/admin/jobs", icon: <PiStudentFill />, label: "Job Opening" },
-    // {
-    //   href: "/admin/product-create",
-    //   icon: <PiStudentFill />,
-    //   label: "Create Product",
-    // },
+    {
+      href: "/admin/farmhouse",
+      icon: <PiStudentFill />,
+      label: "Farm House",
+    },
     // {
     //   href: "/admin/product-getAll",
     //   icon: <PiStudentFill />,

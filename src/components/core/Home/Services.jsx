@@ -26,7 +26,7 @@ const services = [
   {
     image:
       "/aamrasImage.jpeg",
-    title: "Aamras",
+    title: "Aamaras",
     subtitle: "Best Quality Assurance",
     description:
       "Specializes in selling high-quality spices and dry food items for home cooking.",

@@ -142,7 +142,7 @@ const SocialMediaBar = () => {
       </div>
       <div className="social-icon bg-blue-800">
         <Link
-          href="https://www.facebook.com"
+          href="https://www.facebook.com/RKSHOME.CO.IN"
           target="_blank"
           rel="noopener noreferrer"
         >

@@ -33,7 +33,9 @@ function FarmhousePlotView() {
     setLoading(true)
     try {
       const res = await axios.get(`${process.env.NEXT_PUBLIC_BASE_URL}/formhouse/farmhouses-with-plots`)
-      if (res.data.success) setFarmhouses(res.data.data)
+      if (res.data.success) {
+        console.log(res.data.data   )
+        setFarmhouses(res.data.data)}
     } catch (err) {
       toast.error("Error fetching farmhouse data")
     } finally {
@@ -114,7 +116,7 @@ function FarmhousePlotView() {
       setShowSuccessModal(true)
       getAllFarmhousesWithPlots() // refresh data
 
-      toast.success("Plot booking successful!")
+      toast.success("Land booking successful!")
     } catch (err) {
       toast.error("Failed to book the plot. Please try again.")
     } finally {
@@ -144,7 +146,7 @@ function FarmhousePlotView() {
       <div className="max-w-7xl mx-auto">
         <h1 className="text-3xl font-bold mb-6 text-gray-800 border-b pb-3 flex items-center">
           <MdOutlineHouse className="mr-2 text-green-600" size={28} />
-          Farmhouses & Available Plots
+          Farmhouses & Available Lands
         </h1>
 
         {farmhouses.length === 0 ? (
@@ -221,13 +223,13 @@ function FarmhousePlotView() {
           <Dialog.Panel className="bg-white rounded-lg shadow-xl p-6 max-w-md w-full">
             <Dialog.Title className="text-xl font-bold mb-2 text-gray-800 flex items-center">
               <BsCreditCard className="mr-2 text-green-600" />
-              Book Plot - ₹10,000 Booking Amount
+              Book Land - ₹10,000 Booking Amount
             </Dialog.Title>
 
             {selectedPlot && (
               <div className="mb-4 bg-gray-50 p-3 rounded-lg text-sm">
                 <p className="text-gray-600">
-                  <span className="font-medium">Plot Size:</span> {selectedPlot.size} sqft
+                  <span className="font-medium">Land Size:</span> {selectedPlot.size} sqft
                 </p>
               </div>
             )}
@@ -335,7 +337,7 @@ function FarmhousePlotView() {
                   <h3 className="font-medium text-gray-800 mb-2">Booking Details:</h3>
                   <p className="text-sm text-gray-600">Name: {bookingDetails.userName}</p>
                   <p className="text-sm text-gray-600">Farmhouse: {bookingDetails.farmhouseName}</p>
-                  <p className="text-sm text-gray-600">Plot Size: {bookingDetails.plotSize} sqft</p>
+                  <p className="text-sm text-gray-600">Land Size: {bookingDetails.plotSize} sqft</p>
                   <p className="text-sm text-gray-600">Amount Paid: ₹{bookingDetails.amount.toLocaleString("en-IN")}</p>
                 </div>
               )}

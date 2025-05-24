@@ -48,7 +48,7 @@ const Slider = () => {
       id: 3,
       image:
         "/aamrasImage.jpeg",
-      text: "Aamras",
+      text: "Aamaras",
       description: "Wide range of spices and dry foods for home cooking.",
       path: "/ri-si-food/home",
     },

@@ -165,7 +165,7 @@ const HomeQuote = () => {
                   RKS Infrabuild & Homes Pvt. LTD.
                 </option>
                 <option value="New RK Construction">New RK Construction</option>
-                <option value="Aamras">Aamras</option>
+                <option value="Aamaras">Aamaras</option>
                 <option value="Nirvdit All Making Products Private Limited">
                   Nirvdit All Making Products Private Limited
                 </option>

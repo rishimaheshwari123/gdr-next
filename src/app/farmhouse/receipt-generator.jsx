@@ -38,9 +38,9 @@ export const generateReceipt = (bookingData) => {
   doc.setTextColor(255, 255, 255)
   doc.setFontSize(24)
   doc.setFont("helvetica", "bold")
-  doc.text("GDR GROUP 72", 105, 25, { align: "center" })
+  doc.text("RKS Infrabuild & Homes Pvt. LTD", 105, 25, { align: "center" })
   doc.setFontSize(12)
-  doc.text("Premium Farmhouse Plots In Bhopal", 105, 32, { align: "center" })
+  doc.text("Premium Farmhouse Lands In Bhopal", 105, 32, { align: "center" })
 
   // Add receipt title
   doc.setTextColor(40, 40, 40)
@@ -80,7 +80,7 @@ export const generateReceipt = (bookingData) => {
   doc.setFont("helvetica", "normal")
   doc.text(`Farmhouse: ${farmhouseName}`, 25, 125)
   doc.text(`Location: ${farmhouseLocation}`, 25, 132)
-  doc.text(`Plot Size: ${plotSize} sqft`, 25, 139)
+  doc.text(`Land Size: ${plotSize} sqft`, 25, 139)
 
   // Payment Information
   doc.setFontSize(14)
