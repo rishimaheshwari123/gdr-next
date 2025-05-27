@@ -19,6 +19,7 @@ import { motion, useAnimation } from "framer-motion";
 import Image from "next/image"; // Use Next.js Image component
 import { Router } from "next/router"; // Use Next.js Router for navigation
 import god from "@/assests/god.jpg";
+import Link from "next/link";
 
 const Slider = () => {
   const [currentIndex, setCurrentIndex] = useState(0);
@@ -26,41 +27,46 @@ const Slider = () => {
   const textControls = useAnimation();
   // const router = useRouter(); // Use Next.js router
 
-  const work = [
-    {
-      id: 1,
-      text: "RKS Infrabuild & Homes Pvt. LTD.",
-      image: god,
-      description:
-        "Expert in agricultural land sales with seamless financing options.",
-      path: "/rks-homes/home",
-    },
-    {
-      id: 2,
-      image:
-        "https://i.pinimg.com/originals/94/41/f2/9441f2efd20b16f02e73b25b43181a8c.jpg",
-      text: "New RK Construction",
-      description:
-        "Top player in civil works with a focus on quality and safety.",
-      path: "/construction/home",
-    },
-    {
-      id: 3,
-      image:
-        "/aamrasImage.jpeg",
-      text: "Aamaras",
-      description: "Wide range of spices and dry foods for home cooking.",
-      path: "/ri-si-food/home",
-    },
-    {
-      id: 4,
-      image: "https://welthi.com/uploads/images/2022/01/17891583297072.jpg",
-      text: "Nirvdit All Making Products Private Limited",
-      description:
-        "High-quality dairy products with a focus on freshness and excellence.",
-      path: "/srs-foods/home",
-    },
-  ];
+ const work = [
+  {
+    id: 1,
+    text: "GDR Agrifeed Private Limited",
+    image: "/agree.jpg", // Replace with actual image
+    description: "Leader in premium animal feed manufacturing and supply.",
+    path: "/",
+  },
+  {
+    id: 2,
+    text: "RKS Infrabuild & Homes Pvt. LTD.",
+    image: god,
+    description: "Expert in agricultural land sales with seamless financing options.",
+    path: "/rks-homes/home",
+  },
+  {
+    id: 3,
+    text: "New R.K. Constructions",
+    image: "https://i.pinimg.com/originals/94/41/f2/9441f2efd20b16f02e73b25b43181a8c.jpg",
+    description: "Top player in civil works with a focus on quality and safety.",
+    path: "/construction/home",
+  },
+  {
+    id: 4,
+    text: "Nirvdit All Making Products Private Limited",
+    brand: "Parthvi",
+    image: "https://welthi.com/uploads/images/2022/01/17891583297072.jpg",
+    description: "High-quality dairy products with a focus on freshness and excellence.",
+    path: "/srs-foods/home",
+  },
+  {
+    id: 5,
+    text: "Aamars All Making Products Private Limited",
+    brand: "Ruchir",
+    image: "/aamrasImage.jpeg",
+    description: "Wide range of spices and dry foods for home cooking.",
+    path: "/ri-si-food/home",
+  },
+];
+
 
   const imageAnimation = {
     initial: { opacity: 0, scale: 1.1 },
@@ -121,27 +127,36 @@ const Slider = () => {
                 />
               </div>
             </motion.div>
-            <motion.div
-              className="absolute left-8 top-1/3 flex justify-start flex-col transform -translate-y-1/2 p-6"
-              initial="initial"
-              animate={index === currentIndex ? "animate" : "exit"}
-              exit="exit"
-              variants={textAnimation}
-            >
-              <p className="text-white text-xl md:text-2xl lg:text-7xl font-bold text-left mb-4">
-                {item.text}
-              </p>
-              <p className="text-white text-sm md:text-lg lg:text-xl text-left mb-4 hidden lg:block">
-                {item.description}
-              </p>
-              <button
-                onClick={() => Router.push(item.path)} // Use Next.js router for navigation
-                className="block border-2 border-white text-center py-2 text-white text-sm md:text-lg lg:text-xl rounded-lg transition-transform transform hover:scale-105"
-                style={{ width: "200px" }}
-              >
-                Visit Now
-              </button>
-            </motion.div>
+        <motion.div
+  className="absolute left-8 top-1/3 flex justify-start flex-col transform -translate-y-1/2 p-6"
+  initial="initial"
+  animate={index === currentIndex ? "animate" : "exit"}
+  exit="exit"
+  variants={textAnimation}
+>
+  <p className="text-white text-xl md:text-2xl lg:text-7xl font-bold text-left mb-2">
+    {item.text}
+  </p>
+  
+  {item.brand && (
+    <p className="text-white text-lg md:text-xl lg:text-3xl italic mb-2">
+      (Brand Name: {item.brand})
+    </p>
+  )}
+
+  <p className="text-white text-sm md:text-lg lg:text-xl text-left mb-4 hidden lg:block">
+    {item.description}
+  </p>
+  
+  <Link
+    href={item.path}
+    className="block border-2 border-white text-center py-2 text-white text-sm md:text-lg lg:text-xl rounded-lg transition-transform transform hover:scale-105"
+    style={{ width: "200px" }}
+  >
+    Visit Now
+  </Link>
+</motion.div>
+
           </SwiperSlide>
         ))}
       </Swiper>

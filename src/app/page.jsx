@@ -14,6 +14,7 @@ import WhyUs from "@/components/core/Home/WhyUs";
 import Blog from "@/components/core/Home/Blog";
 import HomeQuote from "@/components/core/Home/HomeQuote";
 import FarmhouseListing from "@/components/FormListing";
+import CompanyTagline from "@/components/Tagline";
 
 function Home() {
   const [isClient, setIsClient] = useState(false);
@@ -29,11 +30,12 @@ function Home() {
   return (
     <div>
       <Slider />
-      <ScrollingText
+      {/* <ScrollingText
         text={
           "If you want to join & Invest wtih us you are welcome to GDR group"
         }
-      />
+      /> */}
+      <CompanyTagline tagline={"IF YOU WANT TO JOIN US AND INVEST THEN YOU ARE WELCOME TO RKSHOMES. GOOD OPPRTUNITNITY"}/>
       <TagCloudWithDetails />
       {/* <Fade>
         <AboutHome />

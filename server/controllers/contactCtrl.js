@@ -82,12 +82,13 @@ const createEnquiryCtrl = async (req, res) => {
 const getQuotes = async (req, res) => {
     console.log(req.body)
     try {
-        const { name, email, mobile, service, location, message } = req.body;
+        const { name, email, mobile, service, location, message,subject } = req.body;
 
         const emailRes = await mailSender(
-            "rkshomes30@gmail.com",
+            "vikasmaheshwari6267@gmail.com",
+            // "rkshomes30@gmail.com",
             "Your Data send successfully",
-            getQuoteEmail(name, email, mobile, service, location, message)
+            getQuoteEmail(name, email, mobile, service, location, message,subject)
         );
 
         console.log("Email Res ", emailRes);

@@ -1,4 +1,4 @@
-exports.getQuoteEmail = (name, email, mobile, service,  location,  message) => {
+exports.getQuoteEmail = (name, email, mobile, service,  location,  message,subject) => {
     return `<!DOCTYPE html>
     <html>
     
@@ -47,6 +47,9 @@ exports.getQuoteEmail = (name, email, mobile, service,  location,  message) => {
             <div class="message">Get Quote Request Confirmation</div>
             <div class="body">
                 <p>Dear Admin,</p>
+
+               ${subject ? `<p style="color: #222;"><strong>Subject:</strong> ${subject}</p>` : ''}
+      <p>A new quote request has been received with the following details:</p>
                 <p>A new quote request has been received with the following details:</p>
                 <p><span class="highlight">Name:</span> ${name}</p>
                 <p><span class="highlight">Email:</span> ${email}</p>
