@@ -37,7 +37,7 @@ const Wrapper = ({ children }) => {
       {removeNavbar || isAdminRoute ? null : <TopHeader />}
       {removeNavbar || isAdminRoute ? null : <Navbar />}
 
-      {/* {showModal && <Modal onClose={handleCloseModal}  />} */}
+      {showModal && <Modal onClose={handleCloseModal}  />}
       {children}
       <ToastContainer />
       <SocialMediaBar />
