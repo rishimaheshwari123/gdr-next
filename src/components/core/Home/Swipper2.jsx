@@ -34,8 +34,7 @@ const Swipper2 = () => {
     },
     {
       id: 2,
-      image:
-        "https://shyamdairy.com/wp-content/uploads/slider/cache/a88cd27a959f7b4c0160d66730e6ff77/Shyam-Dairy-Group-of-Products.jpg",
+      image: "/milk.jpg",
       text: "Pure Dairy Solutions",
       description:
         "Providing fresh milk and dairy solutions with a commitment to quality.",
@@ -43,8 +42,7 @@ const Swipper2 = () => {
     },
     {
       id: 3,
-      image:
-        "https://www.krishinutrition.com/wp-content/uploads/2021/03/Cattle-Feed.jpg",
+      image: "/cow-feed.jpg",
       text: "Cattle Nutrition Co.",
       description: "High-quality cattle feed for healthy livestock growth.",
       path: "/cattle-nutrition/home",

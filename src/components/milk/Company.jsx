@@ -4,7 +4,7 @@ import { Slide } from "react-awesome-reveal";
 
 const company = [
   {
-    img: "https://5.imimg.com/data5/JP/JU/QJ/SELLER-86216945/dairy-cattle-feed.jpg",
+    img: "/cow-feed.jpg",
     title: "RKS Infrabuild & Homes Pvt. LTD",
     desc1:
       "Parthvi Cattle food is made of high quality protein, energy and essential minerals. It provides your cattle with essential nutrients that help to build strong bones and muscles.",
@@ -23,7 +23,7 @@ const company = [
       "Parthvi Cattle food is also rich in calcium, which is essential for healthy teeth and bones.",
   },
   {
-    img: "https://www.jiomart.com/images/product/original/494260076/milkfood-natural-pure-cow-ghee-900-ml-product-images-o494260076-p606250198-0-202311211726.jpg?im=Resize=(1000,1000)",
+    img: "/cattle.jpg",
 
     title: "SRS Foods",
     desc1:
@@ -56,13 +56,13 @@ const Company = () => {
           {company.map((currElem, index) => (
             <div
               key={index}
-              className="relative card rounded-lg  cursor-pointer group shadow-xl shadow-pink-500 h-[68vh] "
+              className="relative card rounded-lg  cursor-pointer group shadow-xl shadow-pink-500 h-[60vh] "
             >
               <div className="relative">
                 <img
                   src={currElem.img}
                   alt={currElem.title}
-                  className="min-w-full h-full object-cover transition-transform duration-500 ease-in-out transform group-hover:translate-y-[-50%]"
+                  className="min-w-full h-[60vh] object-cover transition-transform duration-500 ease-in-out transform group-hover:translate-y-[-50%]"
                 />
               </div>
               <div className="absolute inset-0  flex flex-col top-48  bg-yellow-500 p-4 text-gray-600 opacity-0 transition-opacity duration-500 ease-in-out group-hover:opacity-100">
