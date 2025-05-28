@@ -13,11 +13,13 @@ function RISIHomeFood() {
   return (
     <div>
       <HeroSlider />
-      <CompanyTagline tagline={"Build Dreams with Us — Invest, Live, Prosper."}/>
+      <CompanyTagline
+        tagline={"Build Dreams with Us — Invest, Live, Prosper."}
+      />
 
       {/* <AboutSection /> */}
-            <BecomeSeller service={"AAMARS ALL MAKING PRODUCTS PRIVATE LIMITED"} />
-      
+      <BecomeSeller service={"AAMARS ALL MAKING PRODUCTS PRIVATE LIMITED"} />
+
       <ContactBanner />
       <ProdutsHomeFood />
       <SecondSection />

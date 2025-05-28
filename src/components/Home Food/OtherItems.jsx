@@ -58,8 +58,8 @@ const ItemList = () => {
   ];
 
   return (
-    <div className="p-4 bg-gray-100 min-h-screen">
-      <div className="max-w-3xl mx-auto bg-white rounded-lg shadow-lg overflow-hidden">
+    <div className=" bg-gray-100 ">
+      {/* <div className="max-w-3xl mx-auto bg-white rounded-lg shadow-lg overflow-hidden">
         <div className="border-b border-gray-200">
           <div className="flex">
             <button
@@ -143,7 +143,7 @@ const ItemList = () => {
             </div>
           )}
         </div>
-      </div>
+      </div> */}
     </div>
   );
 };

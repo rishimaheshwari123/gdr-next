@@ -24,12 +24,17 @@ import amars from "@/assests/logos/rfood.jpg";
 // ];
 
 const tabs = [
-  { id: 5, name: "GDR Agrifeed Pvt. LTD", link:"/" },
-    
-  { id: 2, name: "RKS Infrabuild & Homes Pvt. LTD" ,link: "/rks-homes/home",},
-  { id: 1, name: "New RK Construction",link: "/construction/home", link: "/srs-foods/home" },
+  { id: 5, name: "GDR Agrifeed Pvt. LTD", link: "/" },
+
+  { id: 2, name: "RKS Infrabuild & Homes Pvt. LTD", link: "/rks-homes/home" },
+  {
+    id: 1,
+    name: "New RK Construction",
+    link: "/construction/home",
+    link: "/srs-foods/home",
+  },
   { id: 3, name: "Nirvdit All Making Products Private Limited" },
-  { id: 4, name: "Aamaras",link: "/ri-si-food/home", },
+  { id: 4, name: "Aamaras", link: "/ri-si-food/home" },
 ];
 const projects = {
   5: [
@@ -94,27 +99,27 @@ const projects = {
     { id: 4, name: "Commercial 1", src: home1 },
     { id: 5, name: "Commercial 2", src: home2 },
     { id: 6, name: "Commercial 3", src: home3 },
-    { id: 7, name: "Commercial 4", src: home4 },
+    // { id: 7, name: "Commercial 4", src: home4 },
     {
       id: 12,
       name: "Commercial 4",
       src: "https://png.pngtree.com/png-vector/20200831/ourmid/pngtree-home-for-sale-sign-representing-the-concept-of-real-estate-sale-png-image_2336006.jpg",
     },
-    {
-      id: 22,
-      name: "Commercial 4",
-      src: "https://i.pinimg.com/736x/06/3f/b6/063fb643d1ddc8bbd4a3cdf002552aa4.jpg",
-    },
-    {
-      id: 23,
-      name: "Commercial 4",
-      src: "https://img.freepik.com/premium-psd/real-estate-house-property-instagram-post-social-media-banner-template_486734-232.jpg",
-    },
-    {
-      id: 24,
-      name: "Commercial 4",
-      src: "https://i.pinimg.com/736x/c5/6c/20/c56c20a7d00d37d3fdf3d833b580a85c.jpg",
-    },
+    // {
+    //   id: 22,
+    //   name: "Commercial 4",
+    //   src: "https://i.pinimg.com/736x/06/3f/b6/063fb643d1ddc8bbd4a3cdf002552aa4.jpg",
+    // },
+    // {
+    //   id: 23,
+    //   name: "Commercial 4",
+    //   src: "https://img.freepik.com/premium-psd/real-estate-house-property-instagram-post-social-media-banner-template_486734-232.jpg",
+    // },
+    // {
+    //   id: 24,
+    //   name: "Commercial 4",
+    //   src: "https://i.pinimg.com/736x/c5/6c/20/c56c20a7d00d37d3fdf3d833b580a85c.jpg",
+    // },
   ],
 
   3: [
