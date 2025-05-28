@@ -7,31 +7,31 @@ const company = [
     img: "https://5.imimg.com/data5/JP/JU/QJ/SELLER-86216945/dairy-cattle-feed.jpg",
     title: "RKS Infrabuild & Homes Pvt. LTD",
     desc1:
-      "Shree Ji 72 Cattle food is made of high quality protein, energy and essential minerals. It provides your cattle with essential nutrients that help to build strong bones and muscles.",
+      "Parthvi Cattle food is made of high quality protein, energy and essential minerals. It provides your cattle with essential nutrients that help to build strong bones and muscles.",
     desc2:
-      "Shree Ji 72 Cattle food is a great source of iodine, which helps to keep your cattle healthy and prevent them from becoming sick.",
+      "Parthvi Cattle food is a great source of iodine, which helps to keep your cattle healthy and prevent them from becoming sick.",
     desc3:
-      "Shree Ji 72 Cattle food is also rich in calcium, which is essential for healthy teeth and bones.",
+      "Parthvi Cattle food is also rich in calcium, which is essential for healthy teeth and bones.",
   },
   {
     img: "https://img.freepik.com/premium-photo/feeding-food-indian-cow_1165568-7.jpg",
     desc1:
-      "Shree Ji 72 Cattle food is made of high quality protein, energy and essential minerals. It provides your cattle with essential nutrients that help to build strong bones and muscles.",
+      "Parthvi Cattle food is made of high quality protein, energy and essential minerals. It provides your cattle with essential nutrients that help to build strong bones and muscles.",
     desc2:
-      "Shree Ji 72 Cattle food is a great source of iodine, which helps to keep your cattle healthy and prevent them from becoming sick.",
+      "Parthvi Cattle food is a great source of iodine, which helps to keep your cattle healthy and prevent them from becoming sick.",
     desc3:
-      "Shree Ji 72 Cattle food is also rich in calcium, which is essential for healthy teeth and bones.",
+      "Parthvi Cattle food is also rich in calcium, which is essential for healthy teeth and bones.",
   },
   {
     img: "https://www.jiomart.com/images/product/original/494260076/milkfood-natural-pure-cow-ghee-900-ml-product-images-o494260076-p606250198-0-202311211726.jpg?im=Resize=(1000,1000)",
 
     title: "SRS Foods",
     desc1:
-      "Shree Ji 72 Cattle food is made of high quality protein, energy and essential minerals. It provides your cattle with essential nutrients that help to build strong bones and muscles.",
+      "Parthvi Cattle food is made of high quality protein, energy and essential minerals. It provides your cattle with essential nutrients that help to build strong bones and muscles.",
     desc2:
-      "Shree Ji 72 Cattle food is a great source of iodine, which helps to keep your cattle healthy and prevent them from becoming sick.",
+      "Parthvi Cattle food is a great source of iodine, which helps to keep your cattle healthy and prevent them from becoming sick.",
     desc3:
-      "Shree Ji 72 Cattle food is also rich in calcium, which is essential for healthy teeth and bones.",
+      "Parthvi Cattle food is also rich in calcium, which is essential for healthy teeth and bones.",
   },
 ];
 

@@ -1,84 +1,106 @@
-import Image from "next/image";
-import { Slide } from "react-awesome-reveal";
-import home from "@/assests/logos/rhome.jpg";
-import food from "@/assests/par.jpg";
-import prabhash from "@/assests/logos/home.jpg";
-import n from "@/assests/nir.jpg";
+import Image from "next/image"
+import Link from "next/link"
+import { Slide } from "react-awesome-reveal"
+import home from "@/assests/logos/rhome.jpg"
+import food from "@/assests/par.jpg"
+import prabhash from "@/assests/logos/home.jpg"
+import gdr from "@/assests/logos/gdrgruop.jpg"
+import n from "@/assests/nir.jpg"
 
 const company = [
   {
+    photo: gdr,
+    title: "GDR Agrifeed Private Limited",
+    desc: "Premium animal feed manufacturer and supplier specializing in high-quality nutrition solutions for livestock and poultry.",
+    link: "/",
+  },
+  {
     photo: home,
     title: "RKS Infrabuild & Homes Pvt LTD",
-    desc: "RKS Infrabuild & Homes Pvt. LTD is a real estate company specializing in the sale of agricultural lands. We are committed to helping our clients find the perfect piece of land for their farming or ranching needs. Our team of real estate professionals has extensive knowledge.",
+    desc: "Leading real estate company specializing in agricultural land development, residential projects, and infrastructure solutions.",
+    link: "/rks-homes/home",
   },
   {
     photo: prabhash,
     title: "New RK Construction",
-    desc: "New RK Construction is a leading construction company that specializes in a wide range of civil works. We have extensive experience in delivering construction projects for both government and private bodies.",
+    desc: "Experienced civil construction company delivering quality infrastructure projects including residential, commercial, and industrial constructions.",
+    link: "/construction/home",
+  },
+  {
+    photo: n,
+    title: "Nirvdit All Making Products",
+    desc: "Leading manufacturer of premium milk products under the trusted 'Shree Ji' brand. Committed to delivering fresh, nutritious dairy products.",
+    link: "/srs-foods/home",
   },
   {
     photo: food,
     title: "Aamaras",
-    desc: "Aamaras is a company that specializes in selling a wide range of spices and dry food items for home cooking. Our aim is to provide our customers with high-quality products.",
+    desc: "Premium spices and dry foods supplier offering authentic flavors and traditional recipes. From aromatic spices to nutritious dry fruits.",
+    link: "/ri-si-food/home",
   },
-  {
-    photo: n,
-    title: "Nirvdit All Making Products Private Limited",
-    desc: "Nirvdit All Making Products Private Limited Company owns 2 brands – “Shree Ji 72” & “Shree Ji Milk Products“. It is a manufacturer of milk products like milk, butter, clarified butter, cottage cheese, ice cream, etc. The company was founded in the year 2018 and is headquartered in Bhopal, India.",
-  },
-];
+]
 
 const Company = () => {
   return (
-    <div className="my-20 overflow-hidden">
-      <div className="flex flex-col w-full items-center">
-        <h6 className="text-4xl font-fjalla text-[#33536B]">Our Companies</h6>
-        {/* <h1 className="my-2 hidden">Commercial Property for Sale in Bhopal </h1> */}
-        <h2 className="hidden">Farmhouse in Bhopal</h2>
-
+    <div className="py-20 bg-gradient-to-b from-gray-50 to-white overflow-hidden">
+      <div className="flex flex-col w-full items-center mb-16">
+        <h6 className="text-4xl md:text-5xl font-fjalla text-[#33536B] mb-4">Our Companies</h6>
         <div className="flex items-center w-[75px]">
-          <div className="h-0.5 bg-[#e2571a]"></div>
+          <div className="h-0.5 bg-[#e2571a] flex-1"></div>
           <div className="h-1 w-1 bg-[#e2571a] rounded-full mx-1"></div>
           <div className="h-1 w-1 bg-[#e2571a] rounded-full mx-1"></div>
           <div className="h-1 w-1 bg-[#e2571a] rounded-full mx-1"></div>
-          <div
-            className="h-[4px] rounded-full w-[10px] flex-grow"
-            style={{ backgroundColor: "#e2571a" }}
-          ></div>
+          <div className="h-[4px] rounded-full w-[10px] bg-[#e2571a]"></div>
         </div>
       </div>
-      <div className="main grid lg:grid-cols-2 gap-4 p-5 max-w-7xl mx-auto">
-        <Slide direction="left">
-          {company.map((currElem, index) => (
-            <div
-              key={index}
-              className="relative card rounded-lg cursor-pointer group shadow-xl shadow-pink-500 h-auto flex flex-col lg:flex-row gap-4 p-4"
-            >
-              {/* Left side - Image and title */}
-              <div className="flex-shrink-0 w-full lg:w-1/3 h-full ">
-                <Image
-                  src={currElem.photo}
-                  alt={currElem.title}
-                  width={300}
-                  height={400}
-                  objectFit="cover"
-                  className="rounded-lg"
-                />
-              </div>
 
-              {/* Right side - Description */}
-              <div className="flex-grow bg-gray-100 p-4 rounded-lg shadow-lg bg-opacity-90">
-                <p className="text-lg font-bold text-gray-900">
-                  {currElem.title}
-                </p>
-                <p className="text-sm text-gray-700">{currElem.desc}</p>
+      <div className="max-w-7xl mx-auto px-6">
+        <Slide direction="up" triggerOnce cascade damping={0.1}>
+          <div className="grid lg:grid-cols-3 md:grid-cols-2 grid-cols-1 gap-8">
+            {company.map((currElem, index) => (
+              <div
+                key={index}
+                className="bg-white rounded-xl shadow-lg overflow-hidden hover:shadow-xl transition-all duration-300 flex flex-col h-full border border-gray-100"
+              >
+                <div className="relative h-52 w-full overflow-hidden">
+                  <Image
+                    src={currElem.photo || "/placeholder.svg"}
+                    alt={currElem.title}
+                    fill
+                    className="object-cover hover:scale-110 transition-transform duration-700"
+                  />
+                  <div className="absolute inset-0 bg-gradient-to-t from-black/30 to-transparent"></div>
+                </div>
+
+                <div className="p-6 flex flex-col flex-grow">
+                  <h3 className="text-xl font-bold text-[#33536B] mb-3 leading-tight">{currElem.title}</h3>
+
+                  <div className="w-12 h-0.5 bg-[#e2571a] mb-4"></div>
+
+                  <p className="text-gray-600 mb-6 flex-grow">{currElem.desc}</p>
+
+                  <Link
+                    href={currElem.link}
+                    className="inline-flex items-center px-5 py-2.5 bg-[#e2571a] text-white font-medium rounded-lg hover:bg-[#d14610] transition-all duration-300 hover:shadow-md self-start"
+                  >
+                    Learn More
+                    <svg
+                      className="w-4 h-4 ml-2 group-hover:translate-x-1 transition-transform duration-300"
+                      fill="none"
+                      stroke="currentColor"
+                      viewBox="0 0 24 24"
+                    >
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
+                    </svg>
+                  </Link>
+                </div>
               </div>
-            </div>
-          ))}
+            ))}
+          </div>
         </Slide>
       </div>
     </div>
-  );
-};
+  )
+}
 
-export default Company;
+export default Company

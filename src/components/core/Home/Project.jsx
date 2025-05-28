@@ -12,15 +12,34 @@ import c3 from "@/assests/constructor/c7.jpg"; // import missing home3 image
 import c4 from "@/assests/constructor/c8.jpg";
 import dudh from "@/assests/dudh.jpg"; // import missing home3 image
 import ghee from "@/assests/ghee.jpg";
+import gdr from "@/assests/logos/gdrgruop.jpg";
+import amars from "@/assests/logos/rfood.jpg";
+
+// const tabs = [
+//   { id: 5, name: "GDR Agrifeed Pvt. LTD" },
+//   { id: 2, name: "RKS Infrabuild & Homes Pvt. LTD" },
+//   { id: 3, name: "New RK Construction" },
+//   { id: 4, name: "Nirvdit All Making Products Private Limited" },
+//   { id: 5, name: "Aamaras" },
+// ];
 
 const tabs = [
-  { id: 2, name: "RKS Infrabuild & Homes Pvt. LTD" },
-  { id: 1, name: "New RK Construction" },
-  { id: 4, name: "Aamaras" },
+  { id: 5, name: "GDR Agrifeed Pvt. LTD", link:"/" },
+    
+  { id: 2, name: "RKS Infrabuild & Homes Pvt. LTD" ,link: "/rks-homes/home",},
+  { id: 1, name: "New RK Construction",link: "/construction/home", link: "/srs-foods/home" },
   { id: 3, name: "Nirvdit All Making Products Private Limited" },
+  { id: 4, name: "Aamaras",link: "/ri-si-food/home", },
 ];
-
 const projects = {
+  5: [
+    {
+      id: 1,
+      name: "Aamaras",
+      src: amars,
+      link: "/",
+    },
+  ],
   1: [
     {
       id: 1,
@@ -179,19 +198,10 @@ const projects = {
   ],
   5: [
     {
-      id: 12,
-      name: "Iron",
-      src: "https://gdrgroup.in/wp-content/uploads/2023/02/011.webp",
-    },
-    {
-      id: 13,
-      name: "Iron",
-      src: "https://gdrgroup.in/wp-content/uploads/2023/02/012.webp",
-    },
-    {
-      id: 14,
-      name: "Iron",
-      src: "https://gdrgroup.in/wp-content/uploads/2023/02/10-STAINLESS-STEEL-REBAR.webp",
+      id: 1,
+      name: "GDR Group 72",
+      src: gdr,
+      link: "/",
     },
   ],
 };
@@ -249,7 +259,7 @@ const Project = () => {
             >
               {projects[activeTab]?.map((project) => (
                 <Link
-                  href={project.link || "/construction/home"}
+                  href={activeTab.link || "/construction/home"}
                   key={project.id}
                   className="relative overflow-hidden group rounded-lg shadow-lg"
                 >

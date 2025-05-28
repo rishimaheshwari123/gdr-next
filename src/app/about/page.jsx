@@ -5,6 +5,7 @@ import { BsArrowRight } from "react-icons/bs";
 import CompanyDetails from "@/components/CompanyDetails";
 import Devision from "@/components/common/Devision";
 import MainCommon from "@/components/common/MainCommon";
+import Link from "next/link";
 
 const About = () => {
   const [isClient, setIsClient] = useState(false);
@@ -54,7 +55,9 @@ const About = () => {
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
             >
-              Learn More
+              <Link href="/farmhouse">
+              Book Now
+              </Link>
               <BsArrowRight className="ml-2" />
             </motion.button>
           </motion.div>

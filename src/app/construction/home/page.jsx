@@ -16,7 +16,7 @@ const ConstructorHome = () => {
             <CompanyTagline tagline={"Crafting Strong Foundations for a Better Tomorrow."}/>
 
       <Company />
-                  <BecomeSeller service={"NEW R.K. CONSTRUCATIONS"} />
+                  <BecomeSeller service={"NEW R.K. CONSTRUCATIONS"} subject="On demand construction" />
       
       <ContactBanner />
       {/* <Partners /> */}

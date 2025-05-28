@@ -17,6 +17,9 @@ const plotSchema = new mongoose.Schema({
     name: String,
     email: String,
     phone: String,
+    orderId: String,
+    city: String,
+    state: String,
     razorpay_order_id: String,
     razorpay_payment_id: String,
     date: { type: Date, default: Date.now }

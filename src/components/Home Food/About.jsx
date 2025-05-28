@@ -54,7 +54,7 @@ function AboutSection() {
           grain and spice supplier in Surat, we provide our clients with
           top-quality products, delivered on time. Our expertise extends to
           exporting grains and spices from Surat, where we consistently uphold
-          excellence in every shipment. At RISI Home Foods, our mission is to
+          excellence in every shipment. At Aamaras Home Foods, our mission is to
           exceed expectations, fostering growth and prosperity for our clients
           and stakeholders.
         </p>

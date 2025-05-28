@@ -17,7 +17,7 @@ const MilkAbout = () => {
             transition={{ duration: 0.8 }}
           >
             <h6 className="text-4xl font-extrabold text-gray-600 mb-6">
-              SRS Cattle and Milk Food Company owns 2 brands – “Shree Ji 72” &
+              SRS Cattle and Milk Food Company owns 2 brands – “Parthvi” &
               “Shree Ji Milk Products“.
             </h6>
             <p className="text-lg text-gray-600 mb-4">

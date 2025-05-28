@@ -1,11 +1,11 @@
-"use client"
-import { useState } from "react"
+"use client";
+import { useState } from "react";
 
-import { motion, useInView } from "framer-motion"
-import { useRef } from "react"
-import Swal from "sweetalert2"
-import { apiConnector } from "../services/apiConnector"
-import Image from "next/image"
+import { motion, useInView } from "framer-motion";
+import { useRef } from "react";
+import Swal from "sweetalert2";
+import { apiConnector } from "../services/apiConnector";
+import Image from "next/image";
 import {
   MapPin,
   Phone,
@@ -18,21 +18,22 @@ import {
   Trophy,
   Target,
   CheckCircle,
-  Sparkles
-} from "lucide-react"
+  Sparkles,
+} from "lucide-react";
 
 const BecomeSeller = ({
-service,
+  service,
+  subject="DEALERSHIP OR SUB DELAERSHIP",
   mapUrl = "https://www.google.com/maps/embed?pb=!1m17!1m12!1m3!1d3668.196516107796!2d77.27105677531803!3d23.16302667907558!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m2!1m1!2zMjPCsDA5JzQ2LjkiTiA3N8KwMTYnMjUuMSJF!5e0!3m2!1sen!2sin!4v1724832538455!5m2!1sen!2sin",
   stats = {
     projects: "1,000+",
     successScore: "99%",
-    rating: "4.9/5.0"
-  }
+    rating: "4.9/5.0",
+  },
 }) => {
-  const BASE_URL = process.env.NEXT_PUBLIC_BASE_URL
-  const ref = useRef(null)
-  const isInView = useInView(ref, { once: true, margin: "-100px" })
+  const BASE_URL = process.env.NEXT_PUBLIC_BASE_URL;
+  const ref = useRef(null);
+  const isInView = useInView(ref, { once: true, margin: "-100px" });
 
   const [formData, setFormData] = useState({
     name: "",
@@ -41,19 +42,19 @@ service,
     service: service,
     location: "",
     message: "",
-    subject:"DEALERSHIP OR SUB DELAERSHIP"
-  })
+    subject: subject,
+  });
 
-  const [isSubmitting, setIsSubmitting] = useState(false)
+  const [isSubmitting, setIsSubmitting] = useState(false);
 
-  const handleChange = e => {
-    const { name, value } = e.target
-    setFormData({ ...formData, [name]: value })
-  }
+  const handleChange = (e) => {
+    const { name, value } = e.target;
+    setFormData({ ...formData, [name]: value });
+  };
 
-  const handleSubmit = async e => {
-    e.preventDefault()
-    setIsSubmitting(true)
+  const handleSubmit = async (e) => {
+    e.preventDefault();
+    setIsSubmitting(true);
 
     Swal.fire({
       title: "Sending your request...",
@@ -64,35 +65,35 @@ service,
       background: "linear-gradient(135deg, #667eea 0%, #764ba2 100%)",
       color: "#fff",
       didOpen: () => {
-        Swal.showLoading()
-      }
-    })
+        Swal.showLoading();
+      },
+    });
 
     try {
       const res = await apiConnector(
         "POST",
         `${BASE_URL}/auth/getQuotes`,
         formData
-      )
-console.log(res)
+      );
+      console.log(res);
       Swal.fire({
         title: "Request Sent Successfully!",
         text: "We'll get back to you soon. Have a great day!",
         icon: "success",
         background: "linear-gradient(135deg, #667eea 0%, #764ba2 100%)",
         color: "#fff",
-        confirmButtonColor: "#10b981"
-      })
+        confirmButtonColor: "#10b981",
+      });
 
-    //   setFormData({
-    //     name: "",
-    //     email: "",
-    //     mobile: "",
-    //             location: "",
-    //     message: ""
-    //   })
+      //   setFormData({
+      //     name: "",
+      //     email: "",
+      //     mobile: "",
+      //             location: "",
+      //     message: ""
+      //   })
     } catch (error) {
-      console.error("ERROR MESSAGE - ", error)
+      console.error("ERROR MESSAGE - ", error);
       Swal.fire({
         title: "Request Failed",
         text:
@@ -101,12 +102,12 @@ console.log(res)
         icon: "error",
         background: "linear-gradient(135deg, #667eea 0%, #764ba2 100%)",
         color: "#fff",
-        confirmButtonColor: "#ef4444"
-      })
+        confirmButtonColor: "#ef4444",
+      });
     } finally {
-      setIsSubmitting(false)
+      setIsSubmitting(false);
     }
-  }
+  };
 
   const containerVariants = {
     hidden: { opacity: 0 },
@@ -114,40 +115,40 @@ console.log(res)
       opacity: 1,
       transition: {
         staggerChildren: 0.2,
-        duration: 0.6
-      }
-    }
-  }
+        duration: 0.6,
+      },
+    },
+  };
 
   const itemVariants = {
     hidden: { opacity: 0, y: 30 },
     visible: {
       opacity: 1,
       y: 0,
-      transition: { duration: 0.6, ease: "easeOut" }
-    }
-  }
+      transition: { duration: 0.6, ease: "easeOut" },
+    },
+  };
 
   const statsData = [
     {
       icon: Target,
       value: stats.projects,
       label: "Projects Completed",
-      color: "from-yellow-400 to-orange-500"
+      color: "from-yellow-400 to-orange-500",
     },
     {
       icon: Trophy,
       value: stats.successScore,
       label: "Success Rate",
-      color: "from-green-400 to-emerald-500"
+      color: "from-green-400 to-emerald-500",
     },
     {
       icon: Star,
       value: stats.rating,
       label: "Client Rating",
-      color: "from-blue-400 to-purple-500"
-    }
-  ]
+      color: "from-blue-400 to-purple-500",
+    },
+  ];
 
   return (
     <motion.div
@@ -163,12 +164,12 @@ console.log(res)
           animate={{
             scale: [1, 1.2, 1],
             rotate: [0, 180, 360],
-            opacity: [0.1, 0.2, 0.1]
+            opacity: [0.1, 0.2, 0.1],
           }}
           transition={{
             duration: 20,
             repeat: Number.POSITIVE_INFINITY,
-            ease: "easeInOut"
+            ease: "easeInOut",
           }}
           className="absolute -top-1/4 -right-1/4 w-96 h-96 bg-gradient-to-br from-blue-400/20 to-purple-400/20 rounded-full blur-3xl"
         />
@@ -176,13 +177,13 @@ console.log(res)
           animate={{
             scale: [1, 0.8, 1],
             rotate: [360, 180, 0],
-            opacity: [0.1, 0.3, 0.1]
+            opacity: [0.1, 0.3, 0.1],
           }}
           transition={{
             duration: 25,
             repeat: Number.POSITIVE_INFINITY,
             ease: "easeInOut",
-            delay: 5
+            delay: 5,
           }}
           className="absolute -bottom-1/4 -left-1/4 w-80 h-80 bg-gradient-to-br from-green-400/20 to-blue-400/20 rounded-full blur-3xl"
         />
@@ -277,8 +278,9 @@ console.log(res)
                 <h2 className="text-2xl font-bold mb-2">
                   Request a Call Back!
                 </h2>
-                <h3 className="text-3xl font-bold mb-2">DEALERSHIP OR SUB DELAERSHIP</h3>
-              
+                <h3 className="text-3xl font-bold mb-2">
+                  {subject}
+                </h3>
               </div>
 
               <form onSubmit={handleSubmit} className="p-8 space-y-6">
@@ -427,7 +429,7 @@ console.log(res)
                         transition={{
                           duration: 1,
                           repeat: Number.POSITIVE_INFINITY,
-                          ease: "linear"
+                          ease: "linear",
                         }}
                         className="w-5 h-5 border-2 border-white/30 border-t-white rounded-full"
                       />
@@ -448,7 +450,7 @@ console.log(res)
         variants={itemVariants}
         className="max-w-7xl mx-auto px-4 pb-16"
       >
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+        {/* <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
           {statsData.map((stat, index) => (
             <motion.div
               key={index}
@@ -463,7 +465,7 @@ console.log(res)
                 transition={{
                   duration: 20,
                   repeat: Number.POSITIVE_INFINITY,
-                  ease: "linear"
+                  ease: "linear",
                 }}
                 className="absolute -top-4 -right-4 w-16 h-16 bg-white/10 rounded-full"
               />
@@ -480,7 +482,7 @@ console.log(res)
                 transition={{
                   delay: index * 0.2 + 0.3,
                   type: "spring",
-                  stiffness: 200
+                  stiffness: 200,
                 }}
                 className="text-4xl font-bold mb-2"
               >
@@ -495,10 +497,10 @@ console.log(res)
               />
             </motion.div>
           ))}
-        </div>
+        </div> */}
       </motion.div>
     </motion.div>
-  )
-}
+  );
+};
 
-export default BecomeSeller
+export default BecomeSeller;

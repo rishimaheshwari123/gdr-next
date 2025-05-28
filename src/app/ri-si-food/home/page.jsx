@@ -15,7 +15,7 @@ function RISIHomeFood() {
       <HeroSlider />
       <CompanyTagline tagline={"Build Dreams with Us — Invest, Live, Prosper."}/>
 
-      <AboutSection />
+      {/* <AboutSection /> */}
             <BecomeSeller service={"AAMARS ALL MAKING PRODUCTS PRIVATE LIMITED"} />
       
       <ContactBanner />

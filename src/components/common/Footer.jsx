@@ -42,15 +42,7 @@ const Footer = () => {
               the years the company has expanded it’s operations, and has made
               substantial contributions to these industries.
             </p>
-            <div className="mt-4">
-              <Image
-              width={300}
-              height={300}
-                src={raview}
-                alt="Ratings"
-                className="h-16"
-              />
-            </div>
+          
             <ShareButtons />
           </div>
           <div className="grid  grid-cols-2 gap-8 lg:gap-10 px-5">
@@ -58,6 +50,9 @@ const Footer = () => {
               <h6 className="text-xl font-semibold mb-4">Our Companies</h6>
               <hr className="my-4" />
               <ul className="grid gap-2">
+                <Link href="/">
+                  <p>GDR Agrifeed pvt. ltd</p>
+                </Link>
                 <Link href="/construction/home">
                   <p>New RK Construction</p>
                 </Link>
@@ -70,7 +65,7 @@ const Footer = () => {
                 </Link>
 
                 <Link href="/ri-si-food/home">
-                  <p>Parthavi Home Food</p>
+                  <p>Aamras</p>
                 </Link>
               </ul>
             </div>

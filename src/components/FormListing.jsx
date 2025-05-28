@@ -44,7 +44,7 @@ const RealEstateListing = () => {
         or use it as a rental property for additional income.
       </p>
 
-      <h2 className="text-xl font-semibold flex items-center gap-2">
+      {/* <h2 className="text-xl font-semibold flex items-center gap-2">
         <FaTree /> Farmland for Sale in Bhopal – Invest in Nature & Growth
       </h2>
       <p>
@@ -123,7 +123,7 @@ const RealEstateListing = () => {
         If you are searching for farmhouse farmland in Bhopal or commercial
         property in Bhopal, GDR Group 72 is your best bet. You can contact us
         today to find the best offers and book your dream property.
-      </p>
+      </p> */}
     </div>
   );
 };

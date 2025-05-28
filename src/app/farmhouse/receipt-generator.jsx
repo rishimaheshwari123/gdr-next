@@ -12,6 +12,10 @@ export const generateReceipt = (bookingData) => {
     amount,
     bookingId,
     bookingDate = new Date().toLocaleDateString(),
+    state,
+    city,
+    razorpayOrderId,
+    razorpayPaymentId,
   } = bookingData
 
   // Create new PDF document
@@ -21,121 +25,213 @@ export const generateReceipt = (bookingData) => {
     format: "a4",
   })
 
-  // Set background color
-  doc.setFillColor(250, 250, 250)
+  // Set background
+  doc.setFillColor(255, 255, 255)
   doc.rect(0, 0, 210, 297, "F")
 
-  // Add border
-  doc.setDrawColor(40, 167, 69) // Green border
-  doc.setLineWidth(0.5)
-  doc.rect(10, 10, 190, 277)
+  // Header section with logo
+  doc.setFillColor(41, 128, 185) // Professional blue
+  doc.rect(0, 0, 210, 40, "F")
 
-  // Add header with company logo
-  doc.setFillColor(40, 167, 69) // Green header
-  doc.rect(10, 10, 190, 30, "F")
+  // Add logo
+  try {
+    const logoImg = new Image()
+    logoImg.crossOrigin = "anonymous"
+    logoImg.onload = () => {
+      // Add logo to PDF (left side of header)
+      doc.addImage(logoImg, "JPEG", 15, 8, 25, 25)
+    }
+    logoImg.src = "/rhome.jpg"
 
-  // Add company name as text (since we don't have an actual logo)
+    // Add logo immediately (synchronous approach)
+    doc.addImage("/rhome.jpg", "JPEG", 15, 8, 25, 25)
+  } catch (error) {
+    console.log("Logo not found, proceeding without logo")
+  }
+
+  // Company name and details (right side of logo)
   doc.setTextColor(255, 255, 255)
-  doc.setFontSize(24)
+  doc.setFontSize(14)
   doc.setFont("helvetica", "bold")
-  doc.text("RKS Infrabuild & Homes Pvt. LTD", 105, 25, { align: "center" })
-  doc.setFontSize(12)
-  doc.text("Premium Farmhouse Lands In Bhopal", 105, 32, { align: "center" })
+  doc.text("RKS INFRABUILD & HOMES PVT. LTD", 45, 16)
 
-  // Add receipt title
-  doc.setTextColor(40, 40, 40)
-  doc.setFontSize(18)
+  doc.setFontSize(8)
+  doc.setFont("helvetica", "normal")
+  doc.text("Premium Farmhouse Lands In Bhopal", 45, 22)
+  doc.text("Email: info@rksinfrabuild.com | Phone: +91 9876543210", 45, 27)
+  doc.text("Website: www.gdrgroup72.com", 45, 32)
+
+  // Receipt title
+  doc.setTextColor(41, 128, 185)
+  doc.setFontSize(14)
   doc.setFont("helvetica", "bold")
-  doc.text("BOOKING RECEIPT", 105, 50, { align: "center" })
+  doc.text("PAYMENT RECEIPT", 105, 52, { align: "center" })
 
-  // Add receipt number and date
-  doc.setFontSize(10)
+  // Receipt details line
   doc.setTextColor(100, 100, 100)
-  // doc.text(`Receipt #: ${bookingId || "FH" + Math.floor(Math.random() * 10000)}`, 20, 60)
-  doc.text(`Date: ${bookingDate}`, 190, 60, { align: "right" })
+  doc.setFontSize(8)
+  doc.setFont("helvetica", "normal")
+  doc.text(`Receipt No: GDR-${bookingId}`, 20, 62)
+  doc.text(`Date: ${bookingDate}`, 190, 62, { align: "right" })
 
-  // Add divider
+  // Separator line
   doc.setDrawColor(200, 200, 200)
-  doc.setLineWidth(0.2)
-  doc.line(20, 65, 190, 65)
+  doc.setLineWidth(0.5)
+  doc.line(20, 67, 190, 67)
 
   // Customer Information
-  doc.setFontSize(14)
+  doc.setTextColor(41, 128, 185)
+  doc.setFontSize(10)
   doc.setFont("helvetica", "bold")
-  doc.setTextColor(40, 40, 40)
-  doc.text("Customer Information", 20, 75)
+  doc.text("BILL TO:", 20, 77)
 
-  doc.setFontSize(11)
+  doc.setTextColor(60, 60, 60)
+  doc.setFontSize(8)
   doc.setFont("helvetica", "normal")
-  doc.text(`Name: ${userName}`, 25, 85)
-  doc.text(`Email: ${userEmail}`, 25, 92)
-  doc.text(`Phone: ${userPhone}`, 25, 99)
+  doc.text(userName, 20, 84)
+  doc.text(userEmail, 20, 89)
+  doc.text(userPhone, 20, 94)
+  doc.text(`${city}, ${state}`, 20, 99)
 
-  // Farmhouse Information
-  doc.setFontSize(14)
+  // Property Information
+  doc.setTextColor(41, 128, 185)
+  doc.setFontSize(10)
   doc.setFont("helvetica", "bold")
-  doc.text("Property Details", 20, 115)
+  doc.text("PROPERTY DETAILS:", 110, 77)
 
-  doc.setFontSize(11)
+  doc.setTextColor(60, 60, 60)
+  doc.setFontSize(8)
   doc.setFont("helvetica", "normal")
-  doc.text(`Farmhouse: ${farmhouseName}`, 25, 125)
-  doc.text(`Location: ${farmhouseLocation}`, 25, 132)
-  doc.text(`Land Size: ${plotSize} sqft`, 25, 139)
+  doc.text(`Farmhouse: ${farmhouseName}`, 110, 84)
+  doc.text(`Location: ${farmhouseLocation}`, 110, 89)
+  doc.text(`Plot Size: ${plotSize} sqft`, 110, 94)
+  doc.text(`Booking ID: GDR-${bookingId}`, 110, 99)
 
   // Payment Information
-  doc.setFontSize(14)
-  doc.setFont("helvetica", "bold")
-  doc.text("Payment Details", 20, 155)
+  if (razorpayOrderId || razorpayPaymentId) {
+    doc.setTextColor(41, 128, 185)
+    doc.setFontSize(10)
+    doc.setFont("helvetica", "bold")
+    doc.text("PAYMENT DETAILS:", 20, 112)
 
-  // Create payment table
+    doc.setTextColor(60, 60, 60)
+    doc.setFontSize(7)
+    doc.setFont("helvetica", "normal")
+    if (razorpayOrderId) {
+      doc.text(`Order ID: ${razorpayOrderId}`, 20, 119)
+    }
+    if (razorpayPaymentId) {
+      doc.text(`Payment ID: ${razorpayPaymentId}`, 20, 124)
+    }
+  }
+
+  // Payment table
   autoTable(doc, {
-    startY: 160,
-    head: [["Description", "Amount"]],
-    body: [
-      ["Booking Amount", `₹${amount.toLocaleString("en-IN")}`],
-      ["GST (18%)", `₹${(amount * 0.18).toLocaleString("en-IN")}`],
-      ["Total", `₹${(amount * 1.18).toLocaleString("en-IN")}`],
-    ],
-    theme: "grid",
+    startY: 135,
+    head: [["DESCRIPTION", "AMOUNT"]],
+    body: [["Farmhouse Booking Payment", `₹ ${amount.toLocaleString("en-IN")}`]],
+    foot: [["TOTAL AMOUNT PAID", `₹ ${amount.toLocaleString("en-IN")}`]],
+    theme: "striped",
     headStyles: {
-      fillColor: [40, 167, 69],
+      fillColor: [41, 128, 185],
       textColor: [255, 255, 255],
       fontStyle: "bold",
+      fontSize: 9,
+      halign: "center",
     },
-    foot: [["Total Amount Paid", `₹${(amount * 1.18).toLocaleString("en-IN")}`]],
+    bodyStyles: {
+      fontSize: 8,
+      textColor: [60, 60, 60],
+      fillColor: [248, 249, 250],
+    },
     footStyles: {
-      fillColor: [240, 240, 240],
-      textColor: [40, 40, 40],
+      fillColor: [41, 128, 185],
+      textColor: [255, 255, 255],
       fontStyle: "bold",
+      fontSize: 9,
+      halign: "center",
     },
-    margin: { left: 25, right: 25 },
+    margin: { left: 20, right: 20 },
+    columnStyles: {
+      0: { cellWidth: 120, halign: "left" },
+      1: { cellWidth: 50, halign: "right" },
+    },
   })
 
-  // Terms and conditions
-  doc.setFontSize(10)
-  doc.setFont("helvetica", "italic")
+  // Payment status
+  doc.setFillColor(46, 204, 113) // Green background
+  doc.rect(20, 160, 170, 10, "F")
+
+  doc.setTextColor(255, 255, 255)
+  doc.setFontSize(9)
+  doc.setFont("helvetica", "bold")
+  doc.text("✓ PAYMENT CONFIRMED", 105, 167, { align: "center" })
+
+  // Important notes
+  doc.setTextColor(41, 128, 185)
+  doc.setFontSize(9)
+  doc.setFont("helvetica", "bold")
+  doc.text("IMPORTANT NOTES:", 20, 180)
+
+  doc.setTextColor(80, 80, 80)
+  doc.setFontSize(7)
+  doc.setFont("helvetica", "normal")
+  const notes = [
+    "• This receipt serves as proof of your booking payment",
+    "• Keep this receipt for your records and future reference",
+    "• Final documentation will be completed within 30 working days",
+    "• Property possession as per agreed timeline in final agreement",
+    "• For any queries, contact us at the above mentioned details",
+  ]
+
+  let yPos = 187
+  notes.forEach((note) => {
+    doc.text(note, 25, yPos)
+    yPos += 5
+  })
+
+  // Terms section
+  doc.setTextColor(41, 128, 185)
+  doc.setFontSize(9)
+  doc.setFont("helvetica", "bold")
+  doc.text("TERMS & CONDITIONS:", 20, 220)
+
+  doc.setTextColor(80, 80, 80)
+  doc.setFontSize(7)
+  doc.setFont("helvetica", "normal")
+  const terms = [
+    "• Booking amount is non-refundable as per company policy",
+    "• All legal disputes subject to Bhopal jurisdiction only",
+    "• Company reserves the right to modify terms with prior notice",
+  ]
+
+  yPos = 227
+  terms.forEach((term) => {
+    doc.text(term, 25, yPos)
+    yPos += 5
+  })
+
+  // Signature section
+  doc.setDrawColor(150, 150, 150)
+  doc.setLineWidth(0.5)
+  doc.line(130, 250, 180, 250)
+
   doc.setTextColor(100, 100, 100)
-  doc.text("Terms & Conditions:", 20, 210)
-  doc.text("1. This is a booking receipt and not the final agreement.", 25, 217)
-  doc.text("2. The booking amount is non-refundable.", 25, 224)
-  doc.text("3. The final agreement will be executed within 30 days of booking.", 25, 231)
-  doc.text("4. All disputes are subject to local jurisdiction.", 25, 238)
+  doc.setFontSize(7)
+  doc.setFont("helvetica", "normal")
+  doc.text("Authorized Signature", 155, 256, { align: "center" })
 
   // Footer
-  doc.setFontSize(9)
+  doc.setFillColor(245, 245, 245)
+  doc.rect(0, 270, 210, 10, "F")
+
   doc.setTextColor(100, 100, 100)
-  doc.text("Thank you for choosing Farmhouse Estates!", 105, 260, { align: "center" })
-  doc.text("For any queries, please contact: support@farmhouseestates.com | +91 9876543210", 105, 265, {
+  doc.setFontSize(7)
+  doc.setFont("helvetica", "italic")
+  doc.text("Thank you for choosing RKS Infrabuild & Homes for your farmhouse investment!", 105, 276, {
     align: "center",
   })
 
-  // Add QR code placeholder (represented as a square)
-  doc.setDrawColor(40, 40, 40)
-  doc.setLineWidth(0.1)
-  doc.rect(155, 210, 30, 30)
-  doc.setFontSize(8)
-  doc.text("Scan for verification", 170, 245, { align: "center" })
-
   // Save the PDF
-  doc.save(`Farmhouse_Booking_Receipt_${bookingId || userName.replace(/\s+/g, "_")}.pdf`)
+  doc.save(`RKS_Receipt_${bookingId}.pdf`)
 }

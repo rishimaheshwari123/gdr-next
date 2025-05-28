@@ -13,6 +13,7 @@ import {
   FaCheckCircle,
   FaTimesCircle,
   FaFileDownload,
+  FaMapMarkerAlt,
 } from "react-icons/fa"
 import { MdLocationOn, MdOutlineHouse } from "react-icons/md"
 import { BsCalendarCheck, BsCreditCard } from "react-icons/bs"
@@ -21,7 +22,13 @@ import { generateReceipt } from "./receipt-generator"
 function FarmhousePlotView() {
   const [farmhouses, setFarmhouses] = useState([])
   const [selectedPlot, setSelectedPlot] = useState(null)
-  const [formData, setFormData] = useState({ name: "", email: "", phone: "" })
+  const [formData, setFormData] = useState({
+    name: "",
+    email: "",
+    phone: "",
+    state: "",
+    city: "",
+  })
   const [isOpen, setIsOpen] = useState(false)
   const [loading, setLoading] = useState(true)
   const [errors, setErrors] = useState({})
@@ -34,8 +41,9 @@ function FarmhousePlotView() {
     try {
       const res = await axios.get(`${process.env.NEXT_PUBLIC_BASE_URL}/formhouse/farmhouses-with-plots`)
       if (res.data.success) {
-        console.log(res.data.data   )
-        setFarmhouses(res.data.data)}
+        console.log(res.data.data)
+        setFarmhouses(res.data.data)
+      }
     } catch (err) {
       toast.error("Error fetching farmhouse data")
     } finally {
@@ -50,7 +58,7 @@ function FarmhousePlotView() {
   const openModal = (plot) => {
     if (plot.isBooked) return
     setSelectedPlot(plot)
-    setFormData({ name: "", email: "", phone: "" })
+    setFormData({ name: "", email: "", phone: "", state: "", city: "" })
     setErrors({})
     setIsOpen(true)
   }
@@ -84,45 +92,69 @@ function FarmhousePlotView() {
       newErrors.phone = "Phone number must be 10 digits"
     }
 
+    if (!formData.state.trim()) {
+      newErrors.state = "State is required"
+    }
+
+    if (!formData.city.trim()) {
+      newErrors.city = "City is required"
+    }
+
     setErrors(newErrors)
     return Object.keys(newErrors).length === 0
   }
 
-  const handleBooking = async () => {
+const handleBooking = async () => {
     if (!validateForm()) return
 
     setBookingInProgress(true)
+
     try {
-      await BuyPlot(formData.name, formData.email, formData.phone, selectedPlot._id, 10000)
+        const randomId = Math.floor(100000 + Math.random() * 900000)
 
-      // Find the farmhouse that contains the selected plot
-      const farmhouse = farmhouses.find((farm) => farm.plots.some((plot) => plot._id === selectedPlot._id))
+        await BuyPlot(
+            formData.name,
+            formData.email,
+            formData.phone,
+            selectedPlot._id,
+            10000,
+            randomId,
+            formData.state,
+            formData.city,
+            () => {
+                // ✅ Only runs if payment is verified
+                const farmhouse = farmhouses.find((farm) =>
+                    farm.plots.some((plot) => plot._id === selectedPlot._id)
+                )
 
-      // Create booking details for receipt
-      const details = {
-        userName: formData.name,
-        userEmail: formData.email,
-        userPhone: formData.phone,
-        farmhouseName: farmhouse?.name || "Farmhouse Estate",
-        farmhouseLocation: farmhouse?.location || "Premium Location",
-        plotSize: selectedPlot.size,
-        amount: 10000,
-        bookingId: "FH" + Date.now().toString().slice(-6),
-        bookingDate: new Date().toLocaleDateString(),
-      }
+                const details = {
+                    userName: formData.name,
+                    userEmail: formData.email,
+                    userPhone: formData.phone,
+                    farmhouseName: farmhouse?.name || "Farmhouse Estate",
+                    farmhouseLocation: farmhouse?.location || "Premium Location",
+                    plotSize: selectedPlot.size,
+                    amount: 10000,
+                    bookingId: randomId,
+                    bookingDate: new Date().toLocaleDateString(),
+                    state: formData.state,
+                    city: formData.city,
+                }
 
-      setBookingDetails(details)
-      closeModal()
-      setShowSuccessModal(true)
-      getAllFarmhousesWithPlots() // refresh data
-
-      toast.success("Land booking successful!")
+                setBookingDetails(details)
+                closeModal()
+                setShowSuccessModal(true)
+                getAllFarmhousesWithPlots()
+                toast.success("Land booking successful!")
+            }
+        )
     } catch (err) {
-      toast.error("Failed to book the plot. Please try again.")
+        toast.error("Failed to book the plot. Please try again.")
     } finally {
-      setBookingInProgress(false)
+        setBookingInProgress(false)
     }
-  }
+}
+
 
   const downloadReceipt = () => {
     if (bookingDetails) {
@@ -199,7 +231,6 @@ function FarmhousePlotView() {
                         {plot.isBooked ? (
                           <div className="flex flex-col">
                             <span className="font-medium">Booked</span>
-                            {/* <span className="text-xs mt-1">by: {plot.bookedInfo?.name || "Someone"}</span> */}
                           </div>
                         ) : (
                           <div className="flex items-center justify-center">
@@ -220,7 +251,7 @@ function FarmhousePlotView() {
       {/* Booking Modal */}
       <Dialog open={isOpen} onClose={closeModal} className="relative z-50">
         <div className="fixed inset-0 bg-black/60 backdrop-blur-sm flex items-center justify-center p-4">
-          <Dialog.Panel className="bg-white rounded-lg shadow-xl p-6 max-w-md w-full">
+          <Dialog.Panel className="bg-white rounded-lg shadow-xl p-6 max-w-md w-full max-h-[90vh] overflow-y-auto">
             <Dialog.Title className="text-xl font-bold mb-2 text-gray-800 flex items-center">
               <BsCreditCard className="mr-2 text-green-600" />
               Book Land - ₹10,000 Booking Amount
@@ -286,6 +317,40 @@ function FarmhousePlotView() {
                 {errors.phone && <p className="mt-1 text-sm text-red-600">{errors.phone}</p>}
               </div>
 
+              <div>
+                <label className="block text-sm font-medium text-gray-700 mb-1">
+                  <FaMapMarkerAlt className="inline mr-2" />
+                  State
+                </label>
+                <input
+                  type="text"
+                  placeholder="Enter your state"
+                  value={formData.state}
+                  onChange={(e) => setFormData({ ...formData, state: e.target.value })}
+                  className={`w-full p-3 border rounded-lg focus:ring-2 focus:ring-green-500 focus:border-green-500 outline-none transition-colors ${
+                    errors.state ? "border-red-500 bg-red-50" : "border-gray-300"
+                  }`}
+                />
+                {errors.state && <p className="mt-1 text-sm text-red-600">{errors.state}</p>}
+              </div>
+
+              <div>
+                <label className="block text-sm font-medium text-gray-700 mb-1">
+                  <MdLocationOn className="inline mr-2" />
+                  City
+                </label>
+                <input
+                  type="text"
+                  placeholder="Enter your city"
+                  value={formData.city}
+                  onChange={(e) => setFormData({ ...formData, city: e.target.value })}
+                  className={`w-full p-3 border rounded-lg focus:ring-2 focus:ring-green-500 focus:border-green-500 outline-none transition-colors ${
+                    errors.city ? "border-red-500 bg-red-50" : "border-gray-300"
+                  }`}
+                />
+                {errors.city && <p className="mt-1 text-sm text-red-600">{errors.city}</p>}
+              </div>
+
               <div className="flex flex-col gap-3 pt-2">
                 <button
                   onClick={handleBooking}
@@ -338,6 +403,8 @@ function FarmhousePlotView() {
                   <p className="text-sm text-gray-600">Name: {bookingDetails.userName}</p>
                   <p className="text-sm text-gray-600">Farmhouse: {bookingDetails.farmhouseName}</p>
                   <p className="text-sm text-gray-600">Land Size: {bookingDetails.plotSize} sqft</p>
+                  <p className="text-sm text-gray-600">State: {bookingDetails.state}</p>
+                  <p className="text-sm text-gray-600">City: {bookingDetails.city}</p>
                   <p className="text-sm text-gray-600">Amount Paid: ₹{bookingDetails.amount.toLocaleString("en-IN")}</p>
                 </div>
               )}

@@ -2,8 +2,17 @@ import React from "react";
 import Link from "next/link";
 import Image from "next/image";
 import n from "@/assests/nir.jpg";
+import gdr from "@/assests/logos/gdrgruop.jpg";
 
 const services = [
+  {
+    image: gdr,
+    title: "GDR Agrifeed Private Limited",
+    subtitle: "GDR Group 72",
+    description:
+      "Leader in premium animal feed manufacturing and supply.",
+    link: "/",
+  },
   {
     image:
       "https://media.istockphoto.com/id/824351914/photo/distribution-warehouse-with-trucks-of-different-capacity.jpg?s=612x612&w=0&k=20&c=-aeDD6vTkJZ9c_Sg_xFPZKpn10HNPczG8AKYPRcWvFs=",
@@ -23,15 +32,7 @@ const services = [
     link: "/construction/home",
   },
 
-  {
-    image:
-      "/aamrasImage.jpeg",
-    title: "Aamaras",
-    subtitle: "Best Quality Assurance",
-    description:
-      "Specializes in selling high-quality spices and dry food items for home cooking.",
-    link: "/ri-si-food/home",
-  },
+
   {
     image: n,
     title: "Nirvdit All Making Products Private Limited",
@@ -39,6 +40,15 @@ const services = [
     description:
       "Manufacturer of milk products like butter, clarified butter, and ice cream.",
     link: "/srs-foods/home",
+  },
+    {
+    image:
+      "/aamrasImage.jpeg",
+    title: "Aamaras",
+    subtitle: "Best Quality Assurance",
+    description:
+      "Specializes in selling high-quality spices and dry food items for home cooking.",
+    link: "/ri-si-food/home",
   },
 ];
 
@@ -61,7 +71,7 @@ const Services = () => {
           ></div>
         </div>
       </div>
-      <div className="grid grid-cols-1 sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-8 max-w-7xl mx-auto p-5">
+      <div className="grid grid-cols-1 sm:grid-cols-1 md:grid-cols-3 lg:grid-cols-3 gap-8 max-w-7xl mx-auto p-5">
         {services.map((service, index) => (
           <div
             key={index}

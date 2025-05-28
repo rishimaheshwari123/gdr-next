@@ -2,12 +2,8 @@
 
 import { useState, useEffect } from "react"
 import axios from "axios"
-
-
-
-
-
-
+import { generateReceipt } from "@/app/farmhouse/receipt-generator"
+import { Download, MapPin, Calendar, Phone, Mail, CreditCard, Hash } from 'lucide-react'
 
 export default function FarmhouseDashboard() {
   const [farmhouses, setFarmhouses] = useState([])
@@ -42,6 +38,26 @@ export default function FarmhouseDashboard() {
     })
   }
 
+  const handleDownloadReceipt = (plot, farmhouse) => {
+    const bookingData = {
+      userName: plot.bookedInfo.name,
+      userEmail: plot.bookedInfo.email,
+      userPhone: plot.bookedInfo.phone,
+      farmhouseName: farmhouse.name,
+      farmhouseLocation: farmhouse.location,
+      plotSize: plot.size,
+      amount: plot.bookedInfo.amount || 10000, // Default amount if not available
+      bookingId: plot.bookedInfo.orderId || plot.bookedInfo.razorpay_order_id?.split("_")[1] || plot._id.slice(-6),
+      bookingDate: formatDate(plot.bookedInfo.date),
+      state: "Madhya Pradesh",
+      city: "Bhopal",
+      razorpayOrderId: plot.bookedInfo.razorpay_order_id,
+      razorpayPaymentId: plot.bookedInfo.razorpay_payment_id,
+    }
+
+    generateReceipt(bookingData)
+  }
+
   if (loading) {
     return (
       <div className="min-h-screen bg-gray-50 flex items-center justify-center">
@@ -72,17 +88,17 @@ export default function FarmhouseDashboard() {
             {farmhouses.map((farmhouse) => (
               <div key={farmhouse._id} className="bg-white rounded-lg shadow-lg overflow-hidden">
                 {/* Farmhouse Header */}
-                <div className="bg-gradient-to-r from-green-600 to-green-700 px-6 py-4">
+                <div className="bg-gradient-to-r from-blue-600 to-blue-700 px-6 py-4">
                   <div className="flex items-center justify-between">
                     <div>
                       <h2 className="text-xl font-bold text-white">{farmhouse.name}</h2>
-                      <p className="text-green-100 flex items-center mt-1">
-                        <span className="mr-2">📍</span>
+                      <p className="text-blue-100 flex items-center mt-1">
+                        <MapPin className="w-4 h-4 mr-2" />
                         {farmhouse.location}
                       </p>
                     </div>
                     <div className="text-right">
-                      <div className="text-green-100 text-sm">Total Plots</div>
+                      <div className="text-blue-100 text-sm">Total Plots</div>
                       <div className="text-2xl font-bold text-white">{farmhouse.plots.length}</div>
                     </div>
                   </div>
@@ -94,7 +110,7 @@ export default function FarmhouseDashboard() {
                     {farmhouse.plots.map((plot) => (
                       <div
                         key={plot._id}
-                        className={`border-2 rounded-lg p-4 transition-all duration-200 hover:shadow-md ${
+                        className={`border rounded-lg p-4 transition-all duration-200 hover:shadow-md ${
                           plot.isBooked
                             ? "border-red-200 bg-red-50"
                             : "border-green-200 bg-green-50 hover:border-green-300"
@@ -102,50 +118,89 @@ export default function FarmhouseDashboard() {
                       >
                         {/* Plot Header */}
                         <div className="flex items-center justify-between mb-3">
-                          <div className="flex items-center">
-                            <div className="text-lg font-semibold text-gray-800">{plot.size}</div>
-                          </div>
-                          <div
+                          <div className="text-lg font-semibold text-gray-800">{plot.size}</div>
+                          <span
                             className={`px-3 py-1 rounded-full text-xs font-medium ${
                               plot.isBooked ? "bg-red-100 text-red-800" : "bg-green-100 text-green-800"
                             }`}
                           >
                             {plot.isBooked ? "Booked" : "Available"}
-                          </div>
+                          </span>
                         </div>
 
                         {/* Plot Details */}
                         {plot.isBooked && plot.bookedInfo ? (
-                          <div className="space-y-2">
+                          <div className="space-y-3">
                             <div className="border-t border-red-200 pt-3">
-                              <h4 className="font-medium text-gray-800 mb-2">Booking Details</h4>
+                              <div className="flex items-center justify-between mb-3">
+                                <h4 className="font-medium text-gray-800">Booking Details</h4>
+                                <button
+                                  onClick={() => handleDownloadReceipt(plot, farmhouse)}
+                                  className="inline-flex items-center px-2.5 py-1.5 text-xs font-medium rounded text-white bg-blue-600 hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500"
+                                >
+                                  <Download className="w-4 h-4 mr-1" />
+                                  Receipt
+                                </button>
+                              </div>
 
-                              <div className="space-y-1 text-sm">
-                                <div className="flex justify-between">
-                                  <span className="text-gray-600">Customer:</span>
+                              <div className="space-y-2 text-sm">
+                                <div className="flex items-center justify-between">
+                                  <span className="text-gray-600 flex items-center">
+                                    <span className="mr-2">👤</span>Customer:
+                                  </span>
                                   <span className="font-medium text-gray-800">{plot.bookedInfo.name}</span>
                                 </div>
 
-                                <div className="flex justify-between">
-                                  <span className="text-gray-600">Phone:</span>
+                                <div className="flex items-center justify-between">
+                                  <span className="text-gray-600 flex items-center">
+                                    <Phone className="w-3 h-3 mr-2" />
+                                    Phone:
+                                  </span>
                                   <span className="font-medium text-gray-800">{plot.bookedInfo.phone}</span>
                                 </div>
 
-                                <div className="flex justify-between">
-                                  <span className="text-gray-600">Email:</span>
-                                  <span className="font-medium text-gray-800 truncate">{plot.bookedInfo.email}</span>
+                                <div className="flex items-center justify-between">
+                                  <span className="text-gray-600 flex items-center">
+                                    <Mail className="w-3 h-3 mr-2" />
+                                    Email:
+                                  </span>
+                                  <span className="font-medium text-gray-800 truncate text-xs">
+                                    {plot.bookedInfo.email}
+                                  </span>
                                 </div>
 
-                                <div className="flex justify-between">
-                                  <span className="text-gray-600">Booked on:</span>
-                                  <span className="font-medium text-gray-800">{formatDate(plot.bookedInfo.date)}</span>
+                                <div className="flex items-center justify-between">
+                                  <span className="text-gray-600 flex items-center">
+                                    <Calendar className="w-3 h-3 mr-2" />
+                                    Booked:
+                                  </span>
+                                  <span className="font-medium text-gray-800 text-xs">
+                                    {formatDate(plot.bookedInfo.date)}
+                                  </span>
                                 </div>
+
+                                {plot.bookedInfo.amount && (
+                                  <div className="flex items-center justify-between">
+                                    <span className="text-gray-600 flex items-center">
+                                      <span className="mr-2">💰</span>Amount:
+                                    </span>
+                                    <span className="font-medium text-green-600">
+                                      ₹{plot.bookedInfo.amount.toLocaleString("en-IN")}
+                                    </span>
+                                  </div>
+                                )}
                               </div>
 
                               <div className="mt-3 pt-2 border-t border-red-200">
                                 <div className="text-xs text-gray-500 space-y-1">
-                                  <div>Order ID: {plot.bookedInfo.razorpay_order_id}</div>
-                                  <div>Payment ID: {plot.bookedInfo.razorpay_payment_id}</div>
+                                  <div className="flex items-center">
+                                    <Hash className="w-3 h-3 mr-1" />
+                                    <span className="truncate">Order: {plot.bookedInfo.razorpay_order_id}</span>
+                                  </div>
+                                  <div className="flex items-center">
+                                    <CreditCard className="w-3 h-3 mr-1" />
+                                    <span className="truncate">Payment: {plot.bookedInfo.razorpay_payment_id}</span>
+                                  </div>
                                 </div>
                               </div>
                             </div>

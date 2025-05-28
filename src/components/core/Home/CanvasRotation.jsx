@@ -22,17 +22,18 @@ const TagCloudWithDetails = () => {
       image: image3,
     },
 
-    {
-      name: "Aamaras",
-      details:
-        "Supplying a variety of liquid products, including industrial chemicals and personal care items.",
-      image: image1,
-    },
+  
     {
       name: "Nirvdit All Making Products Private Limited",
       details:
         "Providing a range of high-quality food products, including spices, grains, and ready-to-eat meals.",
       image: image4,
+    },
+      {
+      name: "Aamaras",
+      details:
+        "Supplying a variety of liquid products, including industrial chemicals and personal care items.",
+      image: image1,
     },
   ];
 

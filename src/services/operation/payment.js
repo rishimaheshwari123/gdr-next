@@ -31,47 +31,36 @@ function loadScript(src) {
 
 // Buy Product
 
-export async function BuyPlot(   
+export async function BuyPlot(
     name,
     email,
     phone,
     plotId,
     ammount,
-
+    orderId,
+    state,
+    city,
+    onSuccess // callback to execute after payment success
 ) {
+    const toastId = toast.loading("Loading payment gateway...")
 
-
-    const toastId = toast.loading("Loading...")
     try {
-        // Loading the script of Razorpay SDK
+        // Load Razorpay SDK
         const res = await loadScript("https://checkout.razorpay.com/v1/checkout.js")
-
         if (!res) {
-            toast.error(
-                "Razorpay SDK failed to load. Check your Internet Connection."
-            )
+            toast.error("Razorpay SDK failed to load.")
             return
         }
 
-        // Initiating the Order in Backend
-        const orderResponse = await apiConnector(
-            "POST",
-            PRODUCT_PAYMENT_API,
-            {
-                ammount
-            },
-         
-        )
-
+        // Get order from backend
+        const orderResponse = await apiConnector("POST", PRODUCT_PAYMENT_API, { ammount })
         if (!orderResponse.data.success) {
             throw new Error(orderResponse.data.message)
         }
-        //   console.log("PAYMENT RESPONSE FROM BACKEND............", orderResponse.data)
-        // Opening the Razorpay SDK
-        const options = {
-            // key: process.env.RAZORPAY_KEY,
-            key: "rzp_test_lQz64anllWjB83",
 
+        // Configure Razorpay
+        const options = {
+            key: "rzp_test_lQz64anllWjB83",
             currency: orderResponse.data.data.currency,
             amount: `${orderResponse.data.data.amount}`,
             order_id: orderResponse.data.data.id,
@@ -82,52 +71,59 @@ export async function BuyPlot(
                 name: name,
                 email: email,
             },
-            handler: function (response) {
-                //   sendPaymentSuccessEmail(response, orderResponse.data.data.amount, token)
-                verifyPayment({
-                    ...response, name, email, ammount, plotId,
+            handler: async function (response) {
+                const verifySuccess = await verifyPayment({
+                    ...response,
+                    name,
+                    email,
+                    ammount,
+                    plotId,
+                    orderId,
+                    state,
+                    city,
                     phone,
                 })
+
+                if (verifySuccess && typeof onSuccess === "function") {
+                    onSuccess() // Call after successful verification
+                }
             },
         }
-        const paymentObject = new window.Razorpay(options)
 
+        const paymentObject = new window.Razorpay(options)
         paymentObject.open()
+
         paymentObject.on("payment.failed", function (response) {
             toast.error("Oops! Payment Failed.")
             console.log(response.error)
         })
     } catch (error) {
-        console.log("PAYMENT API ERROR............", error)
-        toast.error("Could Not make Payment.")
+        console.error("PAYMENT API ERROR:", error)
+        toast.error("Could not make payment.")
     }
+
     toast.dismiss(toastId)
 }
 
-
-// Verify the Payment
+// Payment Verification
 async function verifyPayment(bodyData) {
-    const toastId = toast.loading("Verifying Payment...")
-    console.log("enter verify")
-    // dispatch(setPaymentLoading(true))
-    try {
-        const response = await apiConnector("POST", PRODUCT_VERIFY_API, bodyData
-        )
+    const toastId = toast.loading("Verifying payment...")
 
-        console.log("VERIFY PAYMENT RESPONSE FROM BACKEND............", response)
+    try {
+        const response = await apiConnector("POST", PRODUCT_VERIFY_API, bodyData)
 
         if (!response.data.success) {
-            throw new Error(response.data.message)
+            toast.error("Payment verification failed.")
+            return false
         }
 
-        toast.success("Payment Successful. Order Placed ")
-        // navigate("/")
-        // dispatch(resetCart())
-        // dispatch(setCheckout(false))
+        toast.success("Payment successful. Booking in process...")
+        return true
     } catch (error) {
-        console.log("PAYMENT VERIFY ERROR............", error)
-        toast.error("Could Not Verify Payment.")
+        console.error("PAYMENT VERIFY ERROR:", error)
+        toast.error("Could not verify payment.")
+        return false
+    } finally {
+        toast.dismiss(toastId)
     }
-    toast.dismiss(toastId)
-    // dispatch(setPaymentLoading(false))
 }

@@ -47,7 +47,7 @@ const WhyChooseRISI = () => {
         </div>
 
         <div className="lg:w-[50%] w-full">
-          Discover why RISI Home qFoods stands out as your premier choice for
+          Discover why Aamaras Home Foods stands out as your premier choice for
           sourcing exceptional culinary delights.
         </div>
       </div>
