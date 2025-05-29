@@ -189,7 +189,7 @@ const Footer = () => {
                   ].map((email, index) => (
                     <div
                       key={index}
-                      className="text-xs text-gray-300 hover:text-blue-400 cursor-pointer transition-colors duration-300 py-1 px-2 rounded hover:bg-gray-700"
+                      className="text-sm text-gray-300 hover:text-blue-400 cursor-pointer transition-colors duration-300 py-1 px-2 rounded hover:bg-gray-700"
                       onClick={() => handleEmailClick(email)}
                     >
                       {email}
