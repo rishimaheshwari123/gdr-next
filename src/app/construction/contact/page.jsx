@@ -109,7 +109,7 @@ const ConstructorContact = () => {
               98937 30005
             </p>
             <p className="text-center mb-4 text-white text-lg font-semibold">
-              praharshconstruction@gdrgroup72.com
+              r.k_construction@yahoo.com
             </p>
             <p className="text-center text-gray-600 text-sm">
               Janki Nagar, Neelkant Mahadev Mandir, Near Mashroom Factory
