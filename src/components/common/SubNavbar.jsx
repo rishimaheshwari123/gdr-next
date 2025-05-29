@@ -74,7 +74,7 @@ const TopHeader = () => {
         </div>
       </div>
 
-      <div className="bg-[#212385] text-black p-4 lg:hidden md:hidden">
+      <div className="bg-yellow-300 text-black p-4 lg:hidden md:hidden">
         <div className="flex w-full lg:justify-center md:justify-start items-center space-x-6 justify-between">
           <div className="flex items-center">
             <FiMapPin className="text-lg mr-2" />

@@ -45,6 +45,11 @@ export const navlinks = [
         title: "Career",
         path: "/career"
     },
+    {
+        id: 9,
+        title: "FarmHouse",
+        path: "/farmhouse"
+    },
 
     {
         id: 8,
