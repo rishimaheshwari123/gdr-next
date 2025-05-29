@@ -104,8 +104,8 @@ const Footer = () => {
               <ul className="space-y-4">
                 {[
                   { href: "/", name: "GDR Agrifeed Pvt. Ltd" },
-                  { href: "/construction/home", name: "New RK Construction" },
                   { href: "/rks-homes/home", name: "RKS Infrabuild & Homes Pvt. LTD" },
+                  { href: "/construction/home", name: "New RK Construction" },
                   { href: "/srs-foods/home", name: "Nirvdit All Making Products Private Limited" },
                   { href: "/ri-si-food/home", name: "Aamras" },
                 ].map((company, index) => (
