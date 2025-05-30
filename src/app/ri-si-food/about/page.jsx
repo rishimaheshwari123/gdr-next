@@ -96,9 +96,9 @@ const AboutUsPage = () => {
               <FaGavel className="text-red-500 mr-2" /> BUSINESS ETHICS
             </h6>
             <p>
-              Aamaras' business ethics completely incorporate import-export laws
+              AAMARS ALL MAKING PRODUCTS PRIVATE LIMITED' business ethics completely incorporate import-export laws
               & guidelines and operate in a fair, legal, and quality-assured
-              manner. At Aamaras, the groundwork of integrity is based on the
+              manner. At AAMARS ALL MAKING PRODUCTS PRIVATE LIMITED, the groundwork of integrity is based on the
               standards of business conduct which are envisioned to meet
               commitment, principles, and endeavor to trade fairly and honestly.
             </p>

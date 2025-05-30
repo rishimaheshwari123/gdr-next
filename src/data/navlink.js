@@ -23,7 +23,7 @@ export const navlinks = [
             { name: "RKS Infrabuild & Homes Pvt. LTD.", path: "/rks-homes/home" },
             { name: "New RK Construction", path: "/construction/home" },
             { name: "Nirvdit All Making Products Private Limited", path: "/srs-foods/home" },
-            { name: " Aamaras", path: "/ri-si-food/home" },
+            { name: " AAMARS ALL MAKING PRODUCTS PRIVATE LIMITED", path: "/ri-si-food/home" },
             // { name: "72 GDR Steel", path: "/72-gdr-steel/home" },
             // { name: "R.R.S. Liquid Products", path: "/liquid/home" },
 
@@ -91,7 +91,7 @@ export const constructionNavbar = [
             { name: "RKS Infrabuild & Homes Pvt. LTD.", path: "/rks-homes/home" },
             { name: "New RK Construction", path: "/construction/home" },
             { name: "Nirvdit All Making Products Private Limited", path: "/srs-foods/home" },
-            { name: "Aamaras", path: "/ri-si-food/home" },
+            { name: "AAMARS ALL MAKING PRODUCTS PRIVATE LIMITED", path: "/ri-si-food/home" },
         ]
     },
 
@@ -129,7 +129,7 @@ export const milkNavbar = [
             { name: "RKS Infrabuild & Homes Pvt. LTD.", path: "/rks-homes/home" },
             { name: "New RK Construction", path: "/construction/home" },
             { name: "Nirvdit All Making Products Private Limited", path: "/srs-foods/home" },
-            { name: "Aamaras", path: "/ri-si-food/home" },
+            { name: "AAMARS ALL MAKING PRODUCTS PRIVATE LIMITED", path: "/ri-si-food/home" },
         ]
     },
 
@@ -168,7 +168,7 @@ export const risiFoodNavbar = [
             { name: "RKS Infrabuild & Homes Pvt. LTD.", path: "/rks-homes/home" },
             { name: "New RK Construction", path: "/construction/home" },
             { name: "Nirvdit All Making Products Private Limited", path: "/srs-foods/home" },
-            { name: "Aamaras", path: "/ri-si-food/home" },
+            { name: "AAMARS ALL MAKING PRODUCTS PRIVATE LIMITED", path: "/ri-si-food/home" },
 
         ]
     },
@@ -207,7 +207,7 @@ export const homeReatNavbar = [
             { name: "RKS Infrabuild & Homes Pvt. LTD.", path: "/rks-homes/home" },
             { name: "New RK Construction", path: "/construction/home" },
             { name: "Nirvdit All Making Products Private Limited", path: "/srs-foods/home" },
-            { name: "Aamaras", path: "/ri-si-food/home" },
+            { name: "AAMARS ALL MAKING PRODUCTS PRIVATE LIMITED", path: "/ri-si-food/home" },
         ]
     },
 
@@ -246,7 +246,7 @@ export const gridSteel72 = [
             { name: "RKS Infrabuild & Homes Pvt. LTD.", path: "/rks-homes/home" },
             { name: "New RK Construction", path: "/construction/home" },
             { name: "Nirvdit All Making Products Private Limited", path: "/srs-foods/home" },
-            { name: "Aamaras", path: "/ri-si-food/home" },
+            { name: "AAMARS ALL MAKING PRODUCTS PRIVATE LIMITED", path: "/ri-si-food/home" },
 
         ]
 
@@ -284,7 +284,7 @@ export const lequied = [
             { name: "RKS Infrabuild & Homes Pvt. LTD.", path: "/rks-homes/home" },
             { name: "New RK Construction", path: "/construction/home" },
             { name: "Nirvdit All Making Products Private Limited", path: "/srs-foods/home" },
-            { name: "Aamaras", path: "/ri-si-food/home" },
+            { name: "AAMARS ALL MAKING PRODUCTS PRIVATE LIMITED", path: "/ri-si-food/home" },
         ]
     },
 ]

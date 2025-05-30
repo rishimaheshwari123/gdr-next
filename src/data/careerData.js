@@ -8,7 +8,7 @@ export const jobPostings = [
     details: "New RK Construction. is committed to delivering excellence in construction, focusing on innovative designs and sustainable building practices."
   },
   {
-    title: "Aamaras",
+    title: "AAMARS ALL MAKING PRODUCTS PRIVATE LIMITED",
     details: "Aamaras offers a wide range of home food products, including groceries, grains, and dried fruits, delivering the freshness and quality you deserve."
   },
   {

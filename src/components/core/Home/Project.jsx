@@ -34,13 +34,13 @@ const tabs = [
     link: "/srs-foods/home",
   },
   { id: 3, name: "Nirvdit All Making Products Private Limited" },
-  { id: 4, name: "Aamaras", link: "/ri-si-food/home" },
+  { id: 4, name: "AAMARS ALL MAKING PRODUCTS PRIVATE LIMITED", link: "/ri-si-food/home" },
 ];
 const projects = {
   5: [
     {
       id: 1,
-      name: "Aamaras",
+      name: "AAMARS ALL MAKING PRODUCTS PRIVATE LIMITED",
       src: amars,
       link: "/",
     },

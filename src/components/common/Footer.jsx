@@ -107,7 +107,7 @@ const Footer = () => {
                   { href: "/rks-homes/home", name: "RKS Infrabuild & Homes Pvt. LTD" },
                   { href: "/construction/home", name: "New RK Construction" },
                   { href: "/srs-foods/home", name: "Nirvdit All Making Products Private Limited" },
-                  { href: "/ri-si-food/home", name: "Aamras" },
+                  { href: "/ri-si-food/home", name: "AAMARS ALL MAKING PRODUCTS PRIVATE LIMITED" },
                 ].map((company, index) => (
                   <li key={index}>
                     <Link

@@ -25,49 +25,45 @@ export default function TestimonialSection() {
 const testimonials = [
   {
     id: 1,
-    name: "John Doe",
-    image: "https://randomuser.me/api/portraits/men/32.jpg",
-    text: "Tru made selling my house a breeze! Their expert guidance and personalized service were top-notch.",
-    type: "Seller",
+    name: "Rajesh Sharma",
+    image: "https://randomuser.me/api/portraits/men/75.jpg",
+    text: "RKS Infrabuild ने मेरी उम्मीदों से बढ़कर सेवा दी। फार्महाउस बुक करना इतना आसान कभी नहीं था!",
+    type: "Buyer",
   },
   {
     id: 2,
-
-    name: "Jane Smith",
-    image: "https://randomuser.me/api/portraits/women/44.jpg",
-    text: "I was amazed at how quickly my house sold with Tru. Highly recommended!",
-    type: "Buyer",
+    name: "Priya Mehta",
+    image: "https://randomuser.me/api/portraits/women/65.jpg",
+    text: "हमारे परिवार के लिए एक परफेक्ट फार्महाउस खोजने में RKS टीम ने बहुत मदद की। Highly recommended!",
+    type: "Family Buyer",
   },
   {
     id: 3,
-
-    name: "Samuel Green",
-    image: "https://randomuser.me/api/portraits/men/54.jpg",
-    text: "The team at Tru provided excellent service and support throughout the selling process.",
-    type: "Seller",
+    name: "Amit Verma",
+    image: "https://randomuser.me/api/portraits/men/41.jpg",
+    text: "From location to paperwork, everything was handled professionally. Trustworthy team!",
+    type: "Investor",
   },
   {
     id: 4,
-
-    name: "John Doe",
-    image: "https://randomuser.me/api/portraits/men/32.jpg",
-    text: "Tru made selling my house a breeze! Their expert guidance and personalized service were top-notch.",
-    type: "Seller",
-  },
-  {
-    id: 5,
-
-    name: "Jane Smith",
-    image: "https://randomuser.me/api/portraits/women/44.jpg",
-    text: "I was amazed at how quickly my house sold with Tru. Highly recommended!",
+    name: "Sneha Desai",
+    image: "https://randomuser.me/api/portraits/women/68.jpg",
+    text: "RKS Infrabuild ने फार्महाउस की डील को इतना स्मूद बना दिया कि चिंता की कोई बात ही नहीं थी।",
     type: "Buyer",
   },
   {
+    id: 5,
+    name: "Mohit Bansal",
+    image: "https://randomuser.me/api/portraits/men/21.jpg",
+    text: "Value for money! Transparent process, no hidden costs. मेरे लिए ये सबसे अच्छा इन्वेस्टमेंट रहा।",
+    type: "Investor",
+  },
+  {
     id: 6,
-
-    name: "Samuel Green",
-    image: "https://randomuser.me/api/portraits/men/54.jpg",
-    text: "The team at Tru provided excellent service and support throughout the selling process.",
-    type: "Seller",
+    name: "Anjali Patel",
+    image: "https://randomuser.me/api/portraits/women/39.jpg",
+    text: "RKS की टीम ने मुझे हर स्टेप पर गाइड किया। मैंने फार्महाउस खरीदा और बहुत संतुष्ट हूं।",
+    type: "First-time Buyer",
   },
 ];
+

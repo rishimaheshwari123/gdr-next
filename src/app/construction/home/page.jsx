@@ -18,7 +18,7 @@ const ConstructorHome = () => {
       <Company />
                   <BecomeSeller service={"NEW R.K. CONSTRUCATIONS"} subject="On demand construction" />
       
-      <ContactBanner />
+      {/* <ContactBanner /> */}
       {/* <Partners /> */}
 
       <TalkToUs />

@@ -30,7 +30,7 @@ const TagCloudWithDetails = () => {
       image: image4,
     },
       {
-      name: "Aamaras",
+      name: "AAMARS ALL MAKING PRODUCTS PRIVATE LIMITED",
       details:
         "Supplying a variety of liquid products, including industrial chemicals and personal care items.",
       image: image1,

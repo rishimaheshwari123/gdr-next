@@ -89,11 +89,11 @@ const ConstructorAbout = () => {
             <ul className="list-none space-y-2">
               <li className="flex items-center text-gray-600">
                 <FaCheckCircle className="text-green-600 mr-2" />
-                Aamaras
+                Nirvdit All Making Products Private Limited
               </li>
               <li className="flex items-center text-gray-600">
                 <FaCheckCircle className="text-green-600 mr-2" />
-                Nirvdit All Making Products Private Limited
+                AAMARS ALL MAKING PRODUCTS PRIVATE LIMITED
               </li>
             </ul>
           </div>

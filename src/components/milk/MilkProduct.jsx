@@ -5,7 +5,7 @@ const products = [
     id: 1,
     image:
       "https://5.imimg.com/data5/AT/SA/MY-29330816/animal-feed-pellets-500x500.jpg",
-    title: "Parthvi Midaas",
+    title: "Parthvi Midaas 72",
     subtitle: "(Cattle Food)",
     description:
       "मिडास (पशु आहार) प्रोटीन फ़ूड, एनर्जी फ़ूड, आयोडीन एवं कैल्शियम युक्त",
@@ -14,7 +14,7 @@ const products = [
     id: 2,
     image:
       "https://5.imimg.com/data5/ANDROID/Default/2020/10/HB/FR/JY/74354263/product-jpeg-250x250.jpg",
-    title: "Parthvi Diamond",
+    title: "Parthvi Diamond 72",
     subtitle: "(Cattle Food)",
     description:
       "डायमंड (पशु आहार) प्रोटीन फ़ूड, एनर्जी फ़ूड, आयोडीन एवं कैल्शियम युक्त",
@@ -23,7 +23,7 @@ const products = [
     id: 3,
     image:
       "https://5.imimg.com/data5/PV/TU/MY-17912631/soya-di-oil-cake-500x500.jpg",
-    title: "Parthvi Mix",
+    title: "Parthvi Mix 72",
     subtitle: "(Chana Churi)",
     description: "",
   },
@@ -31,14 +31,14 @@ const products = [
     id: 4,
     image:
       "https://tiimg.tistatic.com/fp/1/004/834/soyabean-chapad-churi-cattle-feed-542.jpg",
-    title: "Parthvi Chapad",
+    title: "Parthvi Chapad 72",
     subtitle: "",
     description: "",
   },
   {
     id: 5,
     image: "https://m.media-amazon.com/images/I/91CK8dmVXAL.jpg",
-    title: "Parthvi Khal Alsi",
+    title: "Parthvi Khal Alsi 72",
     subtitle: "",
     description: "",
   },
@@ -46,7 +46,7 @@ const products = [
     id: 6,
     image:
       "https://cpimg.tistatic.com/07306952/b/4/Corn-Silage-Cattle-Feed.jpg?tr=w300",
-    title: "Parthvi Sailez",
+    title: "Parthvi Sailez 72",
     subtitle: "",
     description: "",
   },
