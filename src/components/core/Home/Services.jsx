@@ -8,16 +8,16 @@ const services = [
   {
     image: gdr,
     title: "GDR Agrifeed Private Limited",
-    subtitle: "GDR Group 72",
+    subtitle: "All type of work",
     description:
-      "Leader in premium animal feed manufacturing and supply.",
+      "Leader in premium  feed manufacturing and supply.",
     link: "/",
   },
   {
     image:
       "https://media.istockphoto.com/id/824351914/photo/distribution-warehouse-with-trucks-of-different-capacity.jpg?s=612x612&w=0&k=20&c=-aeDD6vTkJZ9c_Sg_xFPZKpn10HNPczG8AKYPRcWvFs=",
     title: "RKS Infrabuild & Homes Pvt. LTD.",
-    subtitle: "Excellent Home",
+    subtitle: "Your Trusted Partner in Farmland Investment",
     description:
       "Real estate company focusing on the sale of agricultural lands with expert guidance.",
     link: "/rks-homes/home",
@@ -26,31 +26,29 @@ const services = [
     image:
       "https://wallpapers.com/images/hd/real-estate-digital-art-0kmi22tcj2x60lim.jpg",
     title: "New RK Construction",
-    subtitle: "Best Service Ever",
+    subtitle: "Building Dreams with Strong Foundations",
     description:
       "Leading construction company specializing in civil works for both government and private bodies.",
     link: "/construction/home",
   },
-
-
   {
     image: n,
     title: "Nirvdit All Making Products Private Limited",
-    subtitle: "Best Quality Assurance",
+    subtitle: "Pure Taste, Trusted Quality",
     description:
       "Manufacturer of milk products like butter, clarified butter, and ice cream.",
     link: "/srs-foods/home",
   },
-    {
-    image:
-      "/aamrasImage.jpeg",
+  {
+    image: "/aamrasImage.jpeg",
     title: "AAMARS ALL MAKING PRODUCTS PRIVATE LIMITED",
-    subtitle: "Best Quality Assurance",
+    subtitle: "Bringing Authentic Flavors to Every Home",
     description:
       "Specializes in selling high-quality spices and dry food items for home cooking.",
     link: "/ri-si-food/home",
   },
 ];
+
 
 const Services = () => {
   return (

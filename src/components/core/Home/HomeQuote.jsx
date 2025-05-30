@@ -196,7 +196,7 @@ const HomeQuote = () => {
           </form>
         </div>
       </div>
-      <div className="grid grid-cols-1 md:grid-cols-3 max-w-7xl mx-auto gap-5 p-5">
+      {/* <div className="grid grid-cols-1 md:grid-cols-3 max-w-7xl mx-auto gap-5 p-5">
         <div className="bg-yellow-500 text-center p-5 rounded">
           <h6 className="text-2xl font-bold">1,000+</h6>
           <p>Projects</p>
@@ -209,7 +209,7 @@ const HomeQuote = () => {
           <h6 className="text-2xl font-bold">4.9/5.0</h6>
           <p>Rating</p>
         </div>
-      </div>
+      </div> */}
     </div>
   );
 };

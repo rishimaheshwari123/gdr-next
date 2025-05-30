@@ -11,7 +11,7 @@ const company = [
   {
     photo: gdr,
     title: "GDR Agrifeed Private Limited",
-    desc: "Premium animal feed manufacturer and supplier specializing in high-quality nutrition solutions for livestock and poultry.",
+    desc: "A diversified company offering premium livestock feed, real estate development, civil construction, dairy products, and food supplies under one trusted brand.",
     link: "/",
   },
   {
@@ -38,7 +38,9 @@ const company = [
     desc: "Premium spices and dry foods supplier offering authentic flavors and traditional recipes. From aromatic spices to nutritious dry fruits.",
     link: "/ri-si-food/home",
   },
-]
+];
+
+
 
 const Company = () => {
   return (
