@@ -15,6 +15,7 @@ import Blog from "@/components/core/Home/Blog";
 import HomeQuote from "@/components/core/Home/HomeQuote";
 import FarmhouseListing from "@/components/FormListing";
 import CompanyTagline from "@/components/Tagline";
+import BookFarmhouseBanner from "@/components/common/BookingSection";
 
 function Home() {
   const [isClient, setIsClient] = useState(false);
@@ -35,6 +36,7 @@ function Home() {
           "If you want to join & Invest wtih us you are welcome to GDR group"
         }
       /> */}
+      <BookFarmhouseBanner />
       <CompanyTagline tagline={"IF YOU WANT TO JOIN US AND INVEST THEN YOU ARE WELCOME TO RKSHOMES. GOOD OPPRTUNITNITY"}/>
       <TagCloudWithDetails />
       {/* <Fade>
