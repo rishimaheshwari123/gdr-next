@@ -1,4 +1,5 @@
 import BecomeSeller from "@/components/BecomeSeller";
+import CompanyShowcase from "@/components/common/AllCompanyDetails";
 import Building from "@/components/constructor/Building";
 import Partners from "@/components/constructor/Partner";
 import Company from "@/components/constructor/Services";
@@ -12,6 +13,9 @@ const ConstructorHome = () => {
   return (
     <div>
       <Slider />
+
+            <CompanyShowcase companyName={"New RK Construction"} />
+      
       <Building />
             <CompanyTagline tagline={"Crafting Strong Foundations for a Better Tomorrow."}/>
 

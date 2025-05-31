@@ -112,31 +112,31 @@ const TagCloudWithDetails = () => {
     {
       name: "GDR Agrifeed Private Limited",
       details:
-        "Leading provider of agricultural feed solutions with cutting-edge technology and sustainable practices for modern farming.",
+        "Empowering Excellence, Driving Growth GDR Group is a dynamic business conglomerate dedicated to overseeing and managing a diverse portfolio of companies, each excelling in its domain. With a vision to lead and innovate, GDR Group provides strategic direction, operational efficiency, and sustainable growth opportunities for its subsidiaries.",
       image:image2,
     },
     {
       name: "New RK Construction",
       details:
-        "Specializing in all types of construction services including residential, commercial, and industrial projects with 15+ years of excellence.",
+        "A leader in government and private construction projects, offering comprehensive solutions in infrastructure development with a focus on quality and timely delivery.",
       image: image5,
     },
     {
       name: "RKS Infrabuild & Homes Pvt. LTD",
       details:
-        "Offering comprehensive home building and renovation services with a focus on quality, innovation and customer satisfaction.",
+        "A trusted name in real estate - specializing in land development, property sales, and purchases across premium residential and commercial segments.",
       image: image3,
     },
     {
       name: "Nirvdit All Making Products Private Limited",
       details:
-        "Providing a range of high-quality food products, including organic spices, premium grains, and ready-to-eat meals.",
+        "A quality-driven manufacturer of cattle feed, home food essentials, and grocery items, ensuring premium standards and freshness in every product.",
       image: image4,
     },
     {
       name: "AAMARS ALL MAKING PRODUCTS PRIVATE LIMITED",
       details:
-        "Supplying a variety of premium liquid products, including industrial chemicals, personal care items, and specialty solutions.",
+        "A brand known for superior cattle feed, home food, and grocery manufacturing and marketing, delivering value and trust to homes, farms, and businesses.",
       image: image1,
     },
   ]

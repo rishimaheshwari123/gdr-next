@@ -11,31 +11,31 @@ const company = [
   {
     photo: gdr,
     title: "GDR Agrifeed Private Limited",
-    desc: "A diversified company offering premium livestock feed, real estate development, civil construction, dairy products, and food supplies under one trusted brand.",
+    desc: "Empowering Excellence, Driving Growth GDR Group is a dynamic business conglomerate dedicated to overseeing and managing a diverse portfolio of companies, each excelling in its domain. With a vision to lead and innovate, GDR Group provides strategic direction, operational efficiency, and sustainable growth opportunities for its subsidiaries.",
     link: "/",
   },
   {
     photo: home,
     title: "RKS Infrabuild & Homes Pvt LTD",
-    desc: "Leading real estate company specializing in agricultural land development, residential projects, and infrastructure solutions.",
+    desc: "A trusted name in real estate - specializing in land development, property sales, and purchases across premium residential and commercial segments.",
     link: "/rks-homes/home",
   },
   {
     photo: prabhash,
     title: "New RK Construction",
-    desc: "Experienced civil construction company delivering quality infrastructure projects including residential, commercial, and industrial constructions.",
+    desc: "A leader in government and private construction projects, offering comprehensive solutions in infrastructure development with a focus on quality and timely delivery.",
     link: "/construction/home",
   },
   {
     photo: n,
     title: "Nirvdit All Making Products",
-    desc: "Leading manufacturer of premium milk products under the trusted 'Shree Ji' brand. Committed to delivering fresh, nutritious dairy products.",
+    desc: "A quality-driven manufacturer of cattle feed, home food essentials, and grocery items, ensuring premium standards and freshness in every product.",
     link: "/srs-foods/home",
   },
   {
     photo: food,
     title: "Aamaras",
-    desc: "Premium spices and dry foods supplier offering authentic flavors and traditional recipes. From aromatic spices to nutritious dry fruits.",
+    desc: "A brand known for superior cattle feed, home food, and grocery manufacturing and marketing, delivering value and trust to homes, farms, and businesses.",
     link: "/ri-si-food/home",
   },
 ];

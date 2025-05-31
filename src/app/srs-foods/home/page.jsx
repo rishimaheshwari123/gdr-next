@@ -1,4 +1,5 @@
 import BecomeSeller from "@/components/BecomeSeller";
+import CompanyShowcase from "@/components/common/AllCompanyDetails";
 import Swipper2 from "@/components/core/Home/Swipper2";
 import Company from "@/components/milk/Company";
 import ContactBanner from "@/components/milk/ContactBanner";
@@ -11,7 +12,9 @@ const MilkHome = () => {
   return (
     <div>
       <Swipper2 />
+                  <CompanyShowcase companyName={"Nirvdit All Making Products"} />
       <Services />
+      
             <CompanyTagline tagline={"Pure Dairy Goodness, Delivered Fresh — Parthvi"}/>
           <BecomeSeller service={"NIRVDIT ALL MAKING PRODUCTS PRIVATE LIMITED "} />
     

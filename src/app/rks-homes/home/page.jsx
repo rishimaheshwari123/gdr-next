@@ -1,4 +1,5 @@
 import BecomeSeller from "@/components/BecomeSeller";
+import CompanyShowcase from "@/components/common/AllCompanyDetails";
 import ContactBanner from "@/components/milk/ContactBanner";
 import AboutSection from "@/components/RKS Home/AboutSection";
 import FeaturesSection from "@/components/RKS Home/FetureSection";
@@ -14,7 +15,8 @@ function RKSHome() {
       <MainSection />
             <CompanyTagline tagline={"IF YOU WANT TO JOIN US AND INVEST THEN YOU ARE WELCOME TO RKSHOMES. GOOD OPPRTUNITNITY"}/>
       
-      <Property />
+      <CompanyShowcase />
+      {/* <Property /> */}
       
       <BecomeSeller service={"RKS Infrabuild & Homes Pvt. LTD"} />
       <ContactBanner />

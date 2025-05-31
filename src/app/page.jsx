@@ -43,7 +43,7 @@ function Home() {
         <AboutHome />
       </Fade> */}
       <FarmhouseListing />
-      <Services />
+      {/* <Services /> */}
       <Company />
       <ContactBanner />
       <Project />

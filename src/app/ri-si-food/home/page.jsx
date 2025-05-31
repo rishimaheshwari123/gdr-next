@@ -1,4 +1,5 @@
 import BecomeSeller from "@/components/BecomeSeller";
+import CompanyShowcase from "@/components/common/AllCompanyDetails";
 import AboutSection from "@/components/Home Food/About";
 import ItemList from "@/components/Home Food/OtherItems";
 import ProdutsHomeFood from "@/components/Home Food/ProdutsHomeFood";
@@ -13,6 +14,8 @@ function RISIHomeFood() {
   return (
     <div>
       <HeroSlider />
+                  <CompanyShowcase companyName={"Aamars"} />
+
       <CompanyTagline
         tagline={"Build Dreams with Us — Invest, Live, Prosper."}
       />
