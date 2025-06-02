@@ -19,19 +19,7 @@ const CareerForm = () => {
   const [animate, setAnimate] = useState(false); // State to trigger animation
   const [selectedJobDescription, setSelectedJobDescription] = useState(""); // State for job description
 
-  const jobPositions = [
-    {
-      jobtitle: "React JS Developer",
-      description: "Developing modern web applications using React.js",
-      gender: "Male",
-    },
-    {
-      jobtitle: "Node.js Developer",
-      description: "Backend development using Node.js and Express",
-      gender: "Female",
-    },
-    // Add more job positions as needed
-  ];
+
 
   const BASE_URL = process.env.NEXT_PUBLIC_BASE_URL;
   const [jobs, setJobs] = useState([]);
@@ -174,7 +162,7 @@ const CareerForm = () => {
   };
 
   return (
-    <div className="my-10 max-w-3xl mx-auto p-5">
+    <div className=" max-w-3xl mx-auto p-5">
       <h2 className="text-2xl font-bold my-4 text-center">Career Form</h2>
 
       {/* Gender Selection Tabs */}

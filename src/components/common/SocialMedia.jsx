@@ -8,6 +8,7 @@ import {
   FaEnvelope,
   FaInstagram,
   FaTimes,
+  FaYoutube,
 } from "react-icons/fa";
 import Swal from "sweetalert2";
 import axios from "axios";
@@ -150,13 +151,13 @@ const SocialMediaBar = () => {
           <span className="icon-name">Facebook</span>
         </Link>
       </div>
-      <div className="social-icon bg-green-600">
+      <div className="social-icon bg-red-600">
         <Link
-          href="https://wa.me/9893730005"
+          href="https://www.youtube.com/@rkshomes5376"
           target="_blank"
           rel="noopener noreferrer"
         >
-          <FaWhatsapp />
+          <FaYoutube />
           <span className="icon-name">WhatsApp</span>
         </Link>
       </div>

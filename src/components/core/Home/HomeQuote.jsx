@@ -83,11 +83,11 @@ const HomeQuote = () => {
           </div>
         </div>
 
-        <div className="grid lg:grid-cols-2 max-w-7xl mx-auto gap-5 p-5">
+        <div className="grid lg:grid-cols-2 w-11/12 mx-auto gap-5 p-5 ">
           <div className="text-center my-1">
             <iframe
               src="https://www.google.com/maps/embed?pb=!1m17!1m12!1m3!1d3668.196516107796!2d77.27105677531803!3d23.16302667907558!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m2!1m1!2zMjPCsDA5JzQ2LjkiTiA3N8KwMTYnMjUuMSJF!5e0!3m2!1sen!2sin!4v1724832538455!5m2!1sen!2sin"
-              className="w-full lg:h-[100vh] h-[50vh]"
+              className="w-full lg:h-[60vh] h-[50vh]"
               title="GDR Gruop"
               allowFullScreen=""
               loading="lazy"
@@ -96,7 +96,7 @@ const HomeQuote = () => {
           </div>
 
           <form
-            className="d-shadow grid grid-cols-1 w-full md:grid-cols-2 gap-6 bg-white px-5 py-5"
+            className="d-shadow grid grid-cols-1 w-full md:grid-cols-2 gap-6 bg-white px-5 py-2 "
             onSubmit={handleSubmit}
             style={{
               backgroundImage: `url()`,
@@ -120,7 +120,7 @@ const HomeQuote = () => {
                 placeholder="Your Name"
                 value={formData.name}
                 onChange={handleChange}
-                className="w-full px-3 py-3 border rounded"
+                className="w-full px-3 py-1 border rounded"
               />
             </div>
             <div>
@@ -130,7 +130,7 @@ const HomeQuote = () => {
                 placeholder="Your Email"
                 value={formData.email}
                 onChange={handleChange}
-                className="w-full px-3 py-3 border rounded"
+                className="w-full px-3 py-1 border rounded"
               />
             </div>
             <div>
@@ -140,7 +140,7 @@ const HomeQuote = () => {
                 placeholder="WhatsApp Mobile Number"
                 value={formData.mobile}
                 onChange={handleChange}
-                className="w-full px-3 py-3 border rounded"
+                className="w-full px-3 py-1 border rounded"
               />
             </div>
             <div>
@@ -150,7 +150,7 @@ const HomeQuote = () => {
                 placeholder="City"
                 value={formData.location}
                 onChange={handleChange}
-                className="w-full px-3 py-3 border rounded"
+                className="w-full px-3 py-1 border rounded"
               />
             </div>
             <div>
@@ -158,14 +158,14 @@ const HomeQuote = () => {
                 name="service"
                 value={formData.service}
                 onChange={handleChange}
-                className="w-full px-3 py-3 border rounded"
+                className="w-full px-3 py-1 border rounded"
               >
                 <option value="">Select Service</option>
                 <option value="RKS Infrabuild & Homes Pvt. LTD.">
                   RKS Infrabuild & Homes Pvt. LTD.
                 </option>
                 <option value="New RK Construction">New RK Construction</option>
-                <option value="Aamaras">Aamaras</option>
+                <option value="Aamars">Aamars</option>
                 <option value="Nirvdit All Making Products Private Limited">
                   Nirvdit All Making Products Private Limited
                 </option>
@@ -178,7 +178,7 @@ const HomeQuote = () => {
                 placeholder="Please type at least 20 characters about your Inquiry"
                 value={formData.message}
                 onChange={handleChange}
-                className="w-full px-3 py-3 border rounded h-24"
+                className="w-full px-3 py-1 border rounded h-24"
               ></textarea>
             </div>
             <div className="md:col-span-2 flex items-center">

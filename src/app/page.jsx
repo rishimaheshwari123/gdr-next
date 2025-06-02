@@ -45,11 +45,11 @@ function Home() {
       <FarmhouseListing />
       {/* <Services /> */}
       <Company />
-      <ContactBanner />
+      <ContactBanner title="Enquiry Form" />
       <Project />
-      <Process />
+      {/* <Process /> */}
       <WhyUs />
-      <Blog />
+      <Blog limit={3} />
       <HomeQuote />
     </div>
   );

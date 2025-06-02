@@ -31,38 +31,38 @@ const Slider = () => {
   {
     id: 1,
     text: "GDR Agrifeed Private Limited",
-    image: "/agree.jpg", // Replace with actual image
-    description: "Leader in premium animal feed manufacturing and supply.",
+    image: "/slider2.jpeg", // Replace with actual image
+    description: "GDR Group drives innovation and growth, managing diverse companies with strategic vision, operational excellence, and sustainable success.",
     path: "/",
   },
   {
     id: 2,
     text: "RKS Infrabuild & Homes Pvt. LTD.",
     image: god,
-    description: "Expert in agricultural land sales with seamless financing options.",
+    description: "A trusted real estate name, specializing in land development, property sales, and purchases across premium residential and commercial sectors.",
     path: "/rks-homes/home",
   },
   {
     id: 3,
     text: "New R.K. Constructions",
     image: "https://i.pinimg.com/originals/94/41/f2/9441f2efd20b16f02e73b25b43181a8c.jpg",
-    description: "Top player in civil works with a focus on quality and safety.",
+    description: "A leader in construction, delivering quality infrastructure solutions for government and private sectors with a focus on excellence and timeliness.",
     path: "/construction/home",
   },
   {
     id: 4,
     text: "Nirvdit All Making Products Private Limited",
     brand: "Parthvi",
-    image: "https://welthi.com/uploads/images/2022/01/17891583297072.jpg",
-    description: "High-quality dairy products with a focus on freshness and excellence.",
+    image: "/slider1.jpg",
+    description: "High-quality dairy products with a focus on freshness and excellence.Quality-focused manufacturer of cattle feed, food essentials, and groceries, delivering premium standards and freshness in every product we offer.",
     path: "/srs-foods/home",
   },
   {
     id: 5,
     text: "Aamars All Making Products Private Limited",
     brand: "Ruchir",
-    image: "/aamrasImage.jpeg",
-    description: "Wide range of spices and dry foods for home cooking.",
+    image: "https://img.freepik.com/premium-photo/seasonings-wooden-table-background-spices-herbs_84485-752.jpg",
+    description: "A trusted brand in cattle feed, food, and grocery manufacturing—delivering quality, value, and reliability to homes, farms, and businesses.",
     path: "/ri-si-food/home",
   },
 ];

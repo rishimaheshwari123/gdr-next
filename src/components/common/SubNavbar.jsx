@@ -15,10 +15,10 @@ const TopHeader = () => {
                 <span className="font-medium text-sm">Bhopal</span>
               </div>
 
-              <div className="hidden lg:flex items-center group hover:scale-105 transition-transform duration-200">
+              {/* <div className="hidden lg:flex items-center group hover:scale-105 transition-transform duration-200">
                 <Phone className="w-4 h-4 mr-2 text-gray-700 group-hover:text-gray-900" />
                 <span className="font-medium text-sm">+91 98937 30005</span>
-              </div>
+              </div> */}
 
               <div className="flex items-center group hover:scale-105 transition-transform duration-200">
                 <Mail className="w-4 h-4 mr-2 text-gray-700 group-hover:text-gray-900" />
@@ -90,10 +90,10 @@ const TopHeader = () => {
 
           {/* Second Row - Phone and Social Media */}
           <div className="flex justify-between items-center">
-            <div className="flex items-center group">
+            {/* <div className="flex items-center group">
               <Phone className="w-4 h-4 mr-2 text-gray-700" />
               <span className="font-medium text-sm">+91 98937 30005</span>
-            </div>
+            </div> */}
 
             <div className="flex items-center space-x-2">
               <Link

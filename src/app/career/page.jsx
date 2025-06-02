@@ -22,9 +22,9 @@ const Career = () => {
 
   return (
     <div>
-      <div className="mt-[87px] w-11/12 mx-auto">
+      <div className=" w-11/12 mx-auto">
         <div className="">
-          <div className="flex flex-col gap-8">
+          {/* <div className="flex flex-col gap-8">
             <p className="font-bold text-3xl">
               Life of <span className="text-orange-600">GDR Group</span>
             </p>
@@ -64,9 +64,9 @@ const Career = () => {
                 />
               </div>
             </div>
-          </div>
+          </div> */}
 
-          <div className="my-10">
+          {/* <div className="my-10">
             <p className="text-3xl font-bold">Benefits</p>
             <br />
             <br />
@@ -206,12 +206,12 @@ const Career = () => {
                 </div>
               </div>
             </div>
-          </div>
+          </div> */}
           <br />
           {/* <CareerForm /> */}
         </div>
         <CareerForm />
-        <JobList />
+        {/* <JobList /> */}
       </div>
     </div>
   );

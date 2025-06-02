@@ -9,7 +9,7 @@ export const jobPostings = [
   },
   {
     title: "AAMARS ALL MAKING PRODUCTS PRIVATE LIMITED",
-    details: "Aamaras offers a wide range of home food products, including groceries, grains, and dried fruits, delivering the freshness and quality you deserve."
+    details: "Aamars offers a wide range of home food products, including groceries, grains, and dried fruits, delivering the freshness and quality you deserve."
   },
   {
     title: "Nirvdit All Making Products Private Limited",

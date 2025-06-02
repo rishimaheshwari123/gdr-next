@@ -69,7 +69,7 @@ const work = [
   },
 ];
 
-const Blog = () => {
+const Blog = ({limit}) => {
   const BASE_URL = process.env.NEXT_PUBLIC_BASE_URL;
 
   const [blog, setBlog] = useState([]);
@@ -79,7 +79,10 @@ const Blog = () => {
       const response = await axios.get(`${BASE_URL}/blog/getAll`);
 
       if (response?.data?.success) {
-        setBlog(response.data.blogs);
+    if (response?.data?.success) {
+  setBlog(limit ? response.data.blogs.slice(0, limit) : response.data.blogs);
+}
+
       }
       console.log(response.data.blogs);
     } catch (error) {
@@ -97,7 +100,7 @@ const Blog = () => {
   };
 
   return (
-    <div className="relative mt-2 max-w-7xl mx-auto px-5 ">
+    <div className="relative mt-2 w-11/12 mx-auto px-5 ">
       <p className="text-center text-4xl font-semibold my-10">Latest Blog</p>
       <Swiper
         modules={[Navigation, Pagination, Scrollbar, A11y, Autoplay]}

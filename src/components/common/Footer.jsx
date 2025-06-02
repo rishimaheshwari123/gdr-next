@@ -26,7 +26,7 @@ const Footer = () => {
 
   return (
     <footer className="bg-gray-900 text-white py-16 border-t border-gray-700">
-      <div className="max-w-7xl mx-auto px-6">
+      <div className="w-11/12 mx-auto px-6">
         <div className="grid lg:grid-cols-3 gap-12">
           {/* About Us Section */}
           <div className="space-y-6">
@@ -35,9 +35,7 @@ const Footer = () => {
               <div className="w-16 h-1 bg-blue-500 rounded-full mb-6"></div>
             </div>
             <p className="text-gray-300 leading-relaxed text-sm">
-              GDR Group 72 is a group of companies that was established in 2005, with a primary focus on the real
-              estate, agricultural construction, construction and manufacturing industries. Through the years the
-              company has expanded its operations, and has made substantial contributions to these industries.
+             Empowering Excellence, Driving Growth GDR Group is a dynamic business conglomerate dedicated to overseeing and managing a diverse portfolio of companies, each excelling in its domain. With a vision to lead and innovate, GDR Group provides strategic direction, operational efficiency, and sustainable growth opportunities for its subsidiaries.
             </p>
                {/* Social Media */}
             <div className="space-y-4">
@@ -82,7 +80,7 @@ const Footer = () => {
             </div>
 
                 {/* Phone */}
-              <div className="bg-gray-800 p-4 rounded-lg border border-gray-700 hover:border-blue-500 transition-colors duration-300">
+              {/* <div className="bg-gray-800 p-4 rounded-lg border border-gray-700 hover:border-blue-500 transition-colors duration-300">
                 <div className="flex items-center gap-3">
                   <FaPhone size={16} className="text-blue-400 flex-shrink-0" />
                   <div>
@@ -90,7 +88,7 @@ const Footer = () => {
                     <p className="text-sm text-gray-300">98937 30005</p>
                   </div>
                 </div>
-              </div>
+              </div> */}
           </div>
 
           {/* Links Section */}

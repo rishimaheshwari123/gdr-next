@@ -214,27 +214,27 @@ const TagCloudWithDetails = () => {
             {/* Tag 1 - Top Left */}
             <div
               className="absolute top-[15%] left-[10%] cursor-pointer transition-all duration-500 hover:scale-110"
-              onMouseEnter={() => setSelectedTag(tags[0])}
+              onMouseEnter={() => setSelectedTag(tags[2])}
             >
               <div
                 className={`
                 relative group px-6 py-4 rounded-full transition-all duration-300 animate-float
                 ${
-                  selectedTag.name === tags[0].name
+                  selectedTag.name === tags[2].name
                     ? "bg-gradient-to-r from-blue-500 to-purple-500 shadow-2xl shadow-blue-500/50 scale-110"
                     : "bg-white/10 backdrop-blur-sm border border-white/30 hover:bg-white/20"
                 }
               `}
               >
-                {selectedTag.name === tags[0].name && (
+                {selectedTag.name === tags[2].name && (
                   <div className="absolute inset-0 rounded-full bg-gradient-to-r from-blue-500 to-purple-500 blur-lg opacity-50 animate-pulse"></div>
                 )}
                 <span
                   className={`relative font-bold text-sm lg:text-base ${
-                    selectedTag.name === tags[0].name ? "text-white" : "text-gray-200"
+                    selectedTag.name === tags[2].name ? "text-white" : "text-gray-200"
                   }`}
                 >
-                  GDR Agrifeed
+                  RKS Homes
                 </span>
               </div>
             </div>
@@ -263,7 +263,7 @@ const TagCloudWithDetails = () => {
                     selectedTag.name === tags[1].name ? "text-white" : "text-gray-200"
                   }`}
                 >
-                  New RK Construction
+                  NEW RK Construction
                 </span>
               </div>
             </div>
@@ -271,28 +271,28 @@ const TagCloudWithDetails = () => {
             {/* Tag 3 - Center */}
             <div
               className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 cursor-pointer transition-all duration-500 hover:scale-110"
-              onMouseEnter={() => setSelectedTag(tags[2])}
+              onMouseEnter={() => setSelectedTag(tags[0])}
             >
               <div
                 className={`
                 relative group px-6 py-4 rounded-full transition-all duration-300 animate-float
                 ${
-                  selectedTag.name === tags[2].name
+                  selectedTag.name === tags[0].name
                     ? "bg-gradient-to-r from-blue-500 to-purple-500 shadow-2xl shadow-blue-500/50 scale-110"
                     : "bg-white/10 backdrop-blur-sm border border-white/30 hover:bg-white/20"
                 }
               `}
                 style={{ animationDelay: "1s" }}
               >
-                {selectedTag.name === tags[2].name && (
+                {selectedTag.name === tags[0].name && (
                   <div className="absolute inset-0 rounded-full bg-gradient-to-r from-blue-500 to-purple-500 blur-lg opacity-50 animate-pulse"></div>
                 )}
                 <span
                   className={`relative font-bold text-sm lg:text-base ${
-                    selectedTag.name === tags[2].name ? "text-white" : "text-gray-200"
+                    selectedTag.name === tags[0].name ? "text-white" : "text-gray-200"
                   }`}
                 >
-                  RKS Infrabuild
+                  GDR Group 72
                 </span>
               </div>
             </div>
@@ -321,7 +321,7 @@ const TagCloudWithDetails = () => {
                     selectedTag.name === tags[3].name ? "text-white" : "text-gray-200"
                   }`}
                 >
-                  Nirvdit Products
+                   NIRVDIT Products
                 </span>
               </div>
             </div>

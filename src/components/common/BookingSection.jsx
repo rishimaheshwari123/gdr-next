@@ -15,7 +15,7 @@ const BookFarmhouseBanner = () => {
       {/* Text */}
       <div className="flex-1 text-center sm:text-left">
         <h3 className="text-base font-semibold text-gray-800">
-          Book Your Farmhouse Today / <span className="text-green-700">आज ही अपना फार्महाउस बुक करें</span>
+          Book your Farmhouse & Agricultural Land today / <span className="text-green-700">अपना फार्महाउस और कृषि भूमि आज ही बुक करें </span>
         </h3>
         <p className="text-sm text-gray-600 mt-1">
           Booking starting from ₹1 Lakh | <span className="font-medium">RKS Infrabuild & Homes Pvt. LTD.</span>

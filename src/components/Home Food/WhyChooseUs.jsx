@@ -11,7 +11,7 @@ const sections = [
     icon: <FaBalanceScale className="text-[150px] text-green-600 mr-4" />,
     title: "Premium Quality Assurance",
     description:
-      "At Aamaras, quality is our cornerstone. We meticulously source the finest grains and spices, ensuring each product meets our rigorous quality standards to delight your palate.",
+      "At Aamars, quality is our cornerstone. We meticulously source the finest grains and spices, ensuring each product meets our rigorous quality standards to delight your palate.",
   },
   {
     icon: <FaGlobe className="text-[150px] text-blue-600 mr-4" />,
@@ -47,7 +47,7 @@ const WhyChooseRISI = () => {
         </div>
 
         <div className="lg:w-[50%] w-full">
-          Discover why Aamaras Home Foods stands out as your premier choice for
+          Discover why Aamars Home Foods stands out as your premier choice for
           sourcing exceptional culinary delights.
         </div>
       </div>

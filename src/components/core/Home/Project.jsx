@@ -2,10 +2,14 @@
 import React, { useState } from "react";
 import Image from "next/image";
 import Link from "next/link";
-import home1 from "@/assests/home/h1.jpg";
-import home2 from "@/assests/home/h2.jpg"; // import missing home2 image
-import home3 from "@/assests/home/h3.jpg"; // import missing home3 image
-import home4 from "@/assests/home/h4.jpg";
+import home1 from "@/assests/home/1.webp";
+import home2 from "@/assests/home/2.webp"; // import missing home2 image
+import home3 from "@/assests/home/3.webp"; // import missing home3 image
+import home4 from "@/assests/home/4.jpg";
+import home5 from "@/assests/home/5.jpeg";
+import home6 from "@/assests/home/6.jpg";
+import home7 from "@/assests/home/7.jpg";
+import home8 from "@/assests/home/8.jpg";
 import c1 from "@/assests/constructor/c5.jpg";
 import c2 from "@/assests/constructor/c6.jpg"; // import missing home2 image
 import c3 from "@/assests/constructor/c7.jpg"; // import missing home3 image
@@ -15,26 +19,55 @@ import ghee from "@/assests/ghee.jpg";
 import gdr from "@/assests/logos/gdrgruop.jpg";
 import amars from "@/assests/logos/rfood.jpg";
 
-// const tabs = [
-//   { id: 5, name: "GDR Agrifeed Pvt. LTD" },
-//   { id: 2, name: "RKS Infrabuild & Homes Pvt. LTD" },
-//   { id: 3, name: "New RK Construction" },
-//   { id: 4, name: "Nirvdit All Making Products Private Limited" },
-//   { id: 5, name: "Aamaras" },
-// ];
+// new GDR
+import IMAGE1 from "@/assests/gdr/3.jpg";
+import IMAGE2 from "@/assests/gdr/2.jpeg";
+import IMAGE3 from "@/assests/gdr/1.jpg";
+import IMAGE4 from "@/assests/gdr/7.jpg";
+import IMAGE5 from "@/assests/gdr/5.png";
+import IMAGE6 from "@/assests/gdr/10.jpg";
+import IMAGE7 from "@/assests/gdr/4.jpg";
+import IMAGE8 from "@/assests/gdr/11.jpg";
+
+// NIRVDIT
+
+import nir1 from "@/assests/nirvdit/4.jpg";
+import nir2 from "@/assests/nirvdit/2.jpg";
+import nir3 from "@/assests/nirvdit/3.jpeg";
+import nir4 from "@/assests/nirvdit/10.png";
+import nir5 from "@/assests/nirvdit/11.jpg";
+import nir6 from "@/assests/nirvdit/8.jpg";
+import nir7 from "@/assests/nirvdit/9.jpg";
+
+
+// amars
+import amasrs1 from "@/assests/milk/1.png";
+import amasrs2 from "@/assests/milk/2.webp";
+import amasrs3 from "@/assests/milk/3.jpg";
+import amasrs4 from "@/assests/milk/4.jpg";
+import amasrs5 from "@/assests/milk/5.webp";
+import amasrs6 from "@/assests/milk/6.webp";
+import amasrs7 from "@/assests/milk/7.png";
+
+// LOGOS
+import rkcons from "@/assests/logos/home.jpg"
+import rkshomes from "@/assests/logos/rhome.jpg"
+import nirvdit from "@/assests/nir.jpg"
+
+
 
 const tabs = [
-  { id: 5, name: "GDR Agrifeed Pvt. LTD", link: "/" },
+  { id: 5, name: "GDR Agrifeed Pvt. LTD", link: "/" ,image:gdr},
 
-  { id: 2, name: "RKS Infrabuild & Homes Pvt. LTD", link: "/rks-homes/home" },
+  { id: 2, name: "RKS Infrabuild & Homes Pvt. LTD", link: "/rks-homes/home" ,image:rkshomes},
   {
     id: 1,
     name: "New RK Construction",
     link: "/construction/home",
-    link: "/srs-foods/home",
+    image:rkcons
   },
-  { id: 3, name: "Nirvdit All Making Products Private Limited" },
-  { id: 4, name: "AAMARS ALL MAKING PRODUCTS PRIVATE LIMITED", link: "/ri-si-food/home" },
+  { id: 3, name: "Nirvdit All Making Products Private Limited",image:nirvdit },
+  { id: 4, name: "AAMARS ALL MAKING PRODUCTS PRIVATE LIMITED", link: "/ri-si-food/home", image:amars },
 ];
 const projects = {
   5: [
@@ -99,33 +132,19 @@ const projects = {
     { id: 4, name: "Commercial 1", src: home1 },
     { id: 5, name: "Commercial 2", src: home2 },
     { id: 6, name: "Commercial 3", src: home3 },
-    // { id: 7, name: "Commercial 4", src: home4 },
-    {
-      id: 12,
-      name: "Commercial 4",
-      src: "https://png.pngtree.com/png-vector/20200831/ourmid/pngtree-home-for-sale-sign-representing-the-concept-of-real-estate-sale-png-image_2336006.jpg",
-    },
-    // {
-    //   id: 22,
-    //   name: "Commercial 4",
-    //   src: "https://i.pinimg.com/736x/06/3f/b6/063fb643d1ddc8bbd4a3cdf002552aa4.jpg",
-    // },
-    // {
-    //   id: 23,
-    //   name: "Commercial 4",
-    //   src: "https://img.freepik.com/premium-psd/real-estate-house-property-instagram-post-social-media-banner-template_486734-232.jpg",
-    // },
-    // {
-    //   id: 24,
-    //   name: "Commercial 4",
-    //   src: "https://i.pinimg.com/736x/c5/6c/20/c56c20a7d00d37d3fdf3d833b580a85c.jpg",
-    // },
+    { id: 7, name: "Commercial 4", src: home4 },
+    { id: 48, name: "Commercial 1", src: home5 },
+    { id: 51, name: "Commercial 2", src: home6 },
+    { id: 63, name: "Commercial 3", src: home7 },
+    { id: 7555, name: "Commercial 4", src: home8 },
+   
+  
   ],
 
   3: [
     {
       id: 8,
-      src: "https://img.bebeautiful.in/www-bebeautiful-in/how-to-use-milk-cream-for-your-skin-600x350-picmobhome.jpg",
+      src: IMAGE6,
       name: "Cream",
       subname: "Best Cream",
       description: "We Have All Brands of Fresh Cream",
@@ -133,7 +152,7 @@ const projects = {
     },
     {
       id: 9,
-      src: "https://www.india.com/wp-content/uploads/2022/07/Dahi-Khanyache-Fayde-Marathi.jpg",
+      src: nir1,
       name: "Dahi",
       subname: "Best Dahi",
       description: "We Have All Brands of Fresh Dahi",
@@ -141,7 +160,7 @@ const projects = {
     },
     {
       id: 10,
-      src: dudh,
+      src: nir2,
       name: "Dudh",
       subname: "Best Dudh",
       description: "We Have All Brands of Fresh Dudh",
@@ -149,54 +168,93 @@ const projects = {
     },
     {
       id: 11,
-      src: ghee,
+      src: nir3,
       name: "Ghee",
       subname: "Best Ghee",
       description: "We Have All Brands of Fresh Ghee",
       link: "/construction-home",
     },
+   
+   {
+      id: 15,
+      src: nir7,
+      name: "Shake",
+      subname: "Best Shake",
+      description: "We Have All Brands of Fresh Shake",
+      link: "/construction-home",
+    }, 
     {
-      id: 12,
-      src: "https://i.ytimg.com/vi/tziQpzMX8Uk/maxresdefault.jpg",
-      name: "Lassi",
-      subname: "Best Lassi",
-      description: "We Have All Brands of Fresh Lassi",
+      id: 14,
+      src: nir6,
+      name: "Paneer",
+      subname: "Best Paneer",
+      description: "We Have All Brands of Fresh Paneer",
       link: "/construction-home",
     },
-    {
+   
+    
+      {
       id: 13,
-      src: "https://nonprod-media.webdunia.com/public_html/_media/hi/img/article/2020-04/22/full/1587556253-7501.jpg",
+      src: nir5,
       name: "Mattha",
       subname: "Best Mattha",
       description: "We Have All Brands of Fresh Mattha",
       link: "/construction-home",
     },
     {
-      id: 14,
-      src: "https://www.prakashdairymorbi.com/wp-content/uploads/Malai-Panner.png",
-      name: "Paneer",
-      subname: "Best Paneer",
-      description: "We Have All Brands of Fresh Paneer",
-      link: "/construction-home",
-    },
-    {
-      id: 15,
-      src: "https://www.indianhealthyrecipes.com/wp-content/uploads/2022/11/apple-milkshake-apple-shake.jpg",
-      name: "Shake",
-      subname: "Best Shake",
-      description: "We Have All Brands of Fresh Shake",
+      id: 12,
+      src: nir4,
+      name: "Lassi",
+      subname: "Best Lassi",
+      description: "We Have All Brands of Fresh Lassi",
       link: "/construction-home",
     },
   ],
 
   4: [
+     {
+      id: 15,
+      name: "Sugar Cane Vinegar",
+      src: amasrs5,
+    },
+     {
+      id: 17,
+      name: "Sugar Cane Vinegar",
+      src: amasrs6,
+    },
+    {
+      id: 16,
+      name: "Sugar Cane Vinegar",
+      src: amasrs7,
+    },
     {
       id: 10,
       name: "Sugar Cane Vinegar",
-      src: "/1.jpeg",
+      src: amasrs1,
     },
+
     {
       id: 11,
+      name: "Sugar Cane Vinegar",
+      src: amasrs2,
+    },
+  
+   
+    {
+      id: 14,
+      name: "Sugar Cane Vinegar",
+      src: amasrs4,
+    },
+   
+    
+   
+     {
+      id: 13,
+      name: "Sugar Cane Vinegar",
+      src: amasrs3,
+    },
+    {
+      id: 18,
       name: "Minralas Water",
       src: "/2.jpg",
     },
@@ -204,8 +262,51 @@ const projects = {
   5: [
     {
       id: 1,
-      name: "GDR Group 72",
-      src: gdr,
+      name: "Development",
+      src: IMAGE1,
+      link: "/",
+    },
+    {
+      id: 2,
+      name: "Development",
+      src: IMAGE2,
+      link: "/",
+    },
+    {
+      id: 3,
+      name: "Agriculter",
+      src: IMAGE3,
+      link: "/",
+    },
+    {
+      id: 4,
+      name: "Agriculter",
+      src: IMAGE4,
+      link: "/",
+    },
+    {
+      id: 5,
+      name: "Agriculter",
+      src: IMAGE5,
+      link: "/",
+    },
+    
+    {
+      id: 6,
+      name: "Agriculter",
+      src: IMAGE6,
+      link: "/",
+    },
+    {
+      id: 7,
+      name: "Agriculter",
+      src: IMAGE7,
+      link: "/",
+    },
+    {
+      id: 8,
+      name: "Agriculter",
+      src: IMAGE8,
       link: "/",
     },
   ],
@@ -234,22 +335,28 @@ const Project = () => {
             role="tablist"
             className="flex flex-wrap gap-4 border-b justify-center border-gray-700 px-4"
           >
-            {tabs.map((tab) => (
-              <button
-                key={tab.id}
-                role="tab"
-                aria-selected={activeTab === tab.id}
-                aria-controls={`panel-${tab.id}`}
-                className={`py-3 px-6 text-sm font-medium rounded-t-lg transition-colors ${
-                  activeTab === tab.id
-                    ? "bg-yellow-600 text-white"
-                    : "text-white hover:text-yellow-400"
-                }`}
-                onClick={() => handleTabClick(tab.id)}
-              >
-                {tab.name}
-              </button>
-            ))}
+         {tabs.map((tab) => (
+  <button
+    key={tab.id}
+    role="tab"
+    aria-selected={activeTab === tab.id}
+    aria-controls={`panel-${tab.id}`}
+    className={`flex flex-col items-center gap-2 py-4 px-6 rounded-t-lg transition-colors duration-200 ${
+      activeTab === tab.id
+        ? "bg-yellow-600 text-white"
+        : "text-white hover:text-yellow-400"
+    }`}
+    onClick={() => handleTabClick(tab.id)}
+  >
+    <Image
+      src={tab.image}
+      alt={tab.name}
+      className="w-10 h-10 object-contain rounded"
+    />
+    {/* <span className="text-sm font-medium">{tab.name}</span> */}
+  </button>
+))}
+
           </div>
         </div>
 
@@ -275,11 +382,11 @@ const Project = () => {
                     height={500}
                     className="w-full h-80 object-cover transition-transform duration-500 ease-in-out transform group-hover:scale-110"
                   />
-                  <div className="absolute inset-0 bg-black bg-opacity-50 opacity-0 group-hover:opacity-100 flex items-center justify-center transition-opacity duration-500 ease-in-out">
+                  {/* <div className="absolute inset-0 bg-black bg-opacity-50 opacity-0 group-hover:opacity-100 flex items-center justify-center transition-opacity duration-500 ease-in-out">
                     <span className="text-white text-lg font-medium px-4 text-center">
                       {project.name}
                     </span>
-                  </div>
+                  </div> */}
                 </Link>
               ))}
             </div>

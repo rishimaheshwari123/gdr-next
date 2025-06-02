@@ -95,29 +95,31 @@ const updateBlogCtrl = async (req, res) => {
     }
   };
 
-
 const getAllBlogsCtrl = async (req, res) => {
     try {
+        const blogs = await blogModel.find({}).sort({ createdAt: -1 }); // Sort by createdAt descending
 
-        const blogs = await blogModel.find({});
-        if (!blogs) {
+        if (!blogs || blogs.length === 0) {
             return res.status(400).json({
                 success: false,
                 message: "No blog found"
-            })
+            });
         }
+
         return res.status(200).json({
             success: true,
             totalBlogs: blogs.length,
             blogs
-        })
+        });
     } catch (error) {
         return res.status(500).send({
             success: false,
-            message: "Error in getting blog api!"
-        })
+            message: "Error in getting blog api!",
+            error: error.message
+        });
     }
-}
+};
+
 const getSingleBlogsCtrl = async (req, res) => {
     try {
         const { id } = req.params;

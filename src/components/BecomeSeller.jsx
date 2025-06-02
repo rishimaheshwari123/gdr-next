@@ -261,7 +261,7 @@ const BecomeSeller = ({
       <div className="max-w-7xl mx-auto px-4 pb-16">
         <div className="grid lg:grid-cols-2 gap-8 items-start">
           {/* Left Side - Seller Registration Form */}
-          <motion.div variants={itemVariants}>
+      { subject !=="On demand construction" &&   <motion.div variants={itemVariants}>
             <div className="bg-white rounded-2xl shadow-xl overflow-hidden">
               <div className="p-6 bg-gradient-to-r from-green-500 to-emerald-500 text-white text-center">
                 <motion.div
@@ -276,7 +276,7 @@ const BecomeSeller = ({
               </div>
 
               <form onSubmit={handleSellerSubmit} className="p-8 space-y-6">
-                <div className="grid gap-6">
+                <div className="grid gap-1">
                   {/* Business Name */}
                   <motion.div whileFocus={{ scale: 1.02 }} className="relative group">
                     <Building className="absolute left-3 top-1/2 transform -translate-y-1/2 w-5 h-5 text-gray-400 group-focus-within:text-green-500 transition-colors" />
@@ -287,7 +287,7 @@ const BecomeSeller = ({
                       value={sellerFormData.businessName}
                       onChange={handleSellerChange}
                       required
-                      className="w-full pl-12 pr-4 py-4 border-2 border-gray-200 rounded-xl focus:border-green-500 focus:outline-none transition-all duration-300 bg-gray-50 focus:bg-white"
+                      className="w-full pl-12 pr-4 py-1 border-2 border-gray-200 rounded-xl focus:border-green-500 focus:outline-none transition-all duration-300 bg-gray-50 focus:bg-white"
                     />
                   </motion.div>
 
@@ -301,7 +301,7 @@ const BecomeSeller = ({
                       value={sellerFormData.ownerName}
                       onChange={handleSellerChange}
                       required
-                      className="w-full pl-12 pr-4 py-4 border-2 border-gray-200 rounded-xl focus:border-green-500 focus:outline-none transition-all duration-300 bg-gray-50 focus:bg-white"
+                      className="w-full pl-12 pr-4 py-1 border-2 border-gray-200 rounded-xl focus:border-green-500 focus:outline-none transition-all duration-300 bg-gray-50 focus:bg-white"
                     />
                   </motion.div>
 
@@ -315,7 +315,7 @@ const BecomeSeller = ({
                       value={sellerFormData.email}
                       onChange={handleSellerChange}
                       required
-                      className="w-full pl-12 pr-4 py-4 border-2 border-gray-200 rounded-xl focus:border-green-500 focus:outline-none transition-all duration-300 bg-gray-50 focus:bg-white"
+                      className="w-full pl-12 pr-4 py-1 border-2 border-gray-200 rounded-xl focus:border-green-500 focus:outline-none transition-all duration-300 bg-gray-50 focus:bg-white"
                     />
                   </motion.div>
 
@@ -329,7 +329,7 @@ const BecomeSeller = ({
                       value={sellerFormData.mobile}
                       onChange={handleSellerChange}
                       required
-                      className="w-full pl-12 pr-4 py-4 border-2 border-gray-200 rounded-xl focus:border-green-500 focus:outline-none transition-all duration-300 bg-gray-50 focus:bg-white"
+                      className="w-full pl-12 pr-4 py-1 border-2 border-gray-200 rounded-xl focus:border-green-500 focus:outline-none transition-all duration-300 bg-gray-50 focus:bg-white"
                     />
                   </motion.div>
 
@@ -341,7 +341,7 @@ const BecomeSeller = ({
                       value={sellerFormData.businessType}
                       onChange={handleSellerChange}
                       required
-                      className="w-full pl-12 pr-4 py-4 border-2 border-gray-200 rounded-xl focus:border-green-500 focus:outline-none transition-all duration-300 bg-gray-50 focus:bg-white appearance-none cursor-pointer"
+                      className="w-full pl-12 pr-4 py-1 border-2 border-gray-200 rounded-xl focus:border-green-500 focus:outline-none transition-all duration-300 bg-gray-50 focus:bg-white appearance-none cursor-pointer"
                     >
                       <option value="">Select Business Type</option>
                       <option value="manufacturer">Manufacturer</option>
@@ -360,7 +360,7 @@ const BecomeSeller = ({
                       value={sellerFormData.experience}
                       onChange={handleSellerChange}
                       required
-                      className="w-full pl-12 pr-4 py-4 border-2 border-gray-200 rounded-xl focus:border-green-500 focus:outline-none transition-all duration-300 bg-gray-50 focus:bg-white appearance-none cursor-pointer"
+                      className="w-full pl-12 pr-4 py-1 border-2 border-gray-200 rounded-xl focus:border-green-500 focus:outline-none transition-all duration-300 bg-gray-50 focus:bg-white appearance-none cursor-pointer"
                     >
                       <option value="">Years of Experience</option>
                       <option value="0-1">0-1 Years</option>
@@ -380,7 +380,7 @@ const BecomeSeller = ({
                       value={sellerFormData.location}
                       onChange={handleSellerChange}
                       required
-                      className="w-full pl-12 pr-4 py-4 border-2 border-gray-200 rounded-xl focus:border-green-500 focus:outline-none transition-all duration-300 bg-gray-50 focus:bg-white"
+                      className="w-full pl-12 pr-4 py-1 border-2 border-gray-200 rounded-xl focus:border-green-500 focus:outline-none transition-all duration-300 bg-gray-50 focus:bg-white"
                     />
                   </motion.div>
 
@@ -394,7 +394,7 @@ const BecomeSeller = ({
                       onChange={handleSellerChange}
                       required
                       rows={4}
-                      className="w-full pl-12 pr-4 py-4 border-2 border-gray-200 rounded-xl focus:border-green-500 focus:outline-none transition-all duration-300 bg-gray-50 focus:bg-white resize-none"
+                      className="w-full pl-12 pr-4 py-1 border-2 border-gray-200 rounded-xl focus:border-green-500 focus:outline-none transition-all duration-300 bg-gray-50 focus:bg-white resize-none"
                     />
                   </motion.div>
                 </div>
@@ -405,7 +405,7 @@ const BecomeSeller = ({
                   disabled={isSubmittingSeller}
                   whileHover={{ scale: 1.02, y: -2 }}
                   whileTap={{ scale: 0.98 }}
-                  className="w-full bg-gradient-to-r from-green-500 to-emerald-500 text-white font-bold py-4 px-6 rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 flex items-center justify-center gap-3 disabled:opacity-50 disabled:cursor-not-allowed relative overflow-hidden group"
+                  className="w-full bg-gradient-to-r from-green-500 to-emerald-500 text-white font-bold py-1 px-6 rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 flex items-center justify-center gap-3 disabled:opacity-50 disabled:cursor-not-allowed relative overflow-hidden group"
                 >
                   <span className="relative z-10 flex items-center gap-3">
                     {isSubmittingSeller ? (
@@ -426,7 +426,7 @@ const BecomeSeller = ({
                 </motion.button>
               </form>
             </div>
-          </motion.div>
+          </motion.div>}
 
           {/* Right Side - Subject Specific Form */}
           <motion.div variants={itemVariants}>
@@ -444,7 +444,7 @@ const BecomeSeller = ({
               </div>
 
               <form onSubmit={handleSubjectSubmit} className="p-8 space-y-6">
-                <div className="grid gap-6">
+                <div className="grid gap-1">
                   {/* Name */}
                   <motion.div whileFocus={{ scale: 1.02 }} className="relative group">
                     <User className="absolute left-3 top-1/2 transform -translate-y-1/2 w-5 h-5 text-gray-400 group-focus-within:text-red-500 transition-colors" />
@@ -455,7 +455,7 @@ const BecomeSeller = ({
                       value={subjectFormData.name}
                       onChange={handleSubjectChange}
                       required
-                      className="w-full pl-12 pr-4 py-4 border-2 border-gray-200 rounded-xl focus:border-red-500 focus:outline-none transition-all duration-300 bg-gray-50 focus:bg-white"
+                      className="w-full pl-12 pr-4 py-1 border-2 border-gray-200 rounded-xl focus:border-red-500 focus:outline-none transition-all duration-300 bg-gray-50 focus:bg-white"
                     />
                   </motion.div>
 
@@ -469,7 +469,7 @@ const BecomeSeller = ({
                       value={subjectFormData.email}
                       onChange={handleSubjectChange}
                       required
-                      className="w-full pl-12 pr-4 py-4 border-2 border-gray-200 rounded-xl focus:border-red-500 focus:outline-none transition-all duration-300 bg-gray-50 focus:bg-white"
+                      className="w-full pl-12 pr-4 py-1 border-2 border-gray-200 rounded-xl focus:border-red-500 focus:outline-none transition-all duration-300 bg-gray-50 focus:bg-white"
                     />
                   </motion.div>
 
@@ -483,7 +483,7 @@ const BecomeSeller = ({
                       value={subjectFormData.mobile}
                       onChange={handleSubjectChange}
                       required
-                      className="w-full pl-12 pr-4 py-4 border-2 border-gray-200 rounded-xl focus:border-red-500 focus:outline-none transition-all duration-300 bg-gray-50 focus:bg-white"
+                      className="w-full pl-12 pr-4 py-1 border-2 border-gray-200 rounded-xl focus:border-red-500 focus:outline-none transition-all duration-300 bg-gray-50 focus:bg-white"
                     />
                   </motion.div>
 
@@ -497,7 +497,7 @@ const BecomeSeller = ({
                       value={subjectFormData.location}
                       onChange={handleSubjectChange}
                       required
-                      className="w-full pl-12 pr-4 py-4 border-2 border-gray-200 rounded-xl focus:border-red-500 focus:outline-none transition-all duration-300 bg-gray-50 focus:bg-white"
+                      className="w-full pl-12 pr-4 py-1 border-2 border-gray-200 rounded-xl focus:border-red-500 focus:outline-none transition-all duration-300 bg-gray-50 focus:bg-white"
                     />
                   </motion.div>
 
@@ -508,7 +508,7 @@ const BecomeSeller = ({
                       name="budget"
                       value={subjectFormData.budget}
                       onChange={handleSubjectChange}
-                      className="w-full pl-12 pr-4 py-4 border-2 border-gray-200 rounded-xl focus:border-red-500 focus:outline-none transition-all duration-300 bg-gray-50 focus:bg-white appearance-none cursor-pointer"
+                      className="w-full pl-12 pr-4 py-1 border-2 border-gray-200 rounded-xl focus:border-red-500 focus:outline-none transition-all duration-300 bg-gray-50 focus:bg-white appearance-none cursor-pointer"
                     >
                       <option value="">Select Budget Range</option>
                       <option value="under-50k">Under ₹50,000</option>
@@ -526,7 +526,7 @@ const BecomeSeller = ({
                       name="timeline"
                       value={subjectFormData.timeline}
                       onChange={handleSubjectChange}
-                      className="w-full pl-12 pr-4 py-4 border-2 border-gray-200 rounded-xl focus:border-red-500 focus:outline-none transition-all duration-300 bg-gray-50 focus:bg-white appearance-none cursor-pointer"
+                      className="w-full pl-12 pr-4 py-1 border-2 border-gray-200 rounded-xl focus:border-red-500 focus:outline-none transition-all duration-300 bg-gray-50 focus:bg-white appearance-none cursor-pointer"
                     >
                       <option value="">Project Timeline</option>
                       <option value="immediate">Immediate (Within 1 week)</option>
@@ -548,7 +548,7 @@ const BecomeSeller = ({
                       required
                       minLength={20}
                       rows={4}
-                      className="w-full pl-12 pr-4 py-4 border-2 border-gray-200 rounded-xl focus:border-red-500 focus:outline-none transition-all duration-300 bg-gray-50 focus:bg-white resize-none"
+                      className="w-full pl-12 pr-4 py-1 border-2 border-gray-200 rounded-xl focus:border-red-500 focus:outline-none transition-all duration-300 bg-gray-50 focus:bg-white resize-none"
                     />
                   </motion.div>
                 </div>
@@ -569,7 +569,7 @@ const BecomeSeller = ({
                   disabled={isSubmittingSubject}
                   whileHover={{ scale: 1.02, y: -2 }}
                   whileTap={{ scale: 0.98 }}
-                  className="w-full bg-gradient-to-r from-red-500 to-pink-500 text-white font-bold py-4 px-6 rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 flex items-center justify-center gap-3 disabled:opacity-50 disabled:cursor-not-allowed relative overflow-hidden group"
+                  className="w-full bg-gradient-to-r from-red-500 to-pink-500 text-white font-bold py-1 px-6 rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 flex items-center justify-center gap-3 disabled:opacity-50 disabled:cursor-not-allowed relative overflow-hidden group"
                 >
                   <span className="relative z-10 flex items-center gap-3">
                     {isSubmittingSubject ? (

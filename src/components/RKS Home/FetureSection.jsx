@@ -4,11 +4,11 @@ import { motion, useScroll, useTransform } from "framer-motion";
 import { useRef } from "react";
 import Image from "next/image";
 import h1 from "@/assests/home/h1.jpg";
-import h4 from "@/assests/home/h4.jpg";
+import h4 from "@/assests/home/agfarm.png";
 import fd from "@/assests/gallery/fd.jpg";
-import fh from "@/assests/gallery/fh.jpg";
-import cl from "@/assests/gallery/cl.jpg";
-import re from "@/assests/gallery/re.jpeg";
+import fh from "@/assests/gallery/farmhouse.webp";
+import cl from "@/assests/gallery/comer.webp";
+import re from "@/assests/gallery/resort.jpg";
 import c from "@/assests/gallery/collage.jpeg";
 
 const FeaturesSection = () => {
@@ -27,7 +27,7 @@ const FeaturesSection = () => {
         <AnimatedCard
           index={3}
           imageSrc={h4}
-          heading="Agriculture Land And Farm House Development"
+          heading="Agriculture Land  Development"
         />
         <AnimatedCard index={4} imageSrc={cl} heading="Commercial Land" />
         <AnimatedCard index={5} imageSrc={re} heading="Resort" />
@@ -43,11 +43,11 @@ const FeaturesSection = () => {
           imageSrc="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSUUGSCAJ5lnrrmleJ1LVIW_7u2omoCkgAXSg&s"
           heading="House"
         />
-        <AnimatedCard
+        {/* <AnimatedCard
           index={10}
           imageSrc="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQalUt-hv788-uXN_J9T1MjncH0XKdzuVKe1g&s"
           heading="Farm House"
-        />
+        /> */}
         <AnimatedCard
           index={11}
           imageSrc="https://farmloans.com/wp-content/uploads/2023/03/The-Benefits-Of-Owning-Agricultural-Land-For-Farming-And-Investment1.2-e1680126871212.jpg"

@@ -47,10 +47,10 @@ const Contact = () => {
               Ratibad Bhopal
             </p>
           </div>
-          <div className="mb-4">
+          {/* <div className="mb-4">
             <h3 className="text-xl font-semibold">Phone Number:</h3>
             <p>98937 30005</p>
-          </div>
+          </div> */}
           <div>
             <h3 className="text-xl font-semibold">Email:</h3>
             <p>rkshomes30@gmail.com</p>

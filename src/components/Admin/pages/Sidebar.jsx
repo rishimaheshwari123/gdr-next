@@ -5,168 +5,126 @@ import { useRouter } from "next/navigation";
 import { CiMenuFries } from "react-icons/ci";
 import { RxCross1 } from "react-icons/rx";
 import { AiOutlineUser } from "react-icons/ai";
-import { MdLogout } from "react-icons/md";
-import { FaHome } from "react-icons/fa";
+import { MdLogout, MdOutlineRealEstateAgent } from "react-icons/md";
+import { FaHome, FaRegImages } from "react-icons/fa";
 import { useDispatch, useSelector } from "react-redux";
 import { setToken, setUser } from "@/redux/authSlice";
 import {
   FcBullish,
   FcPlus,
   FcPieChart,
-  FcMultipleCameras,
 } from "react-icons/fc";
-import { PiStudentFill } from "react-icons/pi";
+
+
+import { PiBuildingsFill } from "react-icons/pi";
 
 const Sidebar = () => {
   const [isCollapsed, setIsCollapsed] = useState(
-    localStorage.getItem("sidebarCollapsed") === "true"
+    typeof window !== "undefined" && localStorage.getItem("sidebarCollapsed") === "true"
   );
   const { user } = useSelector((state) => state.auth);
   const dispatch = useDispatch();
   const router = useRouter();
   const sidebarRef = useRef(null);
 
-  // Function to handle logout
-  const handleLogout = async () => {
+  const handleLogout = () => {
     localStorage.removeItem("token");
     dispatch(setToken(null));
     dispatch(setUser(null));
     router.push("/login");
   };
 
-  // Function to toggle sidebar collapse
   const handleToggle = () => {
     const collapsed = !isCollapsed;
     setIsCollapsed(collapsed);
     localStorage.setItem("sidebarCollapsed", collapsed.toString());
   };
 
-  // Effect to close sidebar when clicking outside
   useEffect(() => {
-    // Ensure that this code only runs in the browser (client-side)
-    if (typeof window !== "undefined" && typeof document !== "undefined") {
-      const handleClickOutside = (event) => {
-        if (sidebarRef.current && !sidebarRef.current.contains(event.target)) {
-          setIsCollapsed(true);
-          localStorage.setItem("sidebarCollapsed", "true");
-        }
-      };
+    const handleClickOutside = (event) => {
+      if (sidebarRef.current && !sidebarRef.current.contains(event.target)) {
+        setIsCollapsed(true);
+        localStorage.setItem("sidebarCollapsed", "true");
+      }
+    };
 
-      document.addEventListener("mousedown", handleClickOutside);
-
-      return () => {
-        document.removeEventListener("mousedown", handleClickOutside);
-      };
-    }
+    document.addEventListener("mousedown", handleClickOutside);
+    return () => document.removeEventListener("mousedown", handleClickOutside);
   }, []);
-
 
   const menuItems = [
     { href: "/", icon: <FaHome />, label: "Back To Home" },
     { href: "/admin/dashboard", icon: <FcBullish />, label: "Dashboard" },
     { href: "/admin/addBlog", icon: <FcPlus />, label: "Add Blog" },
     { href: "/admin/getBlog", icon: <FcPieChart />, label: "Get Blog" },
-    {
-      href: "/admin/create-gallery",
-      icon: <FcMultipleCameras />,
-      label: "Add Gallery",
-    },
-    { href: "/admin/jobs", icon: <PiStudentFill />, label: "Job Opening" },
-    {
-      href: "/admin/farmhouse",
-      icon: <PiStudentFill />,
-      label: "Farm House",
-    },
-    // {
-    //   href: "/admin/product-getAll",
-    //   icon: <PiStudentFill />,
-    //   label: "Get Product",
-    // },
+    { href: "/admin/create-gallery", icon: <FaRegImages />, label: "Gallery" },
+    { href: "/admin/jobs", icon: <PiBuildingsFill />, label: "Job Openings" },
+    { href: "/admin/farmhouse", icon: <MdOutlineRealEstateAgent />, label: "Farm House" },
   ];
 
   return (
     <div
       ref={sidebarRef}
-      className={`fixed h-screen top-0 overflow-y-scroll ${
+      className={`fixed top-0 left-0 h-screen z-50 bg-white shadow-md transition-all duration-300 overflow-y-auto ${
         isCollapsed ? "w-20" : "w-64"
-      } bg-white transition-all duration-300`}
+      }`}
     >
-      <div className="flex items-center justify-between p-4">
-        {/* Logo section */}
-        <div
-          className={`${
-            isCollapsed ? "hidden" : "block"
-          } text-gray-600 font-bold text-xl`}
-        ></div>
-        {/* Toggle button */}
+      <div className="flex items-center justify-between px-4 py-3 border-b">
+        {!isCollapsed && (
+          <div className="text-xl font-bold text-gray-700">Admin Panel</div>
+        )}
         <button
           onClick={handleToggle}
-          className="bg-transparent border-none w-8 h-8 flex justify-center items-center cursor-pointer text-gray-600"
+          className="text-gray-600 hover:text-black"
         >
           {isCollapsed ? <CiMenuFries size={22} /> : <RxCross1 size={22} />}
         </button>
       </div>
 
-      {/* Navigation links */}
-      <ul className="text-gray-600 list-none flex flex-col gap-2 p-4 mb-14">
+      <ul className="p-4 flex flex-col gap-2">
         {menuItems.map((item) => (
           <li key={item.href}>
             <Link
               href={item.href}
-              onClick={handleToggle}
-              className={`text-gray-600 py-4 flex items-center hover:border-r-4 hover:border-black ${
-                router.pathname === item.href ? "border-r-4 border-black" : ""
+              className={`flex items-center gap-4 p-3 rounded-lg transition-all ${
+                router.pathname === item.href
+                  ? "bg-yellow-100 text-yellow-700 font-semibold"
+                  : "hover:bg-gray-100 text-gray-700"
               }`}
+              onClick={handleToggle}
             >
-              <div className="text-2xl">{item.icon}</div>
-              <span
-                className={`ml-4 text-xl ${isCollapsed ? "hidden" : "block"}`}
-              >
-                {item.label}
-              </span>
+              <span className="text-xl">{item.icon}</span>
+              {!isCollapsed && <span className="text-base">{item.label}</span>}
             </Link>
           </li>
         ))}
       </ul>
 
-      {/* User and logout section */}
-      <div className="absolute -bottom-18 left-2 right-2 overflow-hidden mt-10">
+      <div className="absolute bottom-4 left-0 w-full px-4">
         <div
-          className={`flex items-center justify-center w-full ${
-            isCollapsed
-              ? "w-11 h-11 rounded-full bg-slate-400 "
-              : "bg-slate-400 py-2 px-4 rounded-lg"
+          className={`flex items-center gap-3 p-3 rounded-lg bg-slate-100 mb-2 ${
+            isCollapsed ? "justify-center" : ""
           }`}
         >
-          <div
-            className={`cursor-pointer flex items-center justify-center text-gray-600 ${
-              isCollapsed ? "w-10 h-10 rounded-full" : ""
-            }`}
-          >
-            {isCollapsed ? (
-              <AiOutlineUser size={20} />
-            ) : (
-              <span className="text-xl">
-                {user?.name?.charAt(0).toUpperCase() + user?.name.slice(1)}
-              </span>
-            )}
+          <div className="text-gray-700 text-lg">
+            <AiOutlineUser />
           </div>
+          {!isCollapsed && (
+            <span className="text-gray-700 text-sm font-medium">
+              {user?.name
+                ? user.name.charAt(0).toUpperCase() + user.name.slice(1)
+                : "User"}
+            </span>
+          )}
         </div>
         <button
           onClick={handleLogout}
-          className={`bg-red-600 text-white text-xl flex items-center justify-center mt-2 ${
-            isCollapsed
-              ? "w-12 h-12 rounded-full"
-              : "py-2 px-4 w-full rounded-lg"
+          className={`flex items-center gap-2 justify-center w-full p-3 rounded-lg text-white bg-red-600 hover:bg-red-700 transition ${
+            isCollapsed ? "justify-center" : "justify-start"
           }`}
         >
-          {isCollapsed ? (
-            <MdLogout />
-          ) : (
-            <span className="flex gap-1 items-center text-xl">
-              <MdLogout /> Logout
-            </span>
-          )}
+          <MdLogout size={20} />
+          {!isCollapsed && <span>Logout</span>}
         </button>
       </div>
     </div>

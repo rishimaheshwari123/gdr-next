@@ -109,9 +109,9 @@ const RksContact = () => {
             <p className="text-center mb-2 text-white text-sm">
               10 Am To 7 Pm All Days
             </p>
-            <p className="text-center mb-4 text-white text-lg font-semibold">
+            {/* <p className="text-center mb-4 text-white text-lg font-semibold">
               98937 30005
-            </p>
+            </p> */}
             <p className="text-center mb-4 text-white text-lg font-semibold">
               rkshomes30@gmail.com
             </p>

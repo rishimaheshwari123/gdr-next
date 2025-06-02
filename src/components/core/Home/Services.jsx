@@ -8,7 +8,7 @@ const services = [
   {
     image: gdr,
     title: "GDR Agrifeed Private Limited",
-    subtitle: "All type of work",
+    subtitle: "GDR Group drives innovation and growth, managing diverse companies with strategic vision, operational excellence, and sustainable success.",
     description:
       "Leader in premium  feed manufacturing and supply.",
     link: "/",
@@ -17,7 +17,7 @@ const services = [
     image:
       "https://media.istockphoto.com/id/824351914/photo/distribution-warehouse-with-trucks-of-different-capacity.jpg?s=612x612&w=0&k=20&c=-aeDD6vTkJZ9c_Sg_xFPZKpn10HNPczG8AKYPRcWvFs=",
     title: "RKS Infrabuild & Homes Pvt. LTD.",
-    subtitle: "Your Trusted Partner in Farmland Investment",
+    subtitle: "Land Development, Farmhouse, Agricultural Land, Commercial Land - Sale & Purchase | High ROI Investment",
     description:
       "Real estate company focusing on the sale of agricultural lands with expert guidance.",
     link: "/rks-homes/home",
@@ -26,7 +26,7 @@ const services = [
     image:
       "https://wallpapers.com/images/hd/real-estate-digital-art-0kmi22tcj2x60lim.jpg",
     title: "New RK Construction",
-    subtitle: "Building Dreams with Strong Foundations",
+    subtitle: "Leading construction company specializing in civil works for both government and private bodies. ",
     description:
       "Leading construction company specializing in civil works for both government and private bodies.",
     link: "/construction/home",
@@ -34,17 +34,17 @@ const services = [
   {
     image: n,
     title: "Nirvdit All Making Products Private Limited",
-    subtitle: "Pure Taste, Trusted Quality",
+    subtitle: "Comprehensive Range of Home, Grocery & Food Products | Milk & Dairy Items | Water & Beverage Solutions | Complete Cattle Feed Range",
     description:
-      "Manufacturer of milk products like butter, clarified butter, and ice cream.",
+      "Comprehensive Range of Home, Grocery & Food Products | Milk & Dairy Items | Water & Beverage Solutions | Complete Cattle Feed Range",
     link: "/srs-foods/home",
   },
   {
     image: "/aamrasImage.jpeg",
     title: "AAMARS ALL MAKING PRODUCTS PRIVATE LIMITED",
-    subtitle: "Bringing Authentic Flavors to Every Home",
+    subtitle:       "Comprehensive Range of Home, Grocery & Food Products | Milk & Dairy Items | Water & Beverage Solutions | Complete Cattle Feed Range",
     description:
-      "Specializes in selling high-quality spices and dry food items for home cooking.",
+      "Comprehensive Range of Home, Grocery & Food Products | Milk & Dairy Items | Water & Beverage Solutions | Complete Cattle Feed Range",
     link: "/ri-si-food/home",
   },
 ];
@@ -86,7 +86,7 @@ const Services = () => {
             <div className="absolute inset-0 bg-black bg-opacity-40 z-10"></div>
             {/* Overlay for Title and Subtitle */}
             <div className="absolute inset-0 flex flex-col justify-center items-center text-white text-center p-4 z-20 transition-transform duration-500 ease-in-out group-hover:translate-x-full">
-              <h6 className="text-xl font-bold">{service.title}</h6>
+              <h6 className="text-xl font-bold uppercase">{service.title}</h6>
               <p className="text-sm">{service.subtitle}</p>
             </div>
             {/* Hidden content */}

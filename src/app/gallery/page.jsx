@@ -299,19 +299,19 @@ const data = [
   //   id: 36,
   //   name: "Pearl Millet",
   //   image: "https://res.cloudinary.com/dsvotvxhq/image/upload/v1719471977/INEXT/n8fytp8pu2azjujawj05.jpg",
-  //   type: "Aamaras Gallery",
+  //   type: "Aamars Gallery",
   // },
   // {
   //   id: 37,
   //   name: "Sorghum",
   //   image: "https://res.cloudinary.com/dsvotvxhq/image/upload/v1719472203/INEXT/zwcdngotgxpj08igfpim.jpg",
-  //   type: "Aamaras Gallery",
+  //   type: "Aamars Gallery",
   // },
   // {
   //   id: 38,
   //   name: "Finger Millet",
   //   image: "https://5.imimg.com/data5/SELLER/Default/2022/8/QG/PN/VM/156307736/3-500x500.jpeg",
-  //   type: "Aamaras Gallery",
+  //   type: "Aamars Gallery",
   // },
 
   // Pulses
@@ -319,19 +319,19 @@ const data = [
   //   id: 39,
   //   name: "Green Gram (Mng Dal)",
   //   image: "https://res.cloudinary.com/dsvotvxhq/image/upload/v1719472481/INEXT/kzuhyjo9bnjtnldju6fd.jpg",
-  //   type: "Aamaras Gallery",
+  //   type: "Aamars Gallery",
   // },
   // {
   //   id: 40,
   //   name: "Split Green Gram (Mung Dal)",
   //   image: "https://t4.ftcdn.net/jpg/01/83/47/67/360_F_183476704_WElLlOssc5NeZFYRNlI7BtebbjSMJFrf.jpg",
-  //   type: "Aamaras Gallery",
+  //   type: "Aamars Gallery",
   // },
   // {
   //   id: 41,
   //   name: "Yellow Lentils (Toor Dal)",
   //   image: "https://cdn.ecommercedns.uk/files/8/252318/9/27680479/yellow-lentils.jpg",
-  //   type: "Aamaras Gallery",
+  //   type: "Aamars Gallery",
   // },
 
   // Spices
@@ -362,19 +362,19 @@ const data = [
   //   id: 45,
   //   name: "Ginger",
   //   image: "https://res.cloudinary.com/dsvotvxhq/image/upload/v1719476349/INEXT/o95pdidtmxj2vsf7blcd.webp",
-  //   type: "Aamaras Gallery",
+  //   type: "Aamars Gallery",
   // },
   // {
   //   id: 46,
   //   name: "Garlic",
   //   image: "https://res.cloudinary.com/dsvotvxhq/image/upload/v1719476439/INEXT/lw5zodvwlfbwnorfnqkh.jpg",
-  //   type: "Aamaras Gallery",
+  //   type: "Aamars Gallery",
   // },
   // {
   //   id: 47,
   //   name: "Green Chilli",
   //   image: "https://res.cloudinary.com/dsvotvxhq/image/upload/v1719504391/INEXT/phacoej2wcdpoqv6x1vf.webp",
-  //   type: "Aamaras Gallery",
+  //   type: "Aamars Gallery",
   // },
 
   // Powders
@@ -405,19 +405,19 @@ const data = [
   //   id: 51,
   //   name: "Basnati Rice",
   //   image: "https://res.cloudinary.com/dsvotvxhq/image/upload/v1719579620/INEXT/rlgavk9bh7uksfdchlgf.webp",
-  //   type: "Aamaras Gallery",
+  //   type: "Aamars Gallery",
   // },
   // {
   //   id: 52,
   //   name: "Sona Masoori Rice",
   //   image: "https://res.cloudinary.com/dsvotvxhq/image/upload/v1719579720/INEXT/mavgxgw4ij1icwuj90zw.jpg",
-  //   type: "Aamaras Gallery",
+  //   type: "Aamars Gallery",
   // },
   // {
   //   id: 53,
   //   name: "Brown Rice",
   //   image: "https://res.cloudinary.com/dsvotvxhq/image/upload/v1719579826/INEXT/fvgiua4tf0v9ithwjpf3.webp",
-  //   type: "Aamaras Gallery",
+  //   type: "Aamars Gallery",
   // },
 
   // Fruits

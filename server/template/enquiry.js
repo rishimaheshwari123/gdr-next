@@ -71,7 +71,7 @@ const enquiryEmail = (name, companyName, product, quantity, email, contactNumber
     <body>
         <div class="container">
             <a href="https://gdrgroup72.com/">
-                <img class="logo" src="https://gdrgroup72.com/static/media/gdrgruop.6fe169ab01a3b9b0d5f7.jpg" alt="Aamaras">
+                <img class="logo" src="https://gdrgroup72.com/static/media/gdrgruop.6fe169ab01a3b9b0d5f7.jpg" alt="Aamars">
             </a>
             <div class="message">New Product Query</div>
             <div class="body">

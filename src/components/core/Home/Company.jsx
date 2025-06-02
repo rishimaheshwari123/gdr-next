@@ -10,13 +10,13 @@ import n from "@/assests/nir.jpg"
 const company = [
   {
     photo: gdr,
-    title: "GDR Agrifeed Private Limited",
+    title: "GDR Agrifeed  Pvt. Ltd.",
     desc: "Empowering Excellence, Driving Growth GDR Group is a dynamic business conglomerate dedicated to overseeing and managing a diverse portfolio of companies, each excelling in its domain. With a vision to lead and innovate, GDR Group provides strategic direction, operational efficiency, and sustainable growth opportunities for its subsidiaries.",
     link: "/",
   },
   {
     photo: home,
-    title: "RKS Infrabuild & Homes Pvt LTD",
+    title: "RKS Infrabuild & Homes Pvt. Ltd.",
     desc: "A trusted name in real estate - specializing in land development, property sales, and purchases across premium residential and commercial segments.",
     link: "/rks-homes/home",
   },
@@ -28,13 +28,13 @@ const company = [
   },
   {
     photo: n,
-    title: "Nirvdit All Making Products",
+    title: "Nirvdit All Making Products Pvt. Ltd.",
     desc: "A quality-driven manufacturer of cattle feed, home food essentials, and grocery items, ensuring premium standards and freshness in every product.",
     link: "/srs-foods/home",
   },
   {
     photo: food,
-    title: "Aamaras",
+    title: "Aamars All Making Products Pvt. Ltd.",
     desc: "A brand known for superior cattle feed, home food, and grocery manufacturing and marketing, delivering value and trust to homes, farms, and businesses.",
     link: "/ri-si-food/home",
   },
@@ -56,7 +56,7 @@ const Company = () => {
         </div>
       </div>
 
-      <div className="max-w-7xl mx-auto px-6">
+      <div className="w-11/12 mx-auto px-6">
         <Slide direction="up" triggerOnce cascade damping={0.1}>
           <div className="grid lg:grid-cols-3 md:grid-cols-2 grid-cols-1 gap-8">
             {company.map((currElem, index) => (

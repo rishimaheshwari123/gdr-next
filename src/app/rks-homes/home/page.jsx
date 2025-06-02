@@ -23,7 +23,7 @@ function RKSHome() {
       <FeaturesSection />
       <AboutSection />
 
-      <TestimonialSection />
+      {/* <TestimonialSection /> */}
     </div>
   );
 }

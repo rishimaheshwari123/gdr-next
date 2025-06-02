@@ -27,7 +27,7 @@ const AboutUsPage = () => {
             </h6>
             <p>
               Both the employees and business partners have made a major
-              contribution to Aamaras strong foundation. We are proud to have
+              contribution to Aamars strong foundation. We are proud to have
               such team players incorporating years of expertise in providing
               customers with a range of import and export solutions. Our
               leaders' approach is always intended to provide visibility,

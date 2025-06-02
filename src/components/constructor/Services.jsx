@@ -5,13 +5,13 @@ import Image from "next/image";
 import dynamic from "next/dynamic";
 
 import briks from "@/assests/constructor/briks.jpeg";
-import cement from "@/assests/constructor/cement.jpeg";
+import cement from "@/assests/constructor/cement.jpg";
 import craser from "@/assests/constructor/craser.jpg";
 import el from "@/assests/constructor/el.png";
 import iron from "@/assests/constructor/iron.jpg";
 import sariya from "@/assests/constructor/sariya.jpeg";
 import send from "@/assests/constructor/send.jpg";
-import wire from "@/assests/constructor/wire.webp";
+import wire from "@/assests/constructor/wire.jpg";
 
 const Slide = dynamic(
   () => import("react-awesome-reveal").then((mod) => mod.Slide),
