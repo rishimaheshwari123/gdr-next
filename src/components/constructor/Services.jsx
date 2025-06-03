@@ -11,7 +11,7 @@ import el from "@/assests/constructor/el.png";
 import iron from "@/assests/constructor/iron.jpg";
 import sariya from "@/assests/constructor/sariya.jpeg";
 import send from "@/assests/constructor/send.jpg";
-import wire from "@/assests/constructor/wire.jpg";
+import wire from "@/assests/constructor/wire.webp";
 
 const Slide = dynamic(
   () => import("react-awesome-reveal").then((mod) => mod.Slide),

@@ -44,7 +44,7 @@ import nir7 from "@/assests/nirvdit/9.jpg";
 import amasrs1 from "@/assests/milk/1.png";
 import amasrs2 from "@/assests/milk/2.webp";
 import amasrs3 from "@/assests/milk/3.jpg";
-import amasrs4 from "@/assests/milk/4.jpg";
+import amasrs4 from "@/assests/milk4.png";
 import amasrs5 from "@/assests/milk/5.webp";
 import amasrs6 from "@/assests/milk/6.webp";
 import amasrs7 from "@/assests/milk/7.png";

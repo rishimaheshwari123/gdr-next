@@ -16,28 +16,28 @@ function HeroSlider() {
       title: "All Kinds of Dry Fruits",
       desc: " Explore our premium selection of dry fruits, including almonds, cashews, walnuts, raisins, and more. Our dry fruits are sourced from the best regions, ensuring you receive only the freshest and highest quality products for your daily snacking and culinary needs.",
       image:
-        "https://res.cloudinary.com/dsvotvxhq/image/upload/v1719821220/INEXT/jmtdvvc7ofy36i9ipstl.jpg",
+        "https://sindhidryfruits.live/cdn/shop/articles/The_Best_Dry_Fruits_for_Energy_A_Look_at_Nutrient-Rich_Powerhouses.png?v=1741508871",
     },
     {
       _id: "668263caf9a5891201ae43df",
       title: "Minral Water",
       desc: "Discover the purity of Minral Water, sourced from the finest natural springs. Our water is carefully filtered and packaged to maintain its refreshing taste and essential minerals, making it the perfect choice for hydration and overall well-being.",
       image:
-        "https://res.cloudinary.com/dsvotvxhq/image/upload/v1719821265/INEXT/wrjwsqb1tfuotdpcgpqd.png",
+        "https://indian-retailer.s3.ap-south-1.amazonaws.com/s3fs-public/2025-03/water%20mineral.jpg",
     },
     {
       _id: "6682641cf9a5891201ae43e5",
       title: "All Types of Vinegar",
       desc: " Elevate your culinary creations with our premium Vinegar, available in a variety of flavors, including apple cider, balsamic, and white vinegar. Perfect for cooking, marinating, and dressing, our vinegar adds a tangy zest to your dishes, enhancing flavors and promoting a healthy lifestyle.",
       image:
-        "https://res.cloudinary.com/dsvotvxhq/image/upload/v1719821347/INEXT/fficfzyq0hv8wuxfxkaf.jpg",
+        "https://indianapublicmedia.org/large-wpimages/amomentofscience/2017/11/vinegar-by-sheila-ryan-via-flickr.jpg",
     },
     {
       _id: "66a4f936d5954d17852bac98",
       title: "All Types Achhar",
       desc: "Savor the traditional flavors of India with our diverse range of Achhar (pickles).From tangy mango and spicy lime to mixed vegetable and chili pickles, our Achhar selection is made from fresh ingredients and authentic spices, adding a burst of flavor to every meal",
       image:
-        "https://res.cloudinary.com/dsvotvxhq/image/upload/v1722087734/INEXT/sqeyiwkkucmue9wnpooz.jpg",
+        "https://savithrammas.com/site/image/cache/catalog/A-Guide-to-Savithrammas-Exotic-Pickles-and-Spices-1080x540.jpg",
     },
   ];
 

@@ -48,7 +48,7 @@ const WhyUs = () => {
         {sections.map((section, index) => (
           <div
             key={index}
-            className="bg-white p-8 rounded-lg lg:rotate-12 hover:rotate-12 shadow-lg hover:shadow-xl transition-shadow duration-300"
+            className="bg-white p-8 rounded-lg  shadow-lg hover:shadow-xl transition-shadow duration-300"
           >
             <div className="flex items-center space-x-4 mb-4">
               {section.icon}
