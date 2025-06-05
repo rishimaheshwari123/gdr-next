@@ -46,7 +46,7 @@ const CompanyDetails = () => {
       <div className="mb-6 p-6 bg-red-50 hover:bg-yellow-400 rounded-lg shadow-sm">
         <h6 className="text-2xl font-extrabold text-red-800 mb-4">Home Food</h6>
         <p className="text-lg text-gray-600 leading-relaxed">
-          <span className="font-semibold text-red-600">AAMARS ALL MAKING PRODUCTS PRIVATE LIMITED</span> offers a
+          <span className="font-semibold text-red-600">Aamars All Making Products Private Limited</span> offers a
           wide range of home food products, including groceries, grains, and
           dried fruits, delivering the freshness and quality you deserve.
         </p>

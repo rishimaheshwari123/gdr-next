@@ -93,7 +93,7 @@ const ConstructorAbout = () => {
               </li>
               <li className="flex items-center text-gray-600">
                 <FaCheckCircle className="text-green-600 mr-2" />
-                AAMARS ALL MAKING PRODUCTS PRIVATE LIMITED
+                Aamars All Making Products Private Limited
               </li>
             </ul>
           </div>

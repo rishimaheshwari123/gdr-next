@@ -41,7 +41,7 @@ const services = [
   },
   {
     image: "/aamrasImage.jpeg",
-    title: "AAMARS ALL MAKING PRODUCTS PRIVATE LIMITED",
+    title: "Aamars All Making Products Private Limited",
     subtitle:       "Comprehensive Range of Home, Grocery & Food Products | Milk & Dairy Items | Water & Beverage Solutions | Complete Cattle Feed Range",
     description:
       "Comprehensive Range of Home, Grocery & Food Products | Milk & Dairy Items | Water & Beverage Solutions | Complete Cattle Feed Range",

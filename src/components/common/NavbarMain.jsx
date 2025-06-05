@@ -1,7 +1,7 @@
 "use client";
 import React, { useState } from "react";
 import { FaChevronDown, FaBars, FaTimes, FaPhone } from "react-icons/fa";
-import logo from "@/assests/logos/gdrgruop.jpg";
+import logo from "@/assests/logos/copylogo.jpg";
 import { navlinks } from "@/data/navlink";
 import Modal from "@/components/core/contact/Modal";
 import Link from "next/link";
@@ -34,12 +34,12 @@ const Navbar = () => {
 
   return (
     <div>
-      <nav className="bg-gray-900 text-white py-3">
+      <nav className="bg-gray-900 text-white py-2">
         <div className="max-w-7xl mx-auto flex justify-between items-center px-4">
           {/* Logo and Contact Information */}
           <Link href="/" passHref>
             <p className="flex items-center space-x-4">
-              <Image src={logo} alt="Logo" className="h-14 w-20" />
+              <Image src={logo} alt="Logo" className="h-16 w-24" />
             </p>
           </Link>
 

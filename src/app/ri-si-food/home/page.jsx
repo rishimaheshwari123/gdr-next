@@ -21,7 +21,7 @@ function RISIHomeFood() {
       />
 
       {/* <AboutSection /> */}
-      <BecomeSeller service={"AAMARS ALL MAKING PRODUCTS PRIVATE LIMITED"} />
+      <BecomeSeller service={"Aamars All Making Products Private Limited"} />
 
       <ContactBanner />
       <ProdutsHomeFood />

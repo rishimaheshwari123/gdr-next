@@ -158,7 +158,7 @@ const SocialMediaBar = () => {
           rel="noopener noreferrer"
         >
           <FaYoutube />
-          <span className="icon-name">WhatsApp</span>
+          <span className="icon-name">Youtube</span>
         </Link>
       </div>
       <div className="social-icon bg-red-500">

@@ -30,7 +30,7 @@
 //       image: image4,
 //     },
 //       {
-//       name: "AAMARS ALL MAKING PRODUCTS PRIVATE LIMITED",
+//       name: "Aamars All Making Products Private Limited",
 //       details:
 //         "Supplying a variety of liquid products, including industrial chemicals and personal care items.",
 //       image: image1,
@@ -134,7 +134,7 @@ const TagCloudWithDetails = () => {
       image: image4,
     },
     {
-      name: "AAMARS ALL MAKING PRODUCTS PRIVATE LIMITED",
+      name: "Aamars All Making Products Private Limited",
       details:
         "A brand known for superior cattle feed, home food, and grocery manufacturing and marketing, delivering value and trust to homes, farms, and businesses.",
       image: image1,
@@ -187,7 +187,7 @@ const TagCloudWithDetails = () => {
         </div>
 
         {/* Tag Cloud Section - Right Side */}
-        <div className="relative flex justify-center items-center min-h-[600px] p-8">
+        <div className="relative hidden lg:block flex justify-center items-center min-h-[600px] p-8">
           {/* Animated Background Globe */}
           <div className="absolute inset-0 flex justify-center items-center">
             <div className="relative">
@@ -373,6 +373,22 @@ const TagCloudWithDetails = () => {
           </div>
         </div>
       </div>
+{/* Mobile-Friendly Tag Layout */}
+<div className="lg:hidden mt-8 px-4 flex flex-col gap-4">
+  {tags.map((tag) => (
+    <div
+      key={tag.name}
+      onClick={() => setSelectedTag(tag)}
+      className={`p-4 rounded-xl text-center cursor-pointer transition-all duration-300 ${
+        selectedTag.name === tag.name
+          ? "bg-gradient-to-r from-blue-500 to-purple-500 text-white shadow-md"
+          : "bg-white/10 text-gray-200 hover:bg-white/20"
+      }`}
+    >
+      {tag.name}
+    </div>
+  ))}
+</div>
 
       <style jsx>{`
         @keyframes float {

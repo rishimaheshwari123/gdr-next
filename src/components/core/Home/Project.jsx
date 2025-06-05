@@ -67,13 +67,13 @@ const tabs = [
     image:rkcons
   },
   { id: 3, name: "Nirvdit All Making Products Private Limited",image:nirvdit },
-  { id: 4, name: "AAMARS ALL MAKING PRODUCTS PRIVATE LIMITED", link: "/ri-si-food/home", image:amars },
+  { id: 4, name: "Aamars All Making Products Private Limited", link: "/ri-si-food/home", image:amars },
 ];
 const projects = {
   5: [
     {
       id: 1,
-      name: "AAMARS ALL MAKING PRODUCTS PRIVATE LIMITED",
+      name: "Aamars All Making Products Private Limited",
       src: amars,
       link: "/",
     },
