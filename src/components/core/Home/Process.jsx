@@ -38,7 +38,7 @@ const Process = () => {
   ];
 
   return (
-    <div className="mb-5">
+    <div className="mb-5 hidden">
       <div
         className="relative bg-cover bg-center text-white"
         style={{ backgroundImage: `url('/path/to/your/background-image.jpg')` }}

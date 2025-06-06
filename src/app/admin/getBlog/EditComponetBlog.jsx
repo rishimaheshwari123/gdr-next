@@ -6,7 +6,7 @@ import { toast } from "react-toastify";
 import ReactQuill from "react-quill";
 import "react-quill/dist/quill.snow.css";
 
-const BlogPopup = ({ isOpen, blogId, onClose,getAllBlogs }) => {
+const BlogPopup = ({ isOpen, blogId, onClose, getAllBlogs }) => {
   const BASE_URL = process.env.NEXT_PUBLIC_BASE_URL;
   const [editorHtml, setEditorHtml] = useState("");
   const maxWords = 3000; // Maximum allowed words
@@ -17,7 +17,6 @@ const BlogPopup = ({ isOpen, blogId, onClose,getAllBlogs }) => {
     image: "",
   });
 
-
   const getSingleBlog = async (id) => {
     try {
       const response = await axios.get(
@@ -26,12 +25,12 @@ const BlogPopup = ({ isOpen, blogId, onClose,getAllBlogs }) => {
       if (response?.data?.success) {
         console.log(response.data.blog);
         setFormData({
-            title:response.data.blog.title,
-            
-            type: response.data.blog.type,
-            image: response.data.blog.image,
-        })
-        setEditorHtml(response.data.blog.desc)
+          title: response.data.blog.title,
+
+          type: response.data.blog.type,
+          image: response.data.blog.image,
+        });
+        setEditorHtml(response.data.blog.desc);
       } else {
         throw new Error(response?.data?.message);
       }
@@ -43,7 +42,6 @@ const BlogPopup = ({ isOpen, blogId, onClose,getAllBlogs }) => {
   useEffect(() => {
     getSingleBlog(blogId);
   }, [isOpen, blogId]);
-
 
   // Fetch blog details if blogId is passed and the modal is open
 
@@ -109,7 +107,7 @@ const BlogPopup = ({ isOpen, blogId, onClose,getAllBlogs }) => {
       Swal.close();
 
       if (response?.data?.success) {
-        getAllBlogs()
+        getAllBlogs();
         Swal.fire({
           title: `Blog ${blogId ? "updated" : "created"} successfully!`,
           text: `Have a nice day!`,
@@ -118,7 +116,7 @@ const BlogPopup = ({ isOpen, blogId, onClose,getAllBlogs }) => {
         onClose(); // Close the popup after successful submission
       }
     } catch (error) {
-        console.log(error)
+      console.log(error);
       Swal.close();
       toast.error("Oops, something went wrong!");
     }
@@ -155,8 +153,6 @@ const BlogPopup = ({ isOpen, blogId, onClose,getAllBlogs }) => {
               required
             />
           </div>
-
-    
 
           <div className="space-y-2 col-span-2">
             <label

@@ -5,7 +5,7 @@ import React, { useState } from "react";
 import "react-quill/dist/quill.snow.css";
 import Swal from "sweetalert2";
 import { toast } from "react-toastify";
-import dynamic from "next/dynamic"; // Import dynamic for ReactQuill
+import dynamic from "next/dynamic";
 const ReactQuill = dynamic(() => import("react-quill"), { ssr: false });
 
 const AddBlog = () => {
@@ -50,7 +50,7 @@ const AddBlog = () => {
 
       const formDataToSend = new FormData();
       formDataToSend.append("title", formData.title);
-      formDataToSend.append("desc", editorHtml); // Send description from ReactQuill
+      formDataToSend.append("desc", editorHtml);
       formDataToSend.append("image", formData.image);
 
       const response = await axios.post(
@@ -75,7 +75,7 @@ const AddBlog = () => {
           title: "",
           image: null,
         });
-        setEditorHtml(""); // Reset editor content
+        setEditorHtml("");
       }
     } catch (error) {
       Swal.close();
