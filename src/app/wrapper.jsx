@@ -2,7 +2,7 @@
 
 import { useEffect, useState } from "react";
 import SocialMediaBar from "@/components/common/SocialMedia";
-import Modal from "@/components/core/Home/Modal";
+// import Modal from "@/components/core/Home/Modal";
 import ScrollToTop from "@/components/ScrollToTop";
 import store from "@/redux/store";
 import { Provider } from "react-redux";
@@ -37,7 +37,7 @@ const Wrapper = ({ children }) => {
       {removeNavbar || isAdminRoute ? null : <TopHeader />}
       {removeNavbar || isAdminRoute ? null : <Navbar />}
 
-      {showModal && <Modal onClose={handleCloseModal} />}
+      {/* {showModal && <Modal onClose={handleCloseModal} />} */}
       {children}
       <ToastContainer />
       <SocialMediaBar />

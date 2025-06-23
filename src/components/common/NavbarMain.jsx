@@ -37,10 +37,16 @@ const Navbar = () => {
       <nav className="bg-gray-900 text-white py-2">
         <div className="max-w-7xl mx-auto flex justify-between items-center px-4">
           {/* Logo and Contact Information */}
-          <Link href="/" passHref>
-            <p className="flex items-center space-x-4">
-              <Image src={logo} alt="Logo" className="h-16 w-24" />
-            </p>
+          <Link href="/">
+            <div className="flex items-center space-x-4">
+              <video
+                src="/video.mp4"
+                loop
+                autoPlay
+                muted
+                className="h-16 w-24"
+              />
+            </div>
           </Link>
 
           {/* Navigation Links */}
